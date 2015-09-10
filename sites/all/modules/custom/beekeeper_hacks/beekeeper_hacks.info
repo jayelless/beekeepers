@@ -1,0 +1,4 @@
+name = BeeKeeper Hacks
+description = Custom code for Beekeeper Site
+core = 7.x
+dependancies[] = membership_entity

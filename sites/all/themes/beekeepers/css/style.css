@@ -1,0 +1,163 @@
+body {
+	margin: 0;
+	background: #636466;
+	font-family: Open Sans, sans-serif;
+}
+#page-wrapper {
+	background: #636466 url(body_bg.png) top left repeat-x;
+	width: 1118px;
+	margin: 0 auto;
+	position: relative;
+	height: 20px;
+	min-height: 100px;
+}
+#logo {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background: url(logo.png) top left no-repeat;
+	width: 199px;
+	height: 173px;
+}
+#header-left {
+	width: 2000px;
+	position: absolute;
+	left: -2000px;
+	top: 0px;
+	background: #636466 url(body_bg.png) top right repeat-x;
+	height: 69px;
+}
+#header-right {
+	width: 2000px;
+	position: absolute;
+	left: 1118px;
+	top: 0px;
+	background: #636466 url(body_bg.png) top left repeat-x;
+	height: 69px;
+}
+#bee1 {
+	position: absolute;
+	top: 21px;
+	left: 1015px;
+	background: url(bee1.png) top left no-repeat;
+	width: 99px;
+	height: 86px;
+}
+#bee2 {
+	position: absolute;
+	top: 85px;
+	left: 916px;
+	background: url(bee2.png) top left no-repeat;
+	width: 94px;
+	height: 79px;
+}
+#bee3 {
+	position: absolute;
+	top: 485px;
+	left: 1071px;
+	background: url(bee3.png) top left no-repeat;
+	width: 100px;
+	height: 92px;
+}
+#header {
+	padding-top: 69px;
+}
+#header h1 {
+	font-weight: 600;
+	color: white;
+	font-size: 30px;
+	margin-left: 210px;
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+#header h2 {
+	font-size: 20px;
+	color: #f0cb78;
+	font-weight: 400;
+	margin-left: 210px;
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+#content-wrapper {
+	width: 1118px;
+}
+#leftsidebar {
+	float: left;
+	width: 200px;
+}
+#rightsidebar {
+	float: right;
+	width: 270px;
+}
+#main-content {
+	margin-left: 210px;
+	background: white;
+	border-radius: 5px;
+	margin-right: 310px;
+	margin-bottom: 40px;
+}
+#content {
+	padding: 30px 30px 30px 30px;
+}
+.sidebar {
+	margin-top: 100px;
+	position: relative;
+}
+.sidebar, .sidebar a, .sidebar a:active, .sidebar a:visited, .sidebar a:hover {
+	font-size: 16px;
+	color: #e2ad20;
+	font-weight: 600;
+	text-decoration: none;
+}
+.sidebar a:hover {
+	color: #f0cb78;
+}
+.sidebar label {
+	color: #f0cb78;
+}
+#searchDiv {
+	position: absolute;
+	top: -100px;
+	left: 0px;
+}
+#searchInput {
+	width: 170px;
+}
+#searchButton {
+}
+#loginDiv {
+	margin-top: 50px;
+}
+#loginDiv input[type=text], #loginDiv input[type=password] {
+	width: 200px;
+}
+#content h1 {
+	font-size: 24px;
+	color: #e2ad20;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.caption {
+	text-align: right;
+	font-size: 12px;
+	color: #636466;
+}
+#content,
+#content p {
+	font-size: 14px;
+	color: #231f20;
+}
+#content h2 {
+	font-size: 18px;
+	font-weight: 600;
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+#content strong {
+	font-weight: 600;
+	color: #e2ad20;
+}
+#content a, #content a:active, #content a:visited, #content a:hover {
+	color: #231f20;
+	text-decoration: underline;
+}
