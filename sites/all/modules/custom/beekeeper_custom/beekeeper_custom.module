@@ -1,11 +1,11 @@
 <?php
 /**
- * Use a hook exposed in the membership_enity_term module to recalculate the end date of the membership
+ * Use a hook exposed in the membership_entity_term module to recalculate the end date of the membership
  * @param  dateObject &$end  The original End date for membership
  * @param  membership_term_entity  &$term  The term entity
  * @return dateObject  The amended end date.
  */
-function beekeeper_hacks_membership_entity_term_end_date_alter(&$end, &$term){
+function beekeeper_custom_membership_entity_term_end_date_alter(&$end, &$term){
     $end = new DateObject(strtotime("31 May next year"), new DateTimezone($term->timezone));
   }
 
@@ -13,9 +13,9 @@ function beekeeper_hacks_membership_entity_term_end_date_alter(&$end, &$term){
 /**
  * Implementation of hook_rules_condition_info().
  */
-function beekeeper_hacks_rules_condition_info() {
+function beekeeper_custom_rules_condition_info() {
     return array(
-        'beekeeper_hacks_rules_condition_send_renewal_notifications' => array(
+        'beekeeper_custom_rules_condition_send_renewal_notifications' => array(
             'label' => t('Send renewal notification emails?'),
             'group' => 'Beekeeper Custom',
         )
@@ -27,7 +27,7 @@ function beekeeper_hacks_rules_condition_info() {
  * and uses a "notifications_sent" variable to make sure the notifications are only sent out
  * once no matter how many times cron is run that day.
  */
-function beekeeper_hacks_rules_condition_send_renewal_notifications() {
+function beekeeper_custom_rules_condition_send_renewal_notifications() {
     $today = date('z');
     $renewal_date = date('z', strtotime("31 May this year"));
     if($today==$renewal_date){

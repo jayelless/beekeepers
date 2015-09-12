@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Membership settings feature.
- */
-
-include_once 'membership_settings.features.inc';

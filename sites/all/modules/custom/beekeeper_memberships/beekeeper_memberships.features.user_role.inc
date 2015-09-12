@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * membership_settings.features.user_role.inc
+ * beekeeper_memberships.features.user_role.inc
  */
 
 /**
  * Implements hook_user_default_roles().
  */
-function membership_settings_user_default_roles() {
+function beekeeper_memberships_user_default_roles() {
   $roles = array();
 
   // Exported role: Honorary membership.
@@ -38,12 +38,6 @@ function membership_settings_user_default_roles() {
   $roles['Standard membership'] = array(
     'name' => 'Standard membership',
     'weight' => 3,
-  );
-
-  // Exported role: administrator.
-  $roles['administrator'] = array(
-    'name' => 'administrator',
-    'weight' => 2,
   );
 
   return $roles;

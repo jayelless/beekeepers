@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * membership_settings.features.filter.inc
+ * beekeeper_users.features.filter.inc
  */
 
 /**
  * Implements hook_filter_default_formats().
  */
-function membership_settings_filter_default_formats() {
+function beekeeper_users_filter_default_formats() {
   $formats = array();
 
   // Exported format: Filtered HTML.
@@ -103,6 +103,5 @@ function membership_settings_filter_default_formats() {
     ),
   );
 
-  //return $formats;
-  return array();
+  return $formats;
 }

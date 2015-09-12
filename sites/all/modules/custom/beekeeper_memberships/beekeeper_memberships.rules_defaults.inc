@@ -1,37 +1,21 @@
 <?php
 /**
  * @file
- * membership_settings.rules_defaults.inc
+ * beekeeper_memberships.rules_defaults.inc
  */
 
 /**
  * Implements hook_default_rules_configuration().
  */
-function membership_settings_default_rules_configuration() {
+function beekeeper_memberships_default_rules_configuration() {
   $items = array();
-  $items['rules_bank_transfer'] = entity_import('rules_config', '{ "rules_bank_transfer" : {
-      "LABEL" : "Bank Transfer",
-      "PLUGIN" : "reaction rule",
-      "ACTIVE" : false,
-      "OWNER" : "rules",
-      "REQUIRES" : [ "commerce_payment" ],
-      "ON" : { "commerce_payment_methods" : [] },
-      "DO" : [
-        { "commerce_payment_enable_bank_transfer" : {
-            "commerce_order" : [ "commerce-order" ],
-            "payment_method" : "bank_transfer"
-          }
-        }
-      ]
-    }
-  }');
   $items['rules_email_membership_renewel_reminder_on_may_31st'] = entity_import('rules_config', '{ "rules_email_membership_renewel_reminder_on_may_31st" : {
       "LABEL" : "Email membership renewel reminder on May 31st",
       "PLUGIN" : "reaction rule",
       "OWNER" : "rules",
-      "REQUIRES" : [ "beekeeper_hacks", "rules" ],
+      "REQUIRES" : [ "beekeeper_custom", "rules" ],
       "ON" : { "cron" : [] },
-      "IF" : [ { "beekeeper_hacks_rules_condition_send_renewal_notifications" : [] } ],
+      "IF" : [ { "beekeeper_custom_rules_condition_send_renewal_notifications" : [] } ],
       "DO" : [
         { "mail_to_users_of_role" : {
             "roles" : { "value" : { "4" : "4", "5" : "5", "6" : "6" } },
