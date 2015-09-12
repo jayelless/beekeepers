@@ -9,6 +9,7 @@ dependencies[] = ctools
 dependencies[] = entity
 dependencies[] = features
 dependencies[] = membership_entity
+dependencies[] = membership_entity_commerce
 dependencies[] = membership_entity_term
 dependencies[] = membership_entity_type
 dependencies[] = menu

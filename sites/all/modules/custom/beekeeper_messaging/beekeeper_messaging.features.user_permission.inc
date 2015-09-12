@@ -131,15 +131,5 @@ function beekeeper_messaging_user_default_permissions() {
     'module' => 'mass_contact',
   );
 
-  // Exported permission: 'mass contact send to users in the Member category'.
-  $permissions['mass contact send to users in the Member category'] = array(
-    'name' => 'mass contact send to users in the Member category',
-    'roles' => array(
-      'Membership Approver' => 'Membership Approver',
-      'administrator' => 'administrator',
-    ),
-    'module' => 'mass_contact',
-  );
-
   return $permissions;
 }
