@@ -51,6 +51,13 @@ function beekeeper_apiaries_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Apiary location */
+  $handler->display->display_options['fields']['field_apiary_location']['id'] = 'field_apiary_location';
+  $handler->display->display_options['fields']['field_apiary_location']['table'] = 'field_data_field_apiary_location';
+  $handler->display->display_options['fields']['field_apiary_location']['field'] = 'field_apiary_location';
+  $handler->display->display_options['fields']['field_apiary_location']['label'] = '';
+  $handler->display->display_options['fields']['field_apiary_location']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_apiary_location']['click_sort_column'] = 'lat';
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -69,6 +76,37 @@ function beekeeper_apiaries_views_default_views() {
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'apiary' => 'apiary',
+  );
+  /* Filter criterion: Geolocation: Distance */
+  $handler->display->display_options['filters']['field_apiary_location_distance']['id'] = 'field_apiary_location_distance';
+  $handler->display->display_options['filters']['field_apiary_location_distance']['table'] = 'field_data_field_apiary_location';
+  $handler->display->display_options['filters']['field_apiary_location_distance']['field'] = 'field_apiary_location_distance';
+  $handler->display->display_options['filters']['field_apiary_location_distance']['value'] = array(
+    'latitude' => '',
+    'longitude' => '',
+    'search_distance' => '50',
+    'search_units' => 'kilometers',
+    'type' => 'googlemap',
+  );
+  $handler->display->display_options['filters']['field_apiary_location_distance']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_apiary_location_distance']['expose']['operator_id'] = '';
+  $handler->display->display_options['filters']['field_apiary_location_distance']['expose']['label'] = 'Distance';
+  $handler->display->display_options['filters']['field_apiary_location_distance']['expose']['operator'] = 'field_apiary_location_distance_op';
+  $handler->display->display_options['filters']['field_apiary_location_distance']['expose']['identifier'] = 'field_apiary_location_distance';
+  $handler->display->display_options['filters']['field_apiary_location_distance']['expose']['remember'] = TRUE;
+  $handler->display->display_options['filters']['field_apiary_location_distance']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    6 => 0,
+    4 => 0,
+    5 => 0,
+    12 => 0,
+    11 => 0,
+    8 => 0,
+    7 => 0,
+    9 => 0,
+    10 => 0,
   );
 
   /* Display: Page */
