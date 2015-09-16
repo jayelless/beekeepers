@@ -10,6 +10,17 @@
 function beekeeper_commerce_user_default_permissions() {
   $permissions = array();
 
+  // Exported permission: 'access checkout'.
+  $permissions['access checkout'] = array(
+    'name' => 'access checkout',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'commerce_checkout',
+  );
+
   // Exported permission: 'administer commerce_customer_profile entities'.
   $permissions['administer commerce_customer_profile entities'] = array(
     'name' => 'administer commerce_customer_profile entities',
