@@ -334,7 +334,7 @@ function beekeeper_memberships_user_default_permissions() {
     'module' => 'membership_entity_type',
   );
 
-  // Exported permission: 'membership delete any membership'.
+  // Exported permission: 'standard_membership delete any membership'.
   $permissions['standard_membership delete any membership'] = array(
     'name' => 'standard_membership delete any membership',
     'roles' => array(
@@ -344,7 +344,7 @@ function beekeeper_memberships_user_default_permissions() {
     'module' => 'membership_entity_type',
   );
 
-  // Exported permission: 'membership delete own membership'.
+  // Exported permission: 'standard_membership delete own membership'.
   $permissions['standard_membership delete own membership'] = array(
     'name' => 'standard_membership delete own membership',
     'roles' => array(
@@ -356,7 +356,7 @@ function beekeeper_memberships_user_default_permissions() {
     'module' => 'membership_entity_type',
   );
 
-  // Exported permission: 'membership edit any membership'.
+  // Exported permission: 'standard_membership edit any membership'.
   $permissions['standard_membership edit any membership'] = array(
     'name' => 'standard_membership edit any membership',
     'roles' => array(
@@ -366,7 +366,7 @@ function beekeeper_memberships_user_default_permissions() {
     'module' => 'membership_entity_type',
   );
 
-  // Exported permission: 'membership edit own membership'.
+  // Exported permission: 'standard_membership edit own membership'.
   $permissions['standard_membership edit own membership'] = array(
     'name' => 'standard_membership edit own membership',
     'roles' => array(
@@ -378,7 +378,7 @@ function beekeeper_memberships_user_default_permissions() {
     'module' => 'membership_entity_type',
   );
 
-  // Exported permission: 'membership join'.
+  // Exported permission: 'standard_membership join'.
   $permissions['standard_membership join'] = array(
     'name' => 'standard_membership join',
     'roles' => array(
@@ -390,7 +390,7 @@ function beekeeper_memberships_user_default_permissions() {
     'module' => 'membership_entity_type',
   );
 
-  // Exported permission: 'membership renew any membership'.
+  // Exported permission: 'standard_membership renew any membership'.
   $permissions['standard_membership renew any membership'] = array(
     'name' => 'standard_membership renew any membership',
     'roles' => array(
@@ -400,7 +400,7 @@ function beekeeper_memberships_user_default_permissions() {
     'module' => 'membership_entity_type',
   );
 
-  // Exported permission: 'membership renew own membership'.
+  // Exported permission: 'standard_membership renew own membership'.
   $permissions['standard_membership renew own membership'] = array(
     'name' => 'standard_membership renew own membership',
     'roles' => array(
@@ -410,7 +410,7 @@ function beekeeper_memberships_user_default_permissions() {
     'module' => 'membership_entity_type',
   );
 
-  // Exported permission: 'membership view any membership'.
+  // Exported permission: 'standard_membership view any membership'.
   $permissions['standard_membership view any membership'] = array(
     'name' => 'standard_membership view any membership',
     'roles' => array(
@@ -420,7 +420,7 @@ function beekeeper_memberships_user_default_permissions() {
     'module' => 'membership_entity_type',
   );
 
-  // Exported permission: 'membership view own membership'.
+  // Exported permission: 'standard_membership view own membership'.
   $permissions['standard_membership view own membership'] = array(
     'name' => 'standard_membership view own membership',
     'roles' => array(

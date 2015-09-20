@@ -60,5 +60,40 @@ function beekeeper_memberships_default_rules_configuration() {
       ]
     }
   }');
+  $items['beekeepers_membership_activate_membership_term'] = entity_import('rules_config', '{ "beekeepers_membership_activate_membership_term" : {
+      "LABEL" : "Activate membership term when payment complete",
+      "PLUGIN" : "reaction rule",
+      "OWNER" : "rules",
+      "TAGS" : [ "Memberships" ],
+      "REQUIRES" : [
+        "commerce_order",
+        "membership_entity_commerce",
+        "rules",
+        "commerce_invoice_receipt",
+        "commerce_payment"
+      ],
+      "ON" : { "commerce_payment_order_paid_in_full" : [] },
+      "IF" : [
+        { "commerce_order_contains_product_type" : {
+            "commerce_order" : [ "commerce_order" ],
+            "product_type" : { "value" : { "membership_entity_product" : "membership_entity_product" } },
+            "operator" : "\\u003E=",
+            "value" : "1"
+          }
+        }
+      ],
+      "DO" : [
+        { "membership_entity_commerce_activate_term" : { "commerce_order" : [ "commerce_order" ] } },
+        { "drupal_message" : { "message" : "Membership activated for [commerce-order:owner] and any other accounts associated this membership order." } },
+        { "commerce_order_update_state" : { "commerce_order" : [ "commerce_order" ], "order_state" : "completed" } },
+        { "commerce_invoice_receipt_action_mail" : {
+            "commerce_order" : [ "commerce_order" ],
+            "to" : "[commerce-order:owner] \\u003C[commerce-order:mail]\\u003E",
+            "subject" : "[site:name]: Order #[commerce-order:order-id]"
+          }
+        }
+      ]
+    }
+  }');
   return $items;
 }

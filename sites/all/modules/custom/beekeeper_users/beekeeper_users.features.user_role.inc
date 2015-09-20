@@ -10,28 +10,16 @@
 function beekeeper_users_user_default_roles() {
   $roles = array();
 
-  // Exported role: administrator.
-  $roles['administrator'] = array(
-    'name' => 'administrator',
-    'weight' => 2,
-  );
-
-  // Exported role: Standard member.
-  $roles['Standard member'] = array(
-    'name' => 'Standard member',
-    'weight' => 3,
+  // Exported role: Honorary member.
+  $roles['Honorary member'] = array(
+    'name' => 'Honorary member',
+    'weight' => 5,
   );
 
   // Exported role: Junior member.
   $roles['Junior member'] = array(
     'name' => 'Junior member',
     'weight' => 4,
-  );
-
-  // Exported role: Honorary member.
-  $roles['Honorary member'] = array(
-    'name' => 'Honorary member',
-    'weight' => 5,
   );
 
   // Exported role: Lifetime member.
@@ -44,6 +32,18 @@ function beekeeper_users_user_default_roles() {
   $roles['Membership admin'] = array(
     'name' => 'Membership admin',
     'weight' => 7,
+  );
+
+  // Exported role: Standard member.
+  $roles['Standard member'] = array(
+    'name' => 'Standard member',
+    'weight' => 3,
+  );
+
+  // Exported role: administrator.
+  $roles['administrator'] = array(
+    'name' => 'administrator',
+    'weight' => 2,
   );
 
   return $roles;
