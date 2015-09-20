@@ -44,3 +44,40 @@ function beekeeper_custom_rules_condition_send_renewal_notifications() {
     }
 
 }
+
+/**
+ * Function to massage imported data to ensure that the address elements are correct
+ *
+ * Implements hook_feeds_presave
+ */
+function beekeeper_custom_feeds_presave($source, $entity, $item) {
+  // Put the address data into the correct field elements
+  $entity->field_postal_address = array(
+    LANGUAGE_NONE => array(
+      0 => array(
+        'country' => $item['country'],
+        'administrative_area' => '',
+        'sub_administrative_area' => '',
+        'locality' => $item['town_city'],
+        'dependent_locality' => $item['suburb'],
+        'postal_code' => $item['postcode'],
+        'thoroughfare' => $item['address_line1'],
+        'premise' => $item['address_line2'],
+        'sub_premise' => '',
+        'organisation_name' => '',
+        'name_line' => $item['first_name'] . ' ' . $item['surname'],
+        'first_name' => $item['first_name'],
+        'last_name' => $item['surname'],
+        'data' => '',
+      )
+    )
+  );
+
+  // Split the telephone number field on multiple phone numbers
+  $phone_number = $entity->field_phone_number[LANGUAGE_NONE][0]['value'];
+  $phone_numbers = explode(';', $phone_number);
+  $entity->field_phone_number[LANGUAGE_NONE] = array();
+  foreach ($phone_numbers as $phone_number) {
+    $entity->field_phone_number[LANGUAGE_NONE][] = array('value' => trim($phone_number));
+  }
+}

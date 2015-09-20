@@ -14,10 +14,19 @@ function beekeeper_users_user_default_permissions() {
   $permissions['access user profiles'] = array(
     'name' => 'access user profiles',
     'roles' => array(
-      'Membership Approver' => 'Membership Approver',
+      'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
     'module' => 'user',
+  );
+
+  // Exported permission: 'administer feeds'.
+  $permissions['administer feeds'] = array(
+    'name' => 'administer feeds',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'feeds',
   );
 
   // Exported permission: 'administer permissions'.
@@ -33,6 +42,7 @@ function beekeeper_users_user_default_permissions() {
   $permissions['administer users'] = array(
     'name' => 'administer users',
     'roles' => array(
+      'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
     'module' => 'user',
@@ -57,6 +67,66 @@ function beekeeper_users_user_default_permissions() {
     'module' => 'user',
   );
 
+  // Exported permission: 'clear import_current_members feeds'.
+  $permissions['clear import_current_members feeds'] = array(
+    'name' => 'clear import_current_members feeds',
+    'roles' => array(
+      'Membership admin' => 'Membership admin',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'feeds',
+  );
+
+  // Exported permission: 'clear import_expired_members feeds'.
+  $permissions['clear import_expired_members feeds'] = array(
+    'name' => 'clear import_expired_members feeds',
+    'roles' => array(
+      'Membership admin' => 'Membership admin',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'feeds',
+  );
+
+  // Exported permission: 'clear import_honorary_members feeds'.
+  $permissions['clear import_honorary_members feeds'] = array(
+    'name' => 'clear import_honorary_members feeds',
+    'roles' => array(
+      'Membership admin' => 'Membership admin',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'feeds',
+  );
+
+  // Exported permission: 'import import_current_members feeds'.
+  $permissions['import import_current_members feeds'] = array(
+    'name' => 'import import_current_members feeds',
+    'roles' => array(
+      'Membership admin' => 'Membership admin',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'feeds',
+  );
+
+  // Exported permission: 'import import_expired_members feeds'.
+  $permissions['import import_expired_members feeds'] = array(
+    'name' => 'import import_expired_members feeds',
+    'roles' => array(
+      'Membership admin' => 'Membership admin',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'feeds',
+  );
+
+  // Exported permission: 'import import_honorary_members feeds'.
+  $permissions['import import_honorary_members feeds'] = array(
+    'name' => 'import import_honorary_members feeds',
+    'roles' => array(
+      'Membership admin' => 'Membership admin',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'feeds',
+  );
+
   // Exported permission: 'select account cancellation method'.
   $permissions['select account cancellation method'] = array(
     'name' => 'select account cancellation method',
@@ -64,6 +134,56 @@ function beekeeper_users_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'user',
+  );
+
+  // Exported permission: 'unlock import_current_members feeds'.
+  $permissions['unlock import_current_members feeds'] = array(
+    'name' => 'unlock import_current_members feeds',
+    'roles' => array(
+      'Membership admin' => 'Membership admin',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'feeds',
+  );
+
+  // Exported permission: 'unlock import_expired_members feeds'.
+  $permissions['unlock import_expired_members feeds'] = array(
+    'name' => 'unlock import_expired_members feeds',
+    'roles' => array(
+      'Membership admin' => 'Membership admin',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'feeds',
+  );
+
+  // Exported permission: 'unlock import_honorary_members feeds'.
+  $permissions['unlock import_honorary_members feeds'] = array(
+    'name' => 'unlock import_honorary_members feeds',
+    'roles' => array(
+      'Membership admin' => 'Membership admin',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'feeds',
+  );
+
+  // Exported permission: 'use text format filtered_html'.
+  $permissions['use text format filtered_html'] = array(
+    'name' => 'use text format filtered_html',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'filter',
+  );
+
+  // Exported permission: 'use text format full_html'.
+  $permissions['use text format full_html'] = array(
+    'name' => 'use text format full_html',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'filter',
   );
 
   return $permissions;

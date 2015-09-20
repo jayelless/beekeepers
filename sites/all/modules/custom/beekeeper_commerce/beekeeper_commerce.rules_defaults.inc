@@ -9,7 +9,7 @@
  */
 function beekeeper_commerce_default_rules_configuration() {
   $items = array();
-  $items['rules_bank_transfer'] = entity_import('rules_config', '{ "rules_bank_transfer" : {
+  $items['beekeeper_commerce_bank_transfer'] = entity_import('rules_config', '{ "beekeeper_commerce_bank_transfer" : {
       "LABEL" : "Bank Transfer",
       "PLUGIN" : "reaction rule",
       "ACTIVE" : false,

@@ -19,7 +19,7 @@ function beekeeper_memberships_default_membership_entity_type() {
   $items['honorary_membership'] = entity_import('membership_entity_type', '{
     "label" : "Honorary Membership",
     "type" : "honorary_membership",
-    "description" : "",
+    "description" : "Honorary membership granted by the organisation",
     "weight" : "0",
     "data" : {
       "member_id_format" : "membership_entity_numeric_member_id",
@@ -42,7 +42,7 @@ function beekeeper_memberships_default_membership_entity_type() {
   $items['junior_membership'] = entity_import('membership_entity_type', '{
     "label" : "Junior Membership",
     "type" : "junior_membership",
-    "description" : "",
+    "description" : "Membership at reduced rate for young beekeepers",
     "weight" : "0",
     "data" : {
       "member_id_format" : "membership_entity_numeric_member_id",
@@ -62,10 +62,10 @@ function beekeeper_memberships_default_membership_entity_type() {
     },
     "rdf_mapping" : []
   }');
-  $items['lifetime_membership'] = entity_import('membership_entity_type', '{
-    "label" : "Lifetime Membership",
-    "type" : "lifetime_membership",
-    "description" : "",
+  $items['life_membership'] = entity_import('membership_entity_type', '{
+    "label" : "Life Membership",
+    "type" : "life_membership",
+    "description" : "Non-expiring membership awarded to members who have made a significant contribution",
     "weight" : "0",
     "data" : {
       "member_id_format" : "membership_entity_numeric_member_id",
@@ -85,10 +85,10 @@ function beekeeper_memberships_default_membership_entity_type() {
     },
     "rdf_mapping" : []
   }');
-  $items['membership'] = entity_import('membership_entity_type', '{
+  $items['standard_membership'] = entity_import('membership_entity_type', '{
     "label" : "Standard Membership",
-    "type" : "membership",
-    "description" : "A regular membership.",
+    "type" : "standard_membership",
+    "description" : "Standard membership for regular members",
     "weight" : "0",
     "data" : {
       "member_id_format" : "membership_entity_numeric_member_id",

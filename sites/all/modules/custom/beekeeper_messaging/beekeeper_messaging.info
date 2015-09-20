@@ -40,4 +40,5 @@ features[user_permission][] = mass contact override archiving
 features[user_permission][] = mass contact override bcc
 features[user_permission][] = mass contact override text format
 features[user_permission][] = mass contact send messages
+features[user_permission][] = mass contact send to users in the members category
 project path = sites/default/files/features

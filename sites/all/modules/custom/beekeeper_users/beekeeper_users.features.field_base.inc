@@ -68,8 +68,8 @@ function beekeeper_users_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
-        0 => '',
-        1 => '',
+        0 => 'Hidden',
+        1 => 'Shared',
       ),
       'allowed_values_function' => '',
     ),
@@ -77,13 +77,47 @@ function beekeeper_users_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_my_location'
-  $field_bases['field_my_location'] = array(
+  // Exported field_base: 'field_phone_number'
+  $field_bases['field_phone_number'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_phone_number',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'telephone',
+    'settings' => array(
+      'profile2_private' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'telephone',
+  );
+
+  // Exported field_base: 'field_postal_address'
+  $field_bases['field_postal_address'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_my_location',
+    'field_name' => 'field_postal_address',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'addressfield',
+    'settings' => array(
+      'profile2_private' => TRUE,
+    ),
+    'translatable' => 0,
+    'type' => 'addressfield',
+  );
+
+  // Exported field_base: 'field_user_location'
+  $field_bases['field_user_location'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_user_location',
     'indexes' => array(
       'lat' => array(
         0 => 'lat',
@@ -97,27 +131,6 @@ function beekeeper_users_field_default_field_bases() {
     'settings' => array(),
     'translatable' => 0,
     'type' => 'geolocation_latlng',
-  );
-
-  // Exported field_base: 'field_occupation'
-  $field_bases['field_occupation'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_occupation',
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'text',
-    'settings' => array(
-      'max_length' => 255,
-    ),
-    'translatable' => 0,
-    'type' => 'text',
   );
 
   return $field_bases;

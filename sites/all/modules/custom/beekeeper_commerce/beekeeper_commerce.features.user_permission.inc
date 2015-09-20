@@ -34,7 +34,7 @@ function beekeeper_commerce_user_default_permissions() {
   $permissions['administer commerce_order entities'] = array(
     'name' => 'administer commerce_order entities',
     'roles' => array(
-      'Membership Approver' => 'Membership Approver',
+      'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
     'module' => 'commerce_order',
@@ -98,7 +98,7 @@ function beekeeper_commerce_user_default_permissions() {
   $permissions['administer payments'] = array(
     'name' => 'administer payments',
     'roles' => array(
-      'Membership Approver' => 'Membership Approver',
+      'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
     'module' => 'commerce_payment',
@@ -155,7 +155,7 @@ function beekeeper_commerce_user_default_permissions() {
   $permissions['create commerce_order entities'] = array(
     'name' => 'create commerce_order entities',
     'roles' => array(
-      'Membership Approver' => 'Membership Approver',
+      'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
     'module' => 'commerce_order',
@@ -165,7 +165,7 @@ function beekeeper_commerce_user_default_permissions() {
   $permissions['create commerce_order entities of bundle commerce_order'] = array(
     'name' => 'create commerce_order entities of bundle commerce_order',
     'roles' => array(
-      'Membership Approver' => 'Membership Approver',
+      'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
     'module' => 'commerce_order',
@@ -202,7 +202,7 @@ function beekeeper_commerce_user_default_permissions() {
   $permissions['create payments'] = array(
     'name' => 'create payments',
     'roles' => array(
-      'Membership Approver' => 'Membership Approver',
+      'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
     'module' => 'commerce_payment',
@@ -212,7 +212,7 @@ function beekeeper_commerce_user_default_permissions() {
   $permissions['delete payments'] = array(
     'name' => 'delete payments',
     'roles' => array(
-      'Membership Approver' => 'Membership Approver',
+      'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
     'module' => 'commerce_payment',
@@ -222,7 +222,7 @@ function beekeeper_commerce_user_default_permissions() {
   $permissions['edit any commerce_customer_profile entity'] = array(
     'name' => 'edit any commerce_customer_profile entity',
     'roles' => array(
-      'Membership Approver' => 'Membership Approver',
+      'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
     'module' => 'commerce_customer',
@@ -232,7 +232,7 @@ function beekeeper_commerce_user_default_permissions() {
   $permissions['edit any commerce_customer_profile entity of bundle billing'] = array(
     'name' => 'edit any commerce_customer_profile entity of bundle billing',
     'roles' => array(
-      'Membership Approver' => 'Membership Approver',
+      'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
     'module' => 'commerce_customer',
@@ -242,7 +242,7 @@ function beekeeper_commerce_user_default_permissions() {
   $permissions['edit any commerce_order entity'] = array(
     'name' => 'edit any commerce_order entity',
     'roles' => array(
-      'Membership Approver' => 'Membership Approver',
+      'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
     'module' => 'commerce_order',
@@ -252,7 +252,7 @@ function beekeeper_commerce_user_default_permissions() {
   $permissions['edit any commerce_order entity of bundle commerce_order'] = array(
     'name' => 'edit any commerce_order entity of bundle commerce_order',
     'roles' => array(
-      'Membership Approver' => 'Membership Approver',
+      'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
     'module' => 'commerce_order',
@@ -309,7 +309,7 @@ function beekeeper_commerce_user_default_permissions() {
   $permissions['edit own commerce_order entities'] = array(
     'name' => 'edit own commerce_order entities',
     'roles' => array(
-      'Membership Approver' => 'Membership Approver',
+      'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
     'module' => 'commerce_order',
@@ -319,7 +319,7 @@ function beekeeper_commerce_user_default_permissions() {
   $permissions['edit own commerce_order entities of bundle commerce_order'] = array(
     'name' => 'edit own commerce_order entities of bundle commerce_order',
     'roles' => array(
-      'Membership Approver' => 'Membership Approver',
+      'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
     'module' => 'commerce_order',
@@ -356,7 +356,7 @@ function beekeeper_commerce_user_default_permissions() {
   $permissions['update payments'] = array(
     'name' => 'update payments',
     'roles' => array(
-      'Membership Approver' => 'Membership Approver',
+      'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
     'module' => 'commerce_payment',
@@ -366,7 +366,7 @@ function beekeeper_commerce_user_default_permissions() {
   $permissions['view any commerce_customer_profile entity'] = array(
     'name' => 'view any commerce_customer_profile entity',
     'roles' => array(
-      'Membership Approver' => 'Membership Approver',
+      'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
     'module' => 'commerce_customer',
@@ -376,7 +376,7 @@ function beekeeper_commerce_user_default_permissions() {
   $permissions['view any commerce_customer_profile entity of bundle billing'] = array(
     'name' => 'view any commerce_customer_profile entity of bundle billing',
     'roles' => array(
-      'Membership Approver' => 'Membership Approver',
+      'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
     'module' => 'commerce_customer',
@@ -386,7 +386,7 @@ function beekeeper_commerce_user_default_permissions() {
   $permissions['view any commerce_order entity'] = array(
     'name' => 'view any commerce_order entity',
     'roles' => array(
-      'Membership Approver' => 'Membership Approver',
+      'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
     'module' => 'commerce_order',
@@ -396,7 +396,7 @@ function beekeeper_commerce_user_default_permissions() {
   $permissions['view any commerce_order entity of bundle commerce_order'] = array(
     'name' => 'view any commerce_order entity of bundle commerce_order',
     'roles' => array(
-      'Membership Approver' => 'Membership Approver',
+      'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
     'module' => 'commerce_order',
@@ -453,7 +453,7 @@ function beekeeper_commerce_user_default_permissions() {
   $permissions['view own commerce_order entities'] = array(
     'name' => 'view own commerce_order entities',
     'roles' => array(
-      'Membership Approver' => 'Membership Approver',
+      'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
@@ -465,7 +465,7 @@ function beekeeper_commerce_user_default_permissions() {
   $permissions['view own commerce_order entities of bundle commerce_order'] = array(
     'name' => 'view own commerce_order entities of bundle commerce_order',
     'roles' => array(
-      'Membership Approver' => 'Membership Approver',
+      'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
     'module' => 'commerce_order',
@@ -502,7 +502,7 @@ function beekeeper_commerce_user_default_permissions() {
   $permissions['view payments'] = array(
     'name' => 'view payments',
     'roles' => array(
-      'Membership Approver' => 'Membership Approver',
+      'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
     'module' => 'commerce_payment',

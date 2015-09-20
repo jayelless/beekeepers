@@ -23,7 +23,7 @@ function beekeeper_polls_user_default_permissions() {
   $permissions['create poll content'] = array(
     'name' => 'create poll content',
     'roles' => array(
-      'Membership Approver' => 'Membership Approver',
+      'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -42,7 +42,7 @@ function beekeeper_polls_user_default_permissions() {
   $permissions['delete own poll content'] = array(
     'name' => 'delete own poll content',
     'roles' => array(
-      'Membership Approver' => 'Membership Approver',
+      'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -61,7 +61,7 @@ function beekeeper_polls_user_default_permissions() {
   $permissions['edit own poll content'] = array(
     'name' => 'edit own poll content',
     'roles' => array(
-      'Membership Approver' => 'Membership Approver',
+      'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -71,7 +71,7 @@ function beekeeper_polls_user_default_permissions() {
   $permissions['inspect all votes'] = array(
     'name' => 'inspect all votes',
     'roles' => array(
-      'Membership Approver' => 'Membership Approver',
+      'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
     'module' => 'poll',
@@ -81,10 +81,10 @@ function beekeeper_polls_user_default_permissions() {
   $permissions['vote on polls'] = array(
     'name' => 'vote on polls',
     'roles' => array(
-      'Honorary membership' => 'Honorary membership',
-      'Junior membership' => 'Junior membership',
-      'Lifetime membership' => 'Lifetime membership',
-      'Standard membership' => 'Standard membership',
+      'Honorary member' => 'Honorary member',
+      'Junior member' => 'Junior member',
+      'Lifetime member' => 'Lifetime member',
+      'Standard member' => 'Standard member',
       'administrator' => 'administrator',
     ),
     'module' => 'poll',

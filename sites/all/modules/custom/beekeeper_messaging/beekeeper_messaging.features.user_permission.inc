@@ -14,7 +14,7 @@ function beekeeper_messaging_user_default_permissions() {
   $permissions['create mass_contact content'] = array(
     'name' => 'create mass_contact content',
     'roles' => array(
-      'Membership Approver' => 'Membership Approver',
+      'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -60,6 +60,7 @@ function beekeeper_messaging_user_default_permissions() {
   $permissions['mass contact administer'] = array(
     'name' => 'mass contact administer',
     'roles' => array(
+      'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
     'module' => 'mass_contact',
@@ -69,6 +70,7 @@ function beekeeper_messaging_user_default_permissions() {
   $permissions['mass contact archive messages'] = array(
     'name' => 'mass contact archive messages',
     'roles' => array(
+      'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
     'module' => 'mass_contact',
@@ -78,7 +80,7 @@ function beekeeper_messaging_user_default_permissions() {
   $permissions['mass contact change default sender information'] = array(
     'name' => 'mass contact change default sender information',
     'roles' => array(
-      'Membership Approver' => 'Membership Approver',
+      'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
     'module' => 'mass_contact',
@@ -88,7 +90,7 @@ function beekeeper_messaging_user_default_permissions() {
   $permissions['mass contact include attachments'] = array(
     'name' => 'mass contact include attachments',
     'roles' => array(
-      'Membership Approver' => 'Membership Approver',
+      'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
     'module' => 'mass_contact',
@@ -125,8 +127,17 @@ function beekeeper_messaging_user_default_permissions() {
   $permissions['mass contact send messages'] = array(
     'name' => 'mass contact send messages',
     'roles' => array(
-      'Membership Approver' => 'Membership Approver',
+      'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
+    ),
+    'module' => 'mass_contact',
+  );
+
+  // Exported permission: 'mass contact send to users in the Member category'.
+  $permissions['mass contact send to users in the members category'] = array(
+    'name' => 'mass contact send to users in the members category',
+    'roles' => array(
+      'Membership admin' => 'Membership admin',
     ),
     'module' => 'mass_contact',
   );

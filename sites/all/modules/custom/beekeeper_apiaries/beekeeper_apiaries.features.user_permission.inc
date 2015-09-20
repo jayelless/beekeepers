@@ -14,11 +14,11 @@ function beekeeper_apiaries_user_default_permissions() {
   $permissions['create apiary content'] = array(
     'name' => 'create apiary content',
     'roles' => array(
-      'Honorary membership' => 'Honorary membership',
-      'Junior membership' => 'Junior membership',
-      'Lifetime membership' => 'Lifetime membership',
-      'Membership Approver' => 'Membership Approver',
-      'Standard membership' => 'Standard membership',
+      'Honorary member' => 'Honorary member',
+      'Junior member' => 'Junior member',
+      'Lifetime member' => 'Lifetime member',
+      'Membership admin' => 'Membership admin',
+      'Standard member' => 'Standard member',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -28,7 +28,7 @@ function beekeeper_apiaries_user_default_permissions() {
   $permissions['delete any apiary content'] = array(
     'name' => 'delete any apiary content',
     'roles' => array(
-      'Membership Approver' => 'Membership Approver',
+      'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -38,11 +38,11 @@ function beekeeper_apiaries_user_default_permissions() {
   $permissions['delete own apiary content'] = array(
     'name' => 'delete own apiary content',
     'roles' => array(
-      'Honorary membership' => 'Honorary membership',
-      'Junior membership' => 'Junior membership',
-      'Lifetime membership' => 'Lifetime membership',
-      'Membership Approver' => 'Membership Approver',
-      'Standard membership' => 'Standard membership',
+      'Honorary member' => 'Honorary member',
+      'Junior member' => 'Junior member',
+      'Lifetime member' => 'Lifetime member',
+      'Membership admin' => 'Membership admin',
+      'Standard member' => 'Standard member',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -52,7 +52,7 @@ function beekeeper_apiaries_user_default_permissions() {
   $permissions['edit any apiary content'] = array(
     'name' => 'edit any apiary content',
     'roles' => array(
-      'Membership Approver' => 'Membership Approver',
+      'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -62,11 +62,11 @@ function beekeeper_apiaries_user_default_permissions() {
   $permissions['edit own apiary content'] = array(
     'name' => 'edit own apiary content',
     'roles' => array(
-      'Honorary membership' => 'Honorary membership',
-      'Junior membership' => 'Junior membership',
-      'Lifetime membership' => 'Lifetime membership',
-      'Membership Approver' => 'Membership Approver',
-      'Standard membership' => 'Standard membership',
+      'Honorary member' => 'Honorary member',
+      'Junior member' => 'Junior member',
+      'Lifetime member' => 'Lifetime member',
+      'Membership admin' => 'Membership admin',
+      'Standard member' => 'Standard member',
       'administrator' => 'administrator',
     ),
     'module' => 'node',

@@ -55,13 +55,12 @@ function beekeeper_users_views_default_views() {
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
-  /* Field: User: My location */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_my_location']['id'] = 'field_my_location';
   $handler->display->display_options['fields']['field_my_location']['table'] = 'field_data_field_my_location';
   $handler->display->display_options['fields']['field_my_location']['field'] = 'field_my_location';
   $handler->display->display_options['fields']['field_my_location']['label'] = '';
   $handler->display->display_options['fields']['field_my_location']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_my_location']['click_sort_column'] = 'lat';
   /* Field: Realname: Real name */
   $handler->display->display_options['fields']['realname']['id'] = 'realname';
   $handler->display->display_options['fields']['realname']['table'] = 'realname';
@@ -79,7 +78,7 @@ function beekeeper_users_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Geolocation: Distance */
+  /* Filter criterion: Broken/missing handler */
   $handler->display->display_options['filters']['field_my_location_distance']['id'] = 'field_my_location_distance';
   $handler->display->display_options['filters']['field_my_location_distance']['table'] = 'field_data_field_my_location';
   $handler->display->display_options['filters']['field_my_location_distance']['field'] = 'field_my_location_distance';
@@ -141,7 +140,7 @@ function beekeeper_users_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Geolocation: Distance */
+  /* Filter criterion: Broken/missing handler */
   $handler->display->display_options['filters']['field_my_location_distance']['id'] = 'field_my_location_distance';
   $handler->display->display_options['filters']['field_my_location_distance']['table'] = 'field_data_field_my_location';
   $handler->display->display_options['filters']['field_my_location_distance']['field'] = 'field_my_location_distance';
@@ -167,7 +166,7 @@ function beekeeper_users_views_default_views() {
     7 => 0,
     8 => 0,
   );
-  /* Filter criterion: User: Share my location with other users (field_location_privacy) */
+  /* Filter criterion: User: Location Privacy (field_location_privacy) */
   $handler->display->display_options['filters']['field_location_privacy_value']['id'] = 'field_location_privacy_value';
   $handler->display->display_options['filters']['field_location_privacy_value']['table'] = 'field_data_field_location_privacy';
   $handler->display->display_options['filters']['field_location_privacy_value']['field'] = 'field_location_privacy_value';
@@ -249,18 +248,17 @@ function beekeeper_users_views_default_views() {
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['name']['link_to_user'] = FALSE;
-  /* Field: User: Occupation */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_occupation']['id'] = 'field_occupation';
   $handler->display->display_options['fields']['field_occupation']['table'] = 'field_data_field_occupation';
   $handler->display->display_options['fields']['field_occupation']['field'] = 'field_occupation';
-  /* Field: User: My location */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_my_location']['id'] = 'field_my_location';
   $handler->display->display_options['fields']['field_my_location']['table'] = 'field_data_field_my_location';
   $handler->display->display_options['fields']['field_my_location']['field'] = 'field_my_location';
   $handler->display->display_options['fields']['field_my_location']['label'] = '';
   $handler->display->display_options['fields']['field_my_location']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_my_location']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_my_location']['click_sort_column'] = 'lat';
   /* Field: User: E-mail */
   $handler->display->display_options['fields']['mail']['id'] = 'mail';
   $handler->display->display_options['fields']['mail']['table'] = 'users';
@@ -286,7 +284,7 @@ function beekeeper_users_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Geolocation: Distance */
+  /* Filter criterion: Broken/missing handler */
   $handler->display->display_options['filters']['field_my_location_distance']['id'] = 'field_my_location_distance';
   $handler->display->display_options['filters']['field_my_location_distance']['table'] = 'field_data_field_my_location';
   $handler->display->display_options['filters']['field_my_location_distance']['field'] = 'field_my_location_distance';

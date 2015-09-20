@@ -18,7 +18,7 @@ function beekeeper_users_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -54,7 +54,7 @@ function beekeeper_users_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -94,16 +94,16 @@ function beekeeper_users_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'inline',
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 4,
+        'weight' => 6,
       ),
     ),
     'entity_type' => 'user',
     'field_name' => 'field_location_privacy',
-    'label' => 'Share my location with other users',
+    'label' => 'Location Privacy',
     'required' => 0,
     'settings' => array(
       'membership_entity_join_form' => FALSE,
@@ -114,40 +114,136 @@ function beekeeper_users_field_default_field_instances() {
       'active' => 1,
       'module' => 'options',
       'settings' => array(
-        'display_label' => 1,
+        'display_label' => 0,
       ),
       'type' => 'options_onoff',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 
-  // Exported field_instance: 'user-user-field_my_location'
-  $field_instances['user-user-field_my_location'] = array(
+  // Exported field_instance: 'user-user-field_phone_number'
+  $field_instances['user-user-field_phone_number'] = array(
     'bundle' => 'user',
-    'default_value' => array(
-      0 => array(
-        'address' => array(
-          'field' => '4 Willis Street, Wellington, Wellington 6011, New Zealand',
-        ),
-        'lat' => -41.2864603,
-        'lng' => '174.77623600000004',
-        'field_type' => 'geolocation_latlng',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'This field is used so that you can see hives near you. This field is private by default so other users will not see your location unless you check the "Show my location with other users" box.',
+    'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
-        'module' => 'geolocation',
+        'label' => 'inline',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'geolocation_text',
+        'type' => 'text_plain',
         'weight' => 3,
       ),
     ),
     'entity_type' => 'user',
-    'field_name' => 'field_my_location',
-    'label' => 'My location',
+    'field_name' => 'field_phone_number',
+    'label' => 'Telephone',
+    'required' => 0,
+    'settings' => array(
+      'membership_entity_join_form' => FALSE,
+      'membership_entity_term_renew_form' => FALSE,
+      'user_register_form' => 0,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'telephone',
+      'settings' => array(
+        'placeholder' => '',
+      ),
+      'type' => 'telephone_default',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'user-user-field_postal_address'
+  $field_instances['user-user-field_postal_address'] = array(
+    'bundle' => 'user',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'addressfield',
+        'settings' => array(
+          'format_handlers' => array(
+            0 => 'address',
+          ),
+          'use_widget_handlers' => 1,
+        ),
+        'type' => 'addressfield_default',
+        'weight' => 4,
+      ),
+    ),
+    'entity_type' => 'user',
+    'field_name' => 'field_postal_address',
+    'label' => 'Postal address',
+    'required' => 0,
+    'settings' => array(
+      'membership_entity_join_form' => FALSE,
+      'membership_entity_term_renew_form' => FALSE,
+      'user_register_form' => 0,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'addressfield',
+      'settings' => array(
+        'available_countries' => array(
+          'NZ' => 'NZ',
+        ),
+        'default_country' => 'site_default',
+        'format_handlers' => array(
+          'address' => 'address',
+          'address-hide-postal-code' => 0,
+          'address-hide-street' => 0,
+          'address-hide-country' => 0,
+          'organisation' => 0,
+          'name-full' => 0,
+          'name-oneline' => 0,
+          'address-optional' => 0,
+        ),
+      ),
+      'type' => 'addressfield_standard',
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance: 'user-user-field_user_location'
+  $field_instances['user-user-field_user_location'] = array(
+    'bundle' => 'user',
+    'default_value' => array(
+      0 => array(
+        'address' => array(
+          'field' => 'Ngauranga Gorge Rd, Ngauranga, Wellington 6035, New Zealand',
+        ),
+        'lat' => -41.2445524,
+        'lng' => '174.81410589999996',
+        'field_type' => 'geolocation_latlng',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'geolocation_googlemaps',
+        'settings' => array(
+          'map_height' => '300px',
+          'map_imageformat' => 'png8',
+          'map_link' => 0,
+          'map_maptype' => 'roadmap',
+          'map_width' => '300px',
+          'map_zoomlevel' => 12,
+          'marker_icon' => '',
+        ),
+        'type' => 'geolocation_googlemaps_static',
+        'weight' => 5,
+      ),
+    ),
+    'entity_type' => 'user',
+    'field_name' => 'field_user_location',
+    'label' => 'My Location',
     'required' => 0,
     'settings' => array(
       'membership_entity_join_form' => FALSE,
@@ -158,47 +254,11 @@ function beekeeper_users_field_default_field_instances() {
       'active' => 1,
       'module' => 'geolocation_googlemaps',
       'settings' => array(
-        'marker_draggable' => 1,
-        'scrollwheel' => 1,
+        'marker_draggable' => 0,
+        'scrollwheel' => 0,
       ),
       'type' => 'geolocation_googlemap',
-      'weight' => 5,
-    ),
-  );
-
-  // Exported field_instance: 'user-user-field_occupation'
-  $field_instances['user-user-field_occupation'] = array(
-    'bundle' => 'user',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 2,
-      ),
-    ),
-    'entity_type' => 'user',
-    'field_name' => 'field_occupation',
-    'label' => 'Occupation',
-    'required' => 1,
-    'settings' => array(
-      'membership_entity_join_form' => FALSE,
-      'membership_entity_term_renew_form' => FALSE,
-      'text_processing' => 0,
-      'user_register_form' => 1,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 3,
+      'weight' => 6,
     ),
   );
 
@@ -206,10 +266,10 @@ function beekeeper_users_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('First Name');
   t('Last Name');
-  t('My location');
-  t('Occupation');
-  t('Share my location with other users');
-  t('This field is used so that you can see hives near you. This field is private by default so other users will not see your location unless you check the "Show my location with other users" box.');
+  t('Location Privacy');
+  t('My Location');
+  t('Postal address');
+  t('Telephone');
 
   return $field_instances;
 }
