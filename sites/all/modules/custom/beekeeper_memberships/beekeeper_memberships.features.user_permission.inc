@@ -334,6 +334,87 @@ function beekeeper_memberships_user_default_permissions() {
     'module' => 'membership_entity_type',
   );
 
+  // Exported permission: 'membership delete any membership'.
+  $permissions['membership delete any membership'] = array(
+    'name' => 'membership delete any membership',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'membership_entity_type',
+  );
+
+  // Exported permission: 'membership delete own membership'.
+  $permissions['membership delete own membership'] = array(
+    'name' => 'membership delete own membership',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'membership_entity_type',
+  );
+
+  // Exported permission: 'membership edit any membership'.
+  $permissions['membership edit any membership'] = array(
+    'name' => 'membership edit any membership',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'membership_entity_type',
+  );
+
+  // Exported permission: 'membership edit own membership'.
+  $permissions['membership edit own membership'] = array(
+    'name' => 'membership edit own membership',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'membership_entity_type',
+  );
+
+  // Exported permission: 'membership join'.
+  $permissions['membership join'] = array(
+    'name' => 'membership join',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'membership_entity_type',
+  );
+
+  // Exported permission: 'membership renew any membership'.
+  $permissions['membership renew any membership'] = array(
+    'name' => 'membership renew any membership',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'membership_entity_type',
+  );
+
+  // Exported permission: 'membership renew own membership'.
+  $permissions['membership renew own membership'] = array(
+    'name' => 'membership renew own membership',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'membership_entity_type',
+  );
+
+  // Exported permission: 'membership view any membership'.
+  $permissions['membership view any membership'] = array(
+    'name' => 'membership view any membership',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'membership_entity_type',
+  );
+
+  // Exported permission: 'membership view own membership'.
+  $permissions['membership view own membership'] = array(
+    'name' => 'membership view own membership',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'membership_entity_type',
+  );
+
   // Exported permission: 'standard_membership delete any membership'.
   $permissions['standard_membership delete any membership'] = array(
     'name' => 'standard_membership delete any membership',
