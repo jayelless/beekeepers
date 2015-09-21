@@ -56,8 +56,6 @@ function beekeeper_memberships_user_default_permissions() {
     'roles' => array(
       'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
-      'anonymous user' => 'anonymous user',
-      'authenticated user' => 'authenticated user',
     ),
     'module' => 'membership_entity_type',
   );
@@ -78,8 +76,6 @@ function beekeeper_memberships_user_default_permissions() {
     'roles' => array(
       'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
-      'anonymous user' => 'anonymous user',
-      'authenticated user' => 'authenticated user',
     ),
     'module' => 'membership_entity_type',
   );
@@ -90,8 +86,6 @@ function beekeeper_memberships_user_default_permissions() {
     'roles' => array(
       'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
-      'anonymous user' => 'anonymous user',
-      'authenticated user' => 'authenticated user',
     ),
     'module' => 'membership_entity_type',
   );
@@ -152,10 +146,9 @@ function beekeeper_memberships_user_default_permissions() {
   $permissions['junior_membership delete own membership'] = array(
     'name' => 'junior_membership delete own membership',
     'roles' => array(
+      'Junior member' => 'Junior member',
       'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
-      'anonymous user' => 'anonymous user',
-      'authenticated user' => 'authenticated user',
     ),
     'module' => 'membership_entity_type',
   );
@@ -174,10 +167,9 @@ function beekeeper_memberships_user_default_permissions() {
   $permissions['junior_membership edit own membership'] = array(
     'name' => 'junior_membership edit own membership',
     'roles' => array(
+      'Junior member' => 'Junior member',
       'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
-      'anonymous user' => 'anonymous user',
-      'authenticated user' => 'authenticated user',
     ),
     'module' => 'membership_entity_type',
   );
@@ -208,6 +200,7 @@ function beekeeper_memberships_user_default_permissions() {
   $permissions['junior_membership renew own membership'] = array(
     'name' => 'junior_membership renew own membership',
     'roles' => array(
+      'Junior member' => 'Junior member',
       'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
@@ -220,6 +213,7 @@ function beekeeper_memberships_user_default_permissions() {
     'roles' => array(
       'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'membership_entity_type',
   );
@@ -228,10 +222,9 @@ function beekeeper_memberships_user_default_permissions() {
   $permissions['junior_membership view own membership'] = array(
     'name' => 'junior_membership view own membership',
     'roles' => array(
+      'Junior member' => 'Junior member',
       'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
-      'anonymous user' => 'anonymous user',
-      'authenticated user' => 'authenticated user',
     ),
     'module' => 'membership_entity_type',
   );
@@ -250,10 +243,9 @@ function beekeeper_memberships_user_default_permissions() {
   $permissions['life_membership delete own membership'] = array(
     'name' => 'life_membership delete own membership',
     'roles' => array(
+      'Lifetime member' => 'Lifetime member',
       'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
-      'anonymous user' => 'anonymous user',
-      'authenticated user' => 'authenticated user',
     ),
     'module' => 'membership_entity_type',
   );
@@ -272,10 +264,9 @@ function beekeeper_memberships_user_default_permissions() {
   $permissions['life_membership edit own membership'] = array(
     'name' => 'life_membership edit own membership',
     'roles' => array(
+      'Lifetime member' => 'Lifetime member',
       'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
-      'anonymous user' => 'anonymous user',
-      'authenticated user' => 'authenticated user',
     ),
     'module' => 'membership_entity_type',
   );
@@ -286,8 +277,6 @@ function beekeeper_memberships_user_default_permissions() {
     'roles' => array(
       'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
-      'anonymous user' => 'anonymous user',
-      'authenticated user' => 'authenticated user',
     ),
     'module' => 'membership_entity_type',
   );
@@ -306,10 +295,9 @@ function beekeeper_memberships_user_default_permissions() {
   $permissions['life_membership renew own membership'] = array(
     'name' => 'life_membership renew own membership',
     'roles' => array(
+      'Lifetime member' => 'Lifetime member',
       'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
-      'anonymous user' => 'anonymous user',
-      'authenticated user' => 'authenticated user',
     ),
     'module' => 'membership_entity_type',
   );
@@ -320,6 +308,7 @@ function beekeeper_memberships_user_default_permissions() {
     'roles' => array(
       'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'membership_entity_type',
   );
@@ -328,6 +317,7 @@ function beekeeper_memberships_user_default_permissions() {
   $permissions['life_membership view own membership'] = array(
     'name' => 'life_membership view own membership',
     'roles' => array(
+      'Lifetime member' => 'Lifetime member',
       'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
@@ -430,9 +420,8 @@ function beekeeper_memberships_user_default_permissions() {
     'name' => 'standard_membership delete own membership',
     'roles' => array(
       'Membership admin' => 'Membership admin',
+      'Standard member' => 'Standard member',
       'administrator' => 'administrator',
-      'anonymous user' => 'anonymous user',
-      'authenticated user' => 'authenticated user',
     ),
     'module' => 'membership_entity_type',
   );
@@ -452,9 +441,8 @@ function beekeeper_memberships_user_default_permissions() {
     'name' => 'standard_membership edit own membership',
     'roles' => array(
       'Membership admin' => 'Membership admin',
+      'Standard member' => 'Standard member',
       'administrator' => 'administrator',
-      'anonymous user' => 'anonymous user',
-      'authenticated user' => 'authenticated user',
     ),
     'module' => 'membership_entity_type',
   );
@@ -486,6 +474,7 @@ function beekeeper_memberships_user_default_permissions() {
     'name' => 'standard_membership renew own membership',
     'roles' => array(
       'Membership admin' => 'Membership admin',
+      'Standard member' => 'Standard member',
       'administrator' => 'administrator',
     ),
     'module' => 'membership_entity_type',
@@ -506,9 +495,8 @@ function beekeeper_memberships_user_default_permissions() {
     'name' => 'standard_membership view own membership',
     'roles' => array(
       'Membership admin' => 'Membership admin',
+      'Standard member' => 'Standard member',
       'administrator' => 'administrator',
-      'anonymous user' => 'anonymous user',
-      'authenticated user' => 'authenticated user',
     ),
     'module' => 'membership_entity_type',
   );

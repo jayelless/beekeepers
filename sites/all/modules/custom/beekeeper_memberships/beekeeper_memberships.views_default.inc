@@ -13,7 +13,7 @@ function beekeeper_memberships_views_default_views() {
   $view = new view();
   $view->name = 'buy_membership';
   $view->description = '';
-  $view->tag = 'default';
+  $view->tag = 'beekeepers';
   $view->base_table = 'commerce_product';
   $view->human_name = 'buy-membership';
   $view->core = 7;
