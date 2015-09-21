@@ -189,6 +189,13 @@ function beekeeper_commerce_user_default_permissions() {
     'module' => 'commerce_product',
   );
 
+  // Exported permission: 'create commerce_product entities of bundle nucleus_colony'.
+  $permissions['create commerce_product entities of bundle nucleus_colony'] = array(
+    'name' => 'create commerce_product entities of bundle nucleus_colony',
+    'roles' => array(),
+    'module' => 'commerce_product',
+  );
+
   // Exported permission: 'create commerce_product entities of bundle product'.
   $permissions['create commerce_product entities of bundle product'] = array(
     'name' => 'create commerce_product entities of bundle product',
@@ -276,6 +283,13 @@ function beekeeper_commerce_user_default_permissions() {
     'module' => 'commerce_product',
   );
 
+  // Exported permission: 'edit any commerce_product entity of bundle nucleus_colony'.
+  $permissions['edit any commerce_product entity of bundle nucleus_colony'] = array(
+    'name' => 'edit any commerce_product entity of bundle nucleus_colony',
+    'roles' => array(),
+    'module' => 'commerce_product',
+  );
+
   // Exported permission: 'edit any commerce_product entity of bundle product'.
   $permissions['edit any commerce_product entity of bundle product'] = array(
     'name' => 'edit any commerce_product entity of bundle product',
@@ -340,6 +354,13 @@ function beekeeper_commerce_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
     ),
+    'module' => 'commerce_product',
+  );
+
+  // Exported permission: 'edit own commerce_product entities of bundle nucleus_colony'.
+  $permissions['edit own commerce_product entities of bundle nucleus_colony'] = array(
+    'name' => 'edit own commerce_product entities of bundle nucleus_colony',
+    'roles' => array(),
     'module' => 'commerce_product',
   );
 
@@ -420,6 +441,13 @@ function beekeeper_commerce_user_default_permissions() {
     'module' => 'commerce_product',
   );
 
+  // Exported permission: 'view any commerce_product entity of bundle nucleus_colony'.
+  $permissions['view any commerce_product entity of bundle nucleus_colony'] = array(
+    'name' => 'view any commerce_product entity of bundle nucleus_colony',
+    'roles' => array(),
+    'module' => 'commerce_product',
+  );
+
   // Exported permission: 'view any commerce_product entity of bundle product'.
   $permissions['view any commerce_product entity of bundle product'] = array(
     'name' => 'view any commerce_product entity of bundle product',
@@ -486,6 +514,13 @@ function beekeeper_commerce_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
     ),
+    'module' => 'commerce_product',
+  );
+
+  // Exported permission: 'view own commerce_product entities of bundle nucleus_colony'.
+  $permissions['view own commerce_product entities of bundle nucleus_colony'] = array(
+    'name' => 'view own commerce_product entities of bundle nucleus_colony',
+    'roles' => array(),
     'module' => 'commerce_product',
   );
 
