@@ -30,12 +30,21 @@ function beekeeper_apiaries_field_default_field_instances() {
           'marker_icon' => '',
         ),
         'type' => 'geolocation_googlemaps_dynamic',
-        'weight' => 1,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
+        'module' => 'geolocation_googlemaps',
+        'settings' => array(
+          'map_height' => '300px',
+          'map_imageformat' => 'png8',
+          'map_link' => 0,
+          'map_maptype' => 'roadmap',
+          'map_width' => '300px',
+          'map_zoomlevel' => 10,
+          'marker_icon' => '',
+        ),
+        'type' => 'geolocation_googlemaps_static',
         'weight' => 0,
       ),
     ),
@@ -56,7 +65,7 @@ function beekeeper_apiaries_field_default_field_instances() {
         'scrollwheel' => 0,
       ),
       'type' => 'geolocation_googlemap',
-      'weight' => -3,
+      'weight' => 1,
     ),
   );
 
@@ -78,7 +87,7 @@ function beekeeper_apiaries_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'node',
@@ -100,7 +109,63 @@ function beekeeper_apiaries_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => -2,
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'node-apiary-field_apiary_photos'
+  $field_instances['node-apiary-field_apiary_photos'] = array(
+    'bundle' => 'apiary',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => 'file',
+          'image_style' => 'large',
+        ),
+        'type' => 'image',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => 'file',
+          'image_style' => 'medium',
+        ),
+        'type' => 'image',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_apiary_photos',
+    'label' => 'Apiary photos',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => 'uid-[current-user:uid]/apiary-photos',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'membership_entity_join_form' => FALSE,
+      'membership_entity_term_renew_form' => FALSE,
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 2,
     ),
   );
 
@@ -108,6 +173,7 @@ function beekeeper_apiaries_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Apiary location');
   t('Apiary notes');
+  t('Apiary photos');
 
   return $field_instances;
 }
