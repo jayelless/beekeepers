@@ -52,27 +52,6 @@ function beekeeper_memberships_menu_default_menu_links() {
     'customized' => 1,
     'parent_identifier' => 'user-menu_join:user/join',
   );
-  // Exported menu link: user-menu_join---junior-membership:user/join/junior-membership
-  $menu_links['user-menu_join---junior-membership:user/join/junior-membership'] = array(
-    'menu_name' => 'user-menu',
-    'link_path' => 'user/join/junior-membership',
-    'router_path' => 'user/join/junior-membership',
-    'link_title' => 'Join - Junior Membership',
-    'options' => array(
-      'attributes' => array(
-        'title' => 'Membership at reduced rate for young beekeepers',
-      ),
-      'identifier' => 'user-menu_join---junior-membership:user/join/junior-membership',
-    ),
-    'module' => 'system',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'customized' => 0,
-    'parent_identifier' => 'user-menu_join:user/join',
-  );
   // Exported menu link: user-menu_join---life-membership:user/join/life-membership
   $menu_links['user-menu_join---life-membership:user/join/life-membership'] = array(
     'menu_name' => 'user-menu',
@@ -92,27 +71,6 @@ function beekeeper_memberships_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => 0,
     'customized' => 1,
-    'parent_identifier' => 'user-menu_join:user/join',
-  );
-  // Exported menu link: user-menu_join---standard-membership:user/join/standard-membership
-  $menu_links['user-menu_join---standard-membership:user/join/standard-membership'] = array(
-    'menu_name' => 'user-menu',
-    'link_path' => 'user/join/standard-membership',
-    'router_path' => 'user/join/standard-membership',
-    'link_title' => 'Join - Standard Membership',
-    'options' => array(
-      'attributes' => array(
-        'title' => 'Standard membership for regular members',
-      ),
-      'identifier' => 'user-menu_join---standard-membership:user/join/standard-membership',
-    ),
-    'module' => 'system',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'customized' => 0,
     'parent_identifier' => 'user-menu_join:user/join',
   );
   // Exported menu link: user-menu_join:user/join
@@ -174,27 +132,6 @@ function beekeeper_memberships_menu_default_menu_links() {
     'customized' => 1,
     'parent_identifier' => 'user-menu_renew:user/renew',
   );
-  // Exported menu link: user-menu_renew---junior-membership:user/renew/junior-membership
-  $menu_links['user-menu_renew---junior-membership:user/renew/junior-membership'] = array(
-    'menu_name' => 'user-menu',
-    'link_path' => 'user/renew/junior-membership',
-    'router_path' => 'user/renew/junior-membership',
-    'link_title' => 'Renew - Junior Membership',
-    'options' => array(
-      'attributes' => array(
-        'title' => 'Membership at reduced rate for young beekeepers',
-      ),
-      'identifier' => 'user-menu_renew---junior-membership:user/renew/junior-membership',
-    ),
-    'module' => 'system',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'customized' => 0,
-    'parent_identifier' => 'user-menu_renew:user/renew',
-  );
   // Exported menu link: user-menu_renew---life-membership:user/renew/life-membership
   $menu_links['user-menu_renew---life-membership:user/renew/life-membership'] = array(
     'menu_name' => 'user-menu',
@@ -214,27 +151,6 @@ function beekeeper_memberships_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => 0,
     'customized' => 1,
-    'parent_identifier' => 'user-menu_renew:user/renew',
-  );
-  // Exported menu link: user-menu_renew---standard-membership:user/renew/standard-membership
-  $menu_links['user-menu_renew---standard-membership:user/renew/standard-membership'] = array(
-    'menu_name' => 'user-menu',
-    'link_path' => 'user/renew/standard-membership',
-    'router_path' => 'user/renew/standard-membership',
-    'link_title' => 'Renew - Standard Membership',
-    'options' => array(
-      'attributes' => array(
-        'title' => 'Standard membership for regular members',
-      ),
-      'identifier' => 'user-menu_renew---standard-membership:user/renew/standard-membership',
-    ),
-    'module' => 'system',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'customized' => 0,
     'parent_identifier' => 'user-menu_renew:user/renew',
   );
   // Exported menu link: user-menu_renew:user/renew
@@ -260,15 +176,11 @@ function beekeeper_memberships_menu_default_menu_links() {
   t('Join');
   t('Join - Dummy Membership');
   t('Join - Honorary Membership');
-  t('Join - Junior Membership');
   t('Join - Life Membership');
-  t('Join - Standard Membership');
   t('Renew');
   t('Renew - Dummy Membership');
   t('Renew - Honorary Membership');
-  t('Renew - Junior Membership');
   t('Renew - Life Membership');
-  t('Renew - Standard Membership');
 
   return $menu_links;
 }

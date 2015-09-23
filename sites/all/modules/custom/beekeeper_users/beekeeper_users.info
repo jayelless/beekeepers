@@ -62,5 +62,6 @@ features[user_role][] = Lifetime member
 features[user_role][] = Membership admin
 features[user_role][] = Standard member
 features[user_role][] = administrator
+features[views_view][] = member_lists
 features[views_view][] = user_admin
 project path = sites/default/files/features
