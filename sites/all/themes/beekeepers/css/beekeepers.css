@@ -114,3 +114,9 @@
   padding: 3px;
   border-radius: 3px;
 }
+
+/* while keeping the main menu to the left */
+.region-header .block-main-menu {
+  clear: none;
+  float: left;
+}
