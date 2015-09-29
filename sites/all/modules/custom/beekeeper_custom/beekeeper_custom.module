@@ -81,3 +81,48 @@ function beekeeper_custom_feeds_presave($source, $entity, $item) {
     $entity->field_phone_number[LANGUAGE_NONE][] = array('value' => trim($phone_number));
   }
 }
+
+/**
+ * Implements hook_block
+ */
+function beekeeper_custom_block_info() {
+  $blocks['curruser'] = array(
+    'info' => t('Current user'),
+    'cache' => DRUPAL_CACHE_PER_USER,
+  );
+  $blocks['ruleoff'] = array(
+    'info' => t('Rule off'),
+    'cache' => DRUPAL_CACHE_GLOBAL,
+  );
+  return $blocks;
+}
+
+
+/**
+ * Implements hook_block_view
+ */
+function beekeeper_custom_block_view($delta = '') {
+  $subject = NULL;
+  switch ($delta) {
+    case 'curruser':
+      global $user;
+      $content = '<span class="beekeeper-username">';
+      if ($user->uid) {
+        $content .= $user->name . '</span>&nbsp;&nbsp<a href="/user/logout">(logout)</a>';
+      }
+      else {
+        $content .= 'anonymous</span>&nbsp;&nbsp<a href="/user/login">(login)</a>';
+      }
+      break;
+    case 'ruleoff':
+      $content = '<div class="beekeeper-rule-off"></div>';
+      break;
+    default:
+      $content = '';
+  }
+  // Return array holding block information
+  return array(
+    'subject' => $subject,
+    'content' => array('#markup' => $content),
+  );
+}

@@ -86,15 +86,6 @@
       </div>
      <?php endif; ?>
 
-    <?php if ($messages || $page['help']): ?>
-      <div id="messages-help-wrapper">
-        <div class="container clearfix">
-          <?php print $messages; ?>
-          <?php print render($page['help']); ?>
-        </div>
-      </div>
-    <?php endif; ?>
-
     <div id="content-wrapper">
       <div class="container">
 
@@ -103,6 +94,15 @@
 
             <div id="content-column">
               <div class="content-inner">
+
+                <?php if ($messages || $page['help']): ?>
+                  <div id="messages-help-wrapper">
+                    <div class="container clearfix">
+                      <?php print $messages; ?>
+                      <?php print render($page['help']); ?>
+                    </div>
+                  </div>
+                <?php endif; ?>
 
                 <?php print render($page['highlighted']); ?>
 
