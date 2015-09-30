@@ -34,6 +34,7 @@ function beekeeper_commerce_user_default_permissions() {
   $permissions['administer commerce_order entities'] = array(
     'name' => 'administer commerce_order entities',
     'roles' => array(
+      'Committee member' => 'Committee member',
       'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
@@ -98,6 +99,7 @@ function beekeeper_commerce_user_default_permissions() {
   $permissions['administer payments'] = array(
     'name' => 'administer payments',
     'roles' => array(
+      'Committee member' => 'Committee member',
       'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
@@ -155,6 +157,7 @@ function beekeeper_commerce_user_default_permissions() {
   $permissions['create commerce_order entities'] = array(
     'name' => 'create commerce_order entities',
     'roles' => array(
+      'Committee member' => 'Committee member',
       'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
@@ -165,6 +168,7 @@ function beekeeper_commerce_user_default_permissions() {
   $permissions['create commerce_order entities of bundle commerce_order'] = array(
     'name' => 'create commerce_order entities of bundle commerce_order',
     'roles' => array(
+      'Committee member' => 'Committee member',
       'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
@@ -192,7 +196,9 @@ function beekeeper_commerce_user_default_permissions() {
   // Exported permission: 'create commerce_product entities of bundle nucleus_colony'.
   $permissions['create commerce_product entities of bundle nucleus_colony'] = array(
     'name' => 'create commerce_product entities of bundle nucleus_colony',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'commerce_product',
   );
 
@@ -209,6 +215,7 @@ function beekeeper_commerce_user_default_permissions() {
   $permissions['create payments'] = array(
     'name' => 'create payments',
     'roles' => array(
+      'Committee member' => 'Committee member',
       'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
@@ -219,6 +226,7 @@ function beekeeper_commerce_user_default_permissions() {
   $permissions['delete payments'] = array(
     'name' => 'delete payments',
     'roles' => array(
+      'Committee member' => 'Committee member',
       'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
@@ -229,6 +237,7 @@ function beekeeper_commerce_user_default_permissions() {
   $permissions['edit any commerce_customer_profile entity'] = array(
     'name' => 'edit any commerce_customer_profile entity',
     'roles' => array(
+      'Committee member' => 'Committee member',
       'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
@@ -239,6 +248,7 @@ function beekeeper_commerce_user_default_permissions() {
   $permissions['edit any commerce_customer_profile entity of bundle billing'] = array(
     'name' => 'edit any commerce_customer_profile entity of bundle billing',
     'roles' => array(
+      'Committee member' => 'Committee member',
       'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
@@ -249,6 +259,7 @@ function beekeeper_commerce_user_default_permissions() {
   $permissions['edit any commerce_order entity'] = array(
     'name' => 'edit any commerce_order entity',
     'roles' => array(
+      'Committee member' => 'Committee member',
       'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
@@ -259,6 +270,7 @@ function beekeeper_commerce_user_default_permissions() {
   $permissions['edit any commerce_order entity of bundle commerce_order'] = array(
     'name' => 'edit any commerce_order entity of bundle commerce_order',
     'roles' => array(
+      'Committee member' => 'Committee member',
       'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
@@ -286,7 +298,9 @@ function beekeeper_commerce_user_default_permissions() {
   // Exported permission: 'edit any commerce_product entity of bundle nucleus_colony'.
   $permissions['edit any commerce_product entity of bundle nucleus_colony'] = array(
     'name' => 'edit any commerce_product entity of bundle nucleus_colony',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'commerce_product',
   );
 
@@ -323,6 +337,7 @@ function beekeeper_commerce_user_default_permissions() {
   $permissions['edit own commerce_order entities'] = array(
     'name' => 'edit own commerce_order entities',
     'roles' => array(
+      'Committee member' => 'Committee member',
       'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
@@ -333,6 +348,7 @@ function beekeeper_commerce_user_default_permissions() {
   $permissions['edit own commerce_order entities of bundle commerce_order'] = array(
     'name' => 'edit own commerce_order entities of bundle commerce_order',
     'roles' => array(
+      'Committee member' => 'Committee member',
       'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
@@ -360,7 +376,9 @@ function beekeeper_commerce_user_default_permissions() {
   // Exported permission: 'edit own commerce_product entities of bundle nucleus_colony'.
   $permissions['edit own commerce_product entities of bundle nucleus_colony'] = array(
     'name' => 'edit own commerce_product entities of bundle nucleus_colony',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'commerce_product',
   );
 
@@ -377,6 +395,7 @@ function beekeeper_commerce_user_default_permissions() {
   $permissions['update payments'] = array(
     'name' => 'update payments',
     'roles' => array(
+      'Committee member' => 'Committee member',
       'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
@@ -387,6 +406,7 @@ function beekeeper_commerce_user_default_permissions() {
   $permissions['view any commerce_customer_profile entity'] = array(
     'name' => 'view any commerce_customer_profile entity',
     'roles' => array(
+      'Committee member' => 'Committee member',
       'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
@@ -397,6 +417,7 @@ function beekeeper_commerce_user_default_permissions() {
   $permissions['view any commerce_customer_profile entity of bundle billing'] = array(
     'name' => 'view any commerce_customer_profile entity of bundle billing',
     'roles' => array(
+      'Committee member' => 'Committee member',
       'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
@@ -407,6 +428,7 @@ function beekeeper_commerce_user_default_permissions() {
   $permissions['view any commerce_order entity'] = array(
     'name' => 'view any commerce_order entity',
     'roles' => array(
+      'Committee member' => 'Committee member',
       'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
@@ -417,6 +439,7 @@ function beekeeper_commerce_user_default_permissions() {
   $permissions['view any commerce_order entity of bundle commerce_order'] = array(
     'name' => 'view any commerce_order entity of bundle commerce_order',
     'roles' => array(
+      'Committee member' => 'Committee member',
       'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
@@ -444,7 +467,9 @@ function beekeeper_commerce_user_default_permissions() {
   // Exported permission: 'view any commerce_product entity of bundle nucleus_colony'.
   $permissions['view any commerce_product entity of bundle nucleus_colony'] = array(
     'name' => 'view any commerce_product entity of bundle nucleus_colony',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'commerce_product',
   );
 
@@ -493,6 +518,7 @@ function beekeeper_commerce_user_default_permissions() {
   $permissions['view own commerce_order entities of bundle commerce_order'] = array(
     'name' => 'view own commerce_order entities of bundle commerce_order',
     'roles' => array(
+      'Committee member' => 'Committee member',
       'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
@@ -520,7 +546,9 @@ function beekeeper_commerce_user_default_permissions() {
   // Exported permission: 'view own commerce_product entities of bundle nucleus_colony'.
   $permissions['view own commerce_product entities of bundle nucleus_colony'] = array(
     'name' => 'view own commerce_product entities of bundle nucleus_colony',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'commerce_product',
   );
 
@@ -537,6 +565,7 @@ function beekeeper_commerce_user_default_permissions() {
   $permissions['view payments'] = array(
     'name' => 'view payments',
     'roles' => array(
+      'Committee member' => 'Committee member',
       'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),

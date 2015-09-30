@@ -10,6 +10,28 @@
 function beekeeper_users_user_default_permissions() {
   $permissions = array();
 
+  // Exported permission: 'access administration menu'.
+  $permissions['access administration menu'] = array(
+    'name' => 'access administration menu',
+    'roles' => array(
+      'Committee member' => 'Committee member',
+      'Membership admin' => 'Membership admin',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'admin_menu',
+  );
+
+  // Exported permission: 'access administration pages'.
+  $permissions['access administration pages'] = array(
+    'name' => 'access administration pages',
+    'roles' => array(
+      'Committee member' => 'Committee member',
+      'Membership admin' => 'Membership admin',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'system',
+  );
+
   // Exported permission: 'access user profiles'.
   $permissions['access user profiles'] = array(
     'name' => 'access user profiles',

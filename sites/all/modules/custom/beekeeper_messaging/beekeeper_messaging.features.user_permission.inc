@@ -14,6 +14,7 @@ function beekeeper_messaging_user_default_permissions() {
   $permissions['create mass_contact content'] = array(
     'name' => 'create mass_contact content',
     'roles' => array(
+      'Committee member' => 'Committee member',
       'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
@@ -33,6 +34,8 @@ function beekeeper_messaging_user_default_permissions() {
   $permissions['delete own mass_contact content'] = array(
     'name' => 'delete own mass_contact content',
     'roles' => array(
+      'Committee member' => 'Committee member',
+      'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -51,6 +54,8 @@ function beekeeper_messaging_user_default_permissions() {
   $permissions['edit own mass_contact content'] = array(
     'name' => 'edit own mass_contact content',
     'roles' => array(
+      'Committee member' => 'Committee member',
+      'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -60,6 +65,7 @@ function beekeeper_messaging_user_default_permissions() {
   $permissions['mass contact administer'] = array(
     'name' => 'mass contact administer',
     'roles' => array(
+      'Committee member' => 'Committee member',
       'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
@@ -70,6 +76,7 @@ function beekeeper_messaging_user_default_permissions() {
   $permissions['mass contact archive messages'] = array(
     'name' => 'mass contact archive messages',
     'roles' => array(
+      'Committee member' => 'Committee member',
       'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
@@ -80,6 +87,7 @@ function beekeeper_messaging_user_default_permissions() {
   $permissions['mass contact change default sender information'] = array(
     'name' => 'mass contact change default sender information',
     'roles' => array(
+      'Committee member' => 'Committee member',
       'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
@@ -90,6 +98,7 @@ function beekeeper_messaging_user_default_permissions() {
   $permissions['mass contact include attachments'] = array(
     'name' => 'mass contact include attachments',
     'roles' => array(
+      'Committee member' => 'Committee member',
       'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
@@ -127,6 +136,7 @@ function beekeeper_messaging_user_default_permissions() {
   $permissions['mass contact send messages'] = array(
     'name' => 'mass contact send messages',
     'roles' => array(
+      'Committee member' => 'Committee member',
       'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
@@ -137,6 +147,7 @@ function beekeeper_messaging_user_default_permissions() {
   $permissions['mass contact send to users in the members category'] = array(
     'name' => 'mass contact send to users in the members category',
     'roles' => array(
+      'Committee member' => 'Committee member',
       'Membership admin' => 'Membership admin',
     ),
     'module' => 'mass_contact',

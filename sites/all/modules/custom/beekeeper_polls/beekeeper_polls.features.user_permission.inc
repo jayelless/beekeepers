@@ -23,6 +23,7 @@ function beekeeper_polls_user_default_permissions() {
   $permissions['create poll content'] = array(
     'name' => 'create poll content',
     'roles' => array(
+      'Committee member' => 'Committee member',
       'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
@@ -42,6 +43,7 @@ function beekeeper_polls_user_default_permissions() {
   $permissions['delete own poll content'] = array(
     'name' => 'delete own poll content',
     'roles' => array(
+      'Committee member' => 'Committee member',
       'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),
@@ -61,6 +63,7 @@ function beekeeper_polls_user_default_permissions() {
   $permissions['edit own poll content'] = array(
     'name' => 'edit own poll content',
     'roles' => array(
+      'Committee member' => 'Committee member',
       'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
     ),

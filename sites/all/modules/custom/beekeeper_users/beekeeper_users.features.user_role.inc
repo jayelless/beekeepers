@@ -10,6 +10,12 @@
 function beekeeper_users_user_default_roles() {
   $roles = array();
 
+  // Exported role: Committee member.
+  $roles['Committee member'] = array(
+    'name' => 'Committee member',
+    'weight' => 8,
+  );
+
   // Exported role: Honorary member.
   $roles['Honorary member'] = array(
     'name' => 'Honorary member',
