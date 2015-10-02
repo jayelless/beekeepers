@@ -98,7 +98,7 @@ function beekeeper_users_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 6,
+        'weight' => 5,
       ),
     ),
     'entity_type' => 'user',
@@ -133,7 +133,7 @@ function beekeeper_users_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_plain',
-        'weight' => 3,
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'user',
@@ -173,7 +173,7 @@ function beekeeper_users_field_default_field_instances() {
           'use_widget_handlers' => 1,
         ),
         'type' => 'addressfield_default',
-        'weight' => 4,
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'user',
@@ -209,6 +209,81 @@ function beekeeper_users_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'user-user-field_swarm_collect_details'
+  $field_instances['user-user-field_swarm_collect_details'] = array(
+    'bundle' => 'user',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Enter details such as the times you are available to collect and the areas you will collect from.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 7,
+      ),
+    ),
+    'entity_type' => 'user',
+    'field_name' => 'field_swarm_collect_details',
+    'label' => 'Swarm collect details',
+    'required' => 0,
+    'settings' => array(
+      'membership_entity_join_form' => FALSE,
+      'membership_entity_term_renew_form' => FALSE,
+      'text_processing' => 1,
+      'user_register_form' => 0,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 3,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 9,
+    ),
+  );
+
+  // Exported field_instance: 'user-user-field_swarm_collector'
+  $field_instances['user-user-field_swarm_collector'] = array(
+    'bundle' => 'user',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Tick the box if you are willing to collect swarms.  Please also fill in the details of your availability in the swarm collection details field',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 6,
+      ),
+    ),
+    'entity_type' => 'user',
+    'field_name' => 'field_swarm_collector',
+    'label' => 'Swarm collector',
+    'required' => 0,
+    'settings' => array(
+      'membership_entity_join_form' => FALSE,
+      'membership_entity_term_renew_form' => FALSE,
+      'user_register_form' => 0,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 0,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 8,
+    ),
+  );
+
   // Exported field_instance: 'user-user-field_user_location'
   $field_instances['user-user-field_user_location'] = array(
     'bundle' => 'user',
@@ -238,7 +313,7 @@ function beekeeper_users_field_default_field_instances() {
           'marker_icon' => '',
         ),
         'type' => 'geolocation_googlemaps_static',
-        'weight' => 5,
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'user',
@@ -264,12 +339,16 @@ function beekeeper_users_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Enter details such as the times you are available to collect and the areas you will collect from.');
   t('First Name');
   t('Last Name');
   t('Location Privacy');
   t('My Location');
   t('Postal address');
+  t('Swarm collect details');
+  t('Swarm collector');
   t('Telephone');
+  t('Tick the box if you are willing to collect swarms.  Please also fill in the details of your availability in the swarm collection details field');
 
   return $field_instances;
 }

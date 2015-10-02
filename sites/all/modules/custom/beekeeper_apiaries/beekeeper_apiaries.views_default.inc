@@ -35,6 +35,8 @@ function beekeeper_apiaries_views_default_views() {
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'google_map';
+  $handler->display->display_options['style_options']['map_center'] = '-41.2784452,174.7766105';
+  $handler->display->display_options['style_options']['map_zoom'] = '13';
   $handler->display->display_options['style_options']['map_min_zoom'] = '1';
   $handler->display->display_options['style_options']['map_max_zoom'] = '19';
   $handler->display->display_options['style_options']['marker_title_field'] = 'title';
@@ -114,11 +116,30 @@ function beekeeper_apiaries_views_default_views() {
     10 => 0,
   );
 
-  /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['path'] = 'apiaries';
+  /* Display: Page: All apiaries */
+  $handler = $view->new_display('page', 'Page: All apiaries', 'page');
+  $handler->display->display_options['path'] = 'apiaries-all';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'Apiaries';
+  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['context'] = 0;
+  $handler->display->display_options['menu']['context_only_inline'] = 0;
+
+  /* Display: Page: My apiaries */
+  $handler = $view->new_display('page', 'Page: My apiaries', 'page_1');
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Author uid */
+  $handler->display->display_options['arguments']['uid']['id'] = 'uid';
+  $handler->display->display_options['arguments']['uid']['table'] = 'node';
+  $handler->display->display_options['arguments']['uid']['field'] = 'uid';
+  $handler->display->display_options['arguments']['uid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['uid']['default_argument_type'] = 'current_user';
+  $handler->display->display_options['arguments']['uid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['uid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['uid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['path'] = 'apiaries-mine';
+  $handler->display->display_options['menu']['type'] = 'normal';
+  $handler->display->display_options['menu']['title'] = 'My Apiaries';
   $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
