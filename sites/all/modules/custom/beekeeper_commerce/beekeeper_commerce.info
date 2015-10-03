@@ -6,6 +6,7 @@ version = 7.x-1.0
 dependencies[] = addressfield
 dependencies[] = beekeeper_messaging
 dependencies[] = commerce
+dependencies[] = commerce_addressbook
 dependencies[] = commerce_cart
 dependencies[] = commerce_checkout
 dependencies[] = commerce_cop
