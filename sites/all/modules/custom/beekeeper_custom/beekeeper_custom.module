@@ -6,8 +6,51 @@
  * @return dateObject  The amended end date.
  */
 function beekeeper_custom_membership_entity_term_end_date_alter(&$end, &$term){
+  // Temp - if this is a dummy membership (type = "membership")
+  // then make the end date 31 May this year
+  if ($term->membership_entity_type == 'membership') {
+    $end = new DateObject(strtotime("31 May this year"), new DateTimezone($term->timezone));
+  }
+  else {
     $end = new DateObject(strtotime("31 May next year"), new DateTimezone($term->timezone));
   }
+}
+
+/**
+ * Use a hook exposed in the membership_entity_term module to recalculate the start date of the membership
+ * @param  dateObject &$start  The original Start date for membership
+ * @param  membership_term_entity  &$term  The term entity
+ * @return dateObject  The amended start date.
+ */
+function beekeeper_custom_membership_entity_term_start_date_alter(&$start, &$term){
+  // Temp - if this is a dummy membership (type = "membership")
+  // then make the start date 30 May this year
+  if ($term->membership_entity_type == 'membership') {
+    $start = new DateObject(strtotime("30 May this year"), new DateTimezone($term->timezone));
+  }
+}
+
+/**
+ * Implements hook_entity_presave
+ */
+function beekeeper_custom_entity_presave($entity, $type) {
+  switch ($type) {
+    case 'membership_entity':
+      if ($entity->type == 'membership') {
+        // This is a dummy membership, so convert it to an expired standard membership
+        $entity->type = 'standard_membership';
+        $entity->status = 0;
+      }
+      break;
+    case 'membership_entity_term':
+      if ($entity->membership_entity_type == 'membership') {
+        // This is a dummy membership, so convert it to an expired standard membership
+        $entity->membership_entity_type = 'standard_membership';
+        $entity->status = 0;
+      }
+      break;
+  }
+}
 
 
 /**
