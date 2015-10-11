@@ -10,9 +10,10 @@
 function beekeeper_memberships_default_rules_configuration() {
   $items = array();
   $items['beekeeper_membership_email_membership_renewal_reminder'] = entity_import('rules_config', '{ "beekeeper_membership_email_membership_renewal_reminder" : {
-      "LABEL" : "Email membership renewal reminder on May 31st",
+      "LABEL" : "Beekeepers: email membership renewal reminder on May 31st",
       "PLUGIN" : "reaction rule",
       "OWNER" : "rules",
+      "TAGS" : [ "Memberships" ],
       "REQUIRES" : [ "beekeeper_custom", "rules" ],
       "ON" : { "cron" : [] },
       "IF" : [ { "beekeeper_custom_rules_condition_send_renewal_notifications" : [] } ],
@@ -20,16 +21,17 @@ function beekeeper_memberships_default_rules_configuration() {
         { "mail_to_users_of_role" : {
             "roles" : { "value" : { "4" : "4", "5" : "5" } },
             "subject" : "[site:name] Membership Renewal Due",
-            "message" : "Hello Bee keepers!\\r\\n\\r\\nYour membership to [site:name] expires on the 31st May. If you have not done so already please login here [site:login-url] to renew your membership. You have a two month grace period to to renew your membership before it is cancelled.\\r\\n\\r\\nThank you.\\r\\n\\r\\nThe [site:name] Team."
+            "message" : "Hello Beekeepers!\\r\\n\\r\\nYour membership to [site:name] expires on the 31st May. If you have not done so already please login here [site:login-url] to renew your membership. You have a two month grace period to to renew your membership before it is cancelled.\\r\\n\\r\\nThank you.\\r\\n\\r\\nThe [site:name] Team."
           }
         }
       ]
     }
   }');
   $items['beekeeper_membership_set_expiry_date_of_new_memberships'] = entity_import('rules_config', '{ "beekeeper_membership_set_expiry_date_of_new_memberships" : {
-      "LABEL" : "Set expiry date of new memberships",
+      "LABEL" : "Beekeepers: set expiry date of new memberships",
       "PLUGIN" : "reaction rule",
       "OWNER" : "rules",
+      "TAGS" : [ "Memberships" ],
       "REQUIRES" : [ "rules", "commerce", "membership_entity" ],
       "ON" : { "membership_entity_insert" : [] },
       "IF" : [
@@ -61,7 +63,7 @@ function beekeeper_memberships_default_rules_configuration() {
     }
   }');
   $items['beekeepers_membership_activate_membership_term'] = entity_import('rules_config', '{ "beekeepers_membership_activate_membership_term" : {
-      "LABEL" : "Activate membership term when payment complete",
+      "LABEL" : "Beekeepers: activate membership when payment complete",
       "PLUGIN" : "reaction rule",
       "OWNER" : "rules",
       "TAGS" : [ "Memberships" ],
@@ -91,7 +93,8 @@ function beekeeper_memberships_default_rules_configuration() {
             "to" : "[commerce-order:owner] \\u003C[commerce-order:mail]\\u003E",
             "subject" : "[site:name]: Order #[commerce-order:order-id]"
           }
-        }
+        },
+        { "user_unblock" : { "account" : [ "commerce-order:owner" ] } }
       ]
     }
   }');
