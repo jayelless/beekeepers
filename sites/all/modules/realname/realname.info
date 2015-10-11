@@ -2,12 +2,9 @@ name = Real name
 description = Provides token-based name displays for users.
 core = 7.x
 dependencies[] = token
-files[] = realname.module
-files[] = realname.admin.inc
-files[] = realname.pages.inc
-files[] = realname.tokens.inc
-files[] = realname.test
-files[] = realname.install
+files[] = realname_handler_argument_user_uid.inc
+files[] = realname_handler_argument_user_username.inc
+files[] = realname_handler_argument_user_realname.inc
 configure = admin/config/people/realname
 
 ; Information added by Drupal.org packaging script on 2014-02-23
