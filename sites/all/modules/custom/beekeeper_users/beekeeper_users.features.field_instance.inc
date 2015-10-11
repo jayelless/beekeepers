@@ -42,7 +42,7 @@ function beekeeper_users_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 1,
+      'weight' => -19,
     ),
   );
 
@@ -78,7 +78,7 @@ function beekeeper_users_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 2,
+      'weight' => -18,
     ),
   );
 
@@ -91,7 +91,7 @@ function beekeeper_users_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Checking this box will mean that your address details are kept private and not made available to other members, and conversely, you will also not be able to see other members details.',
     'display' => array(
       'default' => array(
         'label' => 'inline',
@@ -117,7 +117,7 @@ function beekeeper_users_field_default_field_instances() {
         'display_label' => 0,
       ),
       'type' => 'options_onoff',
-      'weight' => 7,
+      'weight' => -14,
     ),
   );
 
@@ -126,7 +126,7 @@ function beekeeper_users_field_default_field_instances() {
     'bundle' => 'user',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Enter one or more contact phone numbers.  Use the "Add another item" button for second and subsequent numbers.  It is recommended that each number is prefixed with a brief description like "Home: "',
     'display' => array(
       'default' => array(
         'label' => 'inline',
@@ -139,11 +139,11 @@ function beekeeper_users_field_default_field_instances() {
     'entity_type' => 'user',
     'field_name' => 'field_phone_number',
     'label' => 'Telephone',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'membership_entity_join_form' => FALSE,
       'membership_entity_term_renew_form' => FALSE,
-      'user_register_form' => 0,
+      'user_register_form' => 1,
     ),
     'widget' => array(
       'active' => 1,
@@ -152,7 +152,7 @@ function beekeeper_users_field_default_field_instances() {
         'placeholder' => '',
       ),
       'type' => 'telephone_default',
-      'weight' => 3,
+      'weight' => -17,
     ),
   );
 
@@ -161,7 +161,7 @@ function beekeeper_users_field_default_field_instances() {
     'bundle' => 'user',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Enter your home or postal address here.  The first address field should be used for the street name and number unless you need to specify a flat or apartment. Please also specify your suburb if possible.',
     'display' => array(
       'default' => array(
         'label' => 'inline',
@@ -179,11 +179,11 @@ function beekeeper_users_field_default_field_instances() {
     'entity_type' => 'user',
     'field_name' => 'field_postal_address',
     'label' => 'Postal address',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'membership_entity_join_form' => FALSE,
       'membership_entity_term_renew_form' => FALSE,
-      'user_register_form' => 0,
+      'user_register_form' => 1,
     ),
     'widget' => array(
       'active' => 1,
@@ -195,9 +195,9 @@ function beekeeper_users_field_default_field_instances() {
         'default_country' => 'site_default',
         'format_handlers' => array(
           'address' => 'address',
+          'address-hide-country' => 'address-hide-country',
           'address-hide-postal-code' => 0,
           'address-hide-street' => 0,
-          'address-hide-country' => 0,
           'organisation' => 0,
           'name-full' => 0,
           'name-oneline' => 0,
@@ -205,7 +205,7 @@ function beekeeper_users_field_default_field_instances() {
         ),
       ),
       'type' => 'addressfield_standard',
-      'weight' => 4,
+      'weight' => -16,
     ),
   );
 
@@ -214,7 +214,7 @@ function beekeeper_users_field_default_field_instances() {
     'bundle' => 'user',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Enter details such as the times you are available to collect and the areas you will collect from.',
+    'description' => 'Enter details such as the times you are available to collect and the areas you will collect from.  People needing a swarm collected will see you name and phone number(s) along with this information.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -241,7 +241,7 @@ function beekeeper_users_field_default_field_instances() {
         'rows' => 3,
       ),
       'type' => 'text_textarea',
-      'weight' => 9,
+      'weight' => -11,
     ),
   );
 
@@ -254,7 +254,7 @@ function beekeeper_users_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => 'Tick the box if you are willing to collect swarms.  Please also fill in the details of your availability in the swarm collection details field',
+    'description' => 'Tick the box if you are willing to collect swarms.  Please also fill in the details of your availability in the swarm collection details field.  Please note, that you should also set your location details so that you will be listed for swarms in your vicinty.',
     'display' => array(
       'default' => array(
         'label' => 'inline',
@@ -280,7 +280,7 @@ function beekeeper_users_field_default_field_instances() {
         'display_label' => 0,
       ),
       'type' => 'options_onoff',
-      'weight' => 8,
+      'weight' => -12,
     ),
   );
 
@@ -333,13 +333,16 @@ function beekeeper_users_field_default_field_instances() {
         'scrollwheel' => 0,
       ),
       'type' => 'geolocation_googlemap',
-      'weight' => 6,
+      'weight' => -15,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Enter details such as the times you are available to collect and the areas you will collect from.');
+  t('Checking this box will mean that your address details are kept private and not made available to other members, and conversely, you will also not be able to see other members details.');
+  t('Enter details such as the times you are available to collect and the areas you will collect from.  People needing a swarm collected will see you name and phone number(s) along with this information.');
+  t('Enter one or more contact phone numbers.  Use the "Add another item" button for second and subsequent numbers.  It is recommended that each number is prefixed with a brief description like "Home: "');
+  t('Enter your home or postal address here.  The first address field should be used for the street name and number unless you need to specify a flat or apartment. Please also specify your suburb if possible.');
   t('First Name');
   t('Last Name');
   t('Location Privacy');
@@ -348,7 +351,7 @@ function beekeeper_users_field_default_field_instances() {
   t('Swarm collect details');
   t('Swarm collector');
   t('Telephone');
-  t('Tick the box if you are willing to collect swarms.  Please also fill in the details of your availability in the swarm collection details field');
+  t('Tick the box if you are willing to collect swarms.  Please also fill in the details of your availability in the swarm collection details field.  Please note, that you should also set your location details so that you will be listed for swarms in your vicinty.');
 
   return $field_instances;
 }
