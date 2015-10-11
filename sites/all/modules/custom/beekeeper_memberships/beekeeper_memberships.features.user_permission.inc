@@ -203,6 +203,7 @@ function beekeeper_memberships_user_default_permissions() {
       'Junior member' => 'Junior member',
       'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'membership_entity_type',
   );
@@ -213,7 +214,6 @@ function beekeeper_memberships_user_default_permissions() {
     'roles' => array(
       'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
-      'authenticated user' => 'authenticated user',
     ),
     'module' => 'membership_entity_type',
   );
@@ -225,6 +225,7 @@ function beekeeper_memberships_user_default_permissions() {
       'Junior member' => 'Junior member',
       'Membership admin' => 'Membership admin',
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'membership_entity_type',
   );
@@ -476,6 +477,7 @@ function beekeeper_memberships_user_default_permissions() {
       'Membership admin' => 'Membership admin',
       'Standard member' => 'Standard member',
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'membership_entity_type',
   );
@@ -497,6 +499,7 @@ function beekeeper_memberships_user_default_permissions() {
       'Membership admin' => 'Membership admin',
       'Standard member' => 'Standard member',
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'membership_entity_type',
   );
