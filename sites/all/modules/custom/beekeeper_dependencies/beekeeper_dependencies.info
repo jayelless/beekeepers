@@ -62,6 +62,7 @@ dependencies[] = rules
 dependencies[] = rules_admin
 dependencies[] = rules_scheduler
 dependencies[] = select_or_other
+dependencies[] = strongarm
 dependencies[] = taxonomy
 dependencies[] = telephone
 dependencies[] = token
