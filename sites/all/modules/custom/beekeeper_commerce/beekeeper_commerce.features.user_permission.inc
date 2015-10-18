@@ -30,6 +30,15 @@ function beekeeper_commerce_user_default_permissions() {
     'module' => 'commerce_customer',
   );
 
+  // Exported permission: 'administer commerce_extra'.
+  $permissions['administer commerce_extra'] = array(
+    'name' => 'administer commerce_extra',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'commerce_extra',
+  );
+
   // Exported permission: 'administer commerce_order entities'.
   $permissions['administer commerce_order entities'] = array(
     'name' => 'administer commerce_order entities',

@@ -169,3 +169,41 @@ function beekeeper_custom_block_view($delta = '') {
     'content' => array('#markup' => $content),
   );
 }
+
+
+/**
+ * Implements hook_form_FORM_ID_alter
+ *
+ * Add the user's postal address as the default address in the billing pane
+ */
+function beekeeper_custom_form_commerce_checkout_form_checkout_alter(&$form, &$form_state) {
+  $account = user_load_by_mail($form['account']['login']['mail']['#default_value']);
+  if (isset($account->field_postal_address) && !empty($account->field_postal_address)) {
+    // Loop thru user address values and add them as default values
+    $langcode = NULL;
+    $langcode = is_null($langcode) ? LANGUAGE_NONE : $langcode;
+    foreach ($account->field_postal_address[$langcode][0] as $key => $value) {
+      if (isset($form['customer_profile_billing']['commerce_customer_address'][$langcode][0]['#address'][$key])) {
+        $form['customer_profile_billing']['commerce_customer_address'][$langcode][0]['#address'][$key] = $value;
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_user_presave
+ *
+ * Copies the user's name to the name compontnents of the postal address
+ */
+function beekeeper_custom_user_presave(&$edit, $account, $category) {
+  $langcode = NULL;
+  $langcode = is_null($langcode) ? LANGUAGE_NONE : $langcode;
+  if ($edit & isset($edit['field_postal_address'])) {
+    // Copy the name fields to the postal address
+    $first_name = isset($edit['field_first_name']) ? $edit['field_first_name'][$langcode][0]['value'] : 'login:';
+    $last_name = isset($edit['field_last_name']) ? $edit['field_last_name'][$langcode][0]['value'] : $account->name;
+    $edit['field_postal_address'][$langcode][0]['name_line'] = $first_name . ' ' . $last_name;
+    $edit['field_postal_address'][$langcode][0]['first_name'] = $first_name;
+    $edit['field_postal_address'][$langcode][0]['last_name'] = $last_name;
+  }
+}
