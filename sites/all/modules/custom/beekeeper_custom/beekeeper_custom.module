@@ -218,10 +218,12 @@ function beekeeper_custom_mail_alter(&$message) {
   // Note that by setting the default to TRUE, the default setting for the system is to be
   // a development environment. Set this to FALSE to have the default be a live environment.
   if(variable_get('development_environment', TRUE)) {
-    // First: Prevent the mail from being sent
-    $message['send'] = FALSE;
-    // Next: Log the mail so it can be debugged if necessary
+    // Log the mail so it can be debugged if necessary
     watchdog('beekeeper', 'The following email was not sent: !message',
       array('!message' => '<pre>' . print_r($message, TRUE) . '</pre>'));
+    // Prevent the mail from being sent
+    $message['send'] = FALSE;
+    // leave a message for the user
+    drupal_set_message(t('Mail message NOT sent to @to', array('@to'=>$message['to'])));
   }
 }
