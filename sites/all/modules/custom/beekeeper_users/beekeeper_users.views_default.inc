@@ -29,6 +29,7 @@ function beekeeper_users_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['reset_button'] = TRUE;
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '50';
   $handler->display->display_options['style_plugin'] = 'google_map';
@@ -210,6 +211,12 @@ function beekeeper_users_views_default_views() {
     3 => '3',
     8 => '8',
   );
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '100';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
@@ -333,6 +340,175 @@ function beekeeper_users_views_default_views() {
     3 => '3',
   );
   $handler->display->display_options['filters']['status_1']['group'] = 1;
+  /* Filter criterion: Realname: Real name */
+  $handler->display->display_options['filters']['realname']['id'] = 'realname';
+  $handler->display->display_options['filters']['realname']['table'] = 'realname';
+  $handler->display->display_options['filters']['realname']['field'] = 'realname';
+  $handler->display->display_options['filters']['realname']['operator'] = 'contains';
+  $handler->display->display_options['filters']['realname']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['realname']['expose']['operator_id'] = 'realname_op';
+  $handler->display->display_options['filters']['realname']['expose']['label'] = 'Name';
+  $handler->display->display_options['filters']['realname']['expose']['operator'] = 'realname_op';
+  $handler->display->display_options['filters']['realname']['expose']['identifier'] = 'realname';
+  $handler->display->display_options['filters']['realname']['expose']['remember'] = TRUE;
+  $handler->display->display_options['filters']['realname']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    5 => 0,
+    6 => 0,
+    7 => 0,
+    8 => 0,
+    9 => 0,
+  );
+  /* Filter criterion: User: Username */
+  $handler->display->display_options['filters']['username']['id'] = 'username';
+  $handler->display->display_options['filters']['username']['table'] = 'users';
+  $handler->display->display_options['filters']['username']['field'] = 'username';
+  $handler->display->display_options['filters']['username']['operator'] = 'contains';
+  $handler->display->display_options['filters']['username']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['username']['expose']['operator_id'] = 'username_op';
+  $handler->display->display_options['filters']['username']['expose']['label'] = 'Username';
+  $handler->display->display_options['filters']['username']['expose']['operator'] = 'username_op';
+  $handler->display->display_options['filters']['username']['expose']['identifier'] = 'username';
+  $handler->display->display_options['filters']['username']['expose']['remember'] = TRUE;
+  $handler->display->display_options['filters']['username']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    5 => 0,
+    6 => 0,
+    7 => 0,
+    8 => 0,
+    9 => 0,
+  );
+  /* Filter criterion: User: E-mail */
+  $handler->display->display_options['filters']['mail']['id'] = 'mail';
+  $handler->display->display_options['filters']['mail']['table'] = 'users';
+  $handler->display->display_options['filters']['mail']['field'] = 'mail';
+  $handler->display->display_options['filters']['mail']['operator'] = 'contains';
+  $handler->display->display_options['filters']['mail']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['mail']['expose']['operator_id'] = 'mail_op';
+  $handler->display->display_options['filters']['mail']['expose']['label'] = 'E-mail';
+  $handler->display->display_options['filters']['mail']['expose']['operator'] = 'mail_op';
+  $handler->display->display_options['filters']['mail']['expose']['identifier'] = 'mail';
+  $handler->display->display_options['filters']['mail']['expose']['remember'] = TRUE;
+  $handler->display->display_options['filters']['mail']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    5 => 0,
+    6 => 0,
+    7 => 0,
+    8 => 0,
+    9 => 0,
+  );
+  /* Filter criterion: User: Postal address - Dependent locality */
+  $handler->display->display_options['filters']['field_postal_address_dependent_locality']['id'] = 'field_postal_address_dependent_locality';
+  $handler->display->display_options['filters']['field_postal_address_dependent_locality']['table'] = 'field_data_field_postal_address';
+  $handler->display->display_options['filters']['field_postal_address_dependent_locality']['field'] = 'field_postal_address_dependent_locality';
+  $handler->display->display_options['filters']['field_postal_address_dependent_locality']['operator'] = 'contains';
+  $handler->display->display_options['filters']['field_postal_address_dependent_locality']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_postal_address_dependent_locality']['expose']['operator_id'] = 'field_postal_address_dependent_locality_op';
+  $handler->display->display_options['filters']['field_postal_address_dependent_locality']['expose']['label'] = 'Suburb';
+  $handler->display->display_options['filters']['field_postal_address_dependent_locality']['expose']['operator'] = 'field_postal_address_dependent_locality_op';
+  $handler->display->display_options['filters']['field_postal_address_dependent_locality']['expose']['identifier'] = 'field_postal_address_dependent_locality';
+  $handler->display->display_options['filters']['field_postal_address_dependent_locality']['expose']['remember'] = TRUE;
+  $handler->display->display_options['filters']['field_postal_address_dependent_locality']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    5 => 0,
+    6 => 0,
+    7 => 0,
+    8 => 0,
+    9 => 0,
+  );
+  /* Filter criterion: User: Postal address - Locality (i.e. City) */
+  $handler->display->display_options['filters']['field_postal_address_locality']['id'] = 'field_postal_address_locality';
+  $handler->display->display_options['filters']['field_postal_address_locality']['table'] = 'field_data_field_postal_address';
+  $handler->display->display_options['filters']['field_postal_address_locality']['field'] = 'field_postal_address_locality';
+  $handler->display->display_options['filters']['field_postal_address_locality']['operator'] = 'contains';
+  $handler->display->display_options['filters']['field_postal_address_locality']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_postal_address_locality']['expose']['operator_id'] = 'field_postal_address_locality_op';
+  $handler->display->display_options['filters']['field_postal_address_locality']['expose']['label'] = 'Town/city';
+  $handler->display->display_options['filters']['field_postal_address_locality']['expose']['operator'] = 'field_postal_address_locality_op';
+  $handler->display->display_options['filters']['field_postal_address_locality']['expose']['identifier'] = 'field_postal_address_locality';
+  $handler->display->display_options['filters']['field_postal_address_locality']['expose']['remember'] = TRUE;
+  $handler->display->display_options['filters']['field_postal_address_locality']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    5 => 0,
+    6 => 0,
+    7 => 0,
+    8 => 0,
+    9 => 0,
+  );
+  /* Filter criterion: Membership: Membership status */
+  $handler->display->display_options['filters']['status_2']['id'] = 'status_2';
+  $handler->display->display_options['filters']['status_2']['table'] = 'membership_entity';
+  $handler->display->display_options['filters']['status_2']['field'] = 'status';
+  $handler->display->display_options['filters']['status_2']['relationship'] = 'membership_entity';
+  $handler->display->display_options['filters']['status_2']['value'] = array(
+    0 => '0',
+    1 => '1',
+    2 => '2',
+    3 => '3',
+  );
+  $handler->display->display_options['filters']['status_2']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['status_2']['expose']['operator_id'] = 'status_2_op';
+  $handler->display->display_options['filters']['status_2']['expose']['label'] = 'Membership status';
+  $handler->display->display_options['filters']['status_2']['expose']['operator'] = 'status_2_op';
+  $handler->display->display_options['filters']['status_2']['expose']['identifier'] = 'status_2';
+  $handler->display->display_options['filters']['status_2']['expose']['remember'] = TRUE;
+  $handler->display->display_options['filters']['status_2']['expose']['multiple'] = TRUE;
+  $handler->display->display_options['filters']['status_2']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    5 => 0,
+    6 => 0,
+    7 => 0,
+    8 => 0,
+    9 => 0,
+  );
+  /* Filter criterion: Membership: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'membership_entity';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['relationship'] = 'membership_entity';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'honorary_membership' => 'honorary_membership',
+    'junior_membership' => 'junior_membership',
+    'life_membership' => 'life_membership',
+    'standard_membership' => 'standard_membership',
+  );
+  $handler->display->display_options['filters']['type']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['type']['expose']['operator_id'] = 'type_op';
+  $handler->display->display_options['filters']['type']['expose']['label'] = 'Type';
+  $handler->display->display_options['filters']['type']['expose']['operator'] = 'type_op';
+  $handler->display->display_options['filters']['type']['expose']['identifier'] = 'type';
+  $handler->display->display_options['filters']['type']['expose']['remember'] = TRUE;
+  $handler->display->display_options['filters']['type']['expose']['multiple'] = TRUE;
+  $handler->display->display_options['filters']['type']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    5 => 0,
+    6 => 0,
+    7 => 0,
+    8 => 0,
+    9 => 0,
+  );
+  $handler->display->display_options['filters']['type']['expose']['reduce'] = TRUE;
   $handler->display->display_options['path'] = 'members-list';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'List members';
