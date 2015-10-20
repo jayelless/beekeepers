@@ -67,13 +67,6 @@ function beekeeper_users_views_default_views() {
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
-  /* Field: User: My Location */
-  $handler->display->display_options['fields']['field_user_location']['id'] = 'field_user_location';
-  $handler->display->display_options['fields']['field_user_location']['table'] = 'field_data_field_user_location';
-  $handler->display->display_options['fields']['field_user_location']['field'] = 'field_user_location';
-  $handler->display->display_options['fields']['field_user_location']['label'] = '';
-  $handler->display->display_options['fields']['field_user_location']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_user_location']['click_sort_column'] = 'lat';
   /* Field: Realname: Real name */
   $handler->display->display_options['fields']['realname']['id'] = 'realname';
   $handler->display->display_options['fields']['realname']['table'] = 'realname';
@@ -91,32 +84,6 @@ function beekeeper_users_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Geolocation: Distance */
-  $handler->display->display_options['filters']['field_user_location_distance']['id'] = 'field_user_location_distance';
-  $handler->display->display_options['filters']['field_user_location_distance']['table'] = 'field_data_field_user_location';
-  $handler->display->display_options['filters']['field_user_location_distance']['field'] = 'field_user_location_distance';
-  $handler->display->display_options['filters']['field_user_location_distance']['value'] = array(
-    'latitude' => '',
-    'longitude' => '',
-    'search_distance' => '100',
-    'search_units' => 'kilometers',
-    'type' => 'googlemap',
-  );
-  $handler->display->display_options['filters']['field_user_location_distance']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_user_location_distance']['expose']['operator_id'] = '';
-  $handler->display->display_options['filters']['field_user_location_distance']['expose']['label'] = 'Distance';
-  $handler->display->display_options['filters']['field_user_location_distance']['expose']['operator'] = 'field_user_location_distance_op';
-  $handler->display->display_options['filters']['field_user_location_distance']['expose']['identifier'] = 'field_user_location_distance';
-  $handler->display->display_options['filters']['field_user_location_distance']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    3 => 0,
-    4 => 0,
-    5 => 0,
-    6 => 0,
-    7 => 0,
-    8 => 0,
-  );
 
   /* Display: Members view all */
   $handler = $view->new_display('page', 'Members view all', 'page');
@@ -516,6 +483,79 @@ function beekeeper_users_views_default_views() {
   $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
+
+  /* Display: Data export */
+  $handler = $view->new_display('views_data_export', 'Data export', 'views_data_export_1');
+  $handler->display->display_options['defaults']['access'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'role';
+  $handler->display->display_options['access']['role'] = array(
+    3 => '3',
+    8 => '8',
+  );
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'views_data_export_csv';
+  $handler->display->display_options['style_options']['provide_file'] = 1;
+  $handler->display->display_options['style_options']['parent_sort'] = 0;
+  $handler->display->display_options['style_options']['quote'] = 1;
+  $handler->display->display_options['style_options']['trim'] = 1;
+  $handler->display->display_options['style_options']['replace_newlines'] = 0;
+  $handler->display->display_options['style_options']['header'] = 1;
+  $handler->display->display_options['style_options']['keep_html'] = 0;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Realname: Real name */
+  $handler->display->display_options['fields']['realname']['id'] = 'realname';
+  $handler->display->display_options['fields']['realname']['table'] = 'realname';
+  $handler->display->display_options['fields']['realname']['field'] = 'realname';
+  $handler->display->display_options['fields']['realname']['label'] = 'Name';
+  /* Field: User: Username */
+  $handler->display->display_options['fields']['username']['id'] = 'username';
+  $handler->display->display_options['fields']['username']['table'] = 'users';
+  $handler->display->display_options['fields']['username']['field'] = 'username';
+  $handler->display->display_options['fields']['username']['link_to_user'] = FALSE;
+  /* Field: User: E-mail */
+  $handler->display->display_options['fields']['mail']['id'] = 'mail';
+  $handler->display->display_options['fields']['mail']['table'] = 'users';
+  $handler->display->display_options['fields']['mail']['field'] = 'mail';
+  $handler->display->display_options['fields']['mail']['link_to_user'] = '0';
+  /* Field: User: Postal address - Thoroughfare (i.e. Street address) */
+  $handler->display->display_options['fields']['field_postal_address_thoroughfare']['id'] = 'field_postal_address_thoroughfare';
+  $handler->display->display_options['fields']['field_postal_address_thoroughfare']['table'] = 'field_data_field_postal_address';
+  $handler->display->display_options['fields']['field_postal_address_thoroughfare']['field'] = 'field_postal_address_thoroughfare';
+  $handler->display->display_options['fields']['field_postal_address_thoroughfare']['label'] = 'Street';
+  /* Field: User: Postal address - Premise (i.e. Apartment / Suite number) */
+  $handler->display->display_options['fields']['field_postal_address_premise']['id'] = 'field_postal_address_premise';
+  $handler->display->display_options['fields']['field_postal_address_premise']['table'] = 'field_data_field_postal_address';
+  $handler->display->display_options['fields']['field_postal_address_premise']['field'] = 'field_postal_address_premise';
+  $handler->display->display_options['fields']['field_postal_address_premise']['label'] = 'Address-2';
+  /* Field: User: Postal address - Dependent locality */
+  $handler->display->display_options['fields']['field_postal_address_dependent_locality']['id'] = 'field_postal_address_dependent_locality';
+  $handler->display->display_options['fields']['field_postal_address_dependent_locality']['table'] = 'field_data_field_postal_address';
+  $handler->display->display_options['fields']['field_postal_address_dependent_locality']['field'] = 'field_postal_address_dependent_locality';
+  $handler->display->display_options['fields']['field_postal_address_dependent_locality']['label'] = 'Suburb';
+  /* Field: User: Postal address - Locality (i.e. City) */
+  $handler->display->display_options['fields']['field_postal_address_locality']['id'] = 'field_postal_address_locality';
+  $handler->display->display_options['fields']['field_postal_address_locality']['table'] = 'field_data_field_postal_address';
+  $handler->display->display_options['fields']['field_postal_address_locality']['field'] = 'field_postal_address_locality';
+  $handler->display->display_options['fields']['field_postal_address_locality']['label'] = 'Town-City';
+  /* Field: User: Postal address - Postal code */
+  $handler->display->display_options['fields']['field_postal_address_postal_code']['id'] = 'field_postal_address_postal_code';
+  $handler->display->display_options['fields']['field_postal_address_postal_code']['table'] = 'field_data_field_postal_address';
+  $handler->display->display_options['fields']['field_postal_address_postal_code']['field'] = 'field_postal_address_postal_code';
+  $handler->display->display_options['fields']['field_postal_address_postal_code']['label'] = 'Postcode';
+  /* Field: Membership: Membership status */
+  $handler->display->display_options['fields']['status']['id'] = 'status';
+  $handler->display->display_options['fields']['status']['table'] = 'membership_entity';
+  $handler->display->display_options['fields']['status']['field'] = 'status';
+  $handler->display->display_options['fields']['status']['relationship'] = 'membership_entity';
+  $handler->display->display_options['fields']['status']['label'] = 'Membership-status';
+  /* Field: Membership: Type */
+  $handler->display->display_options['fields']['type']['id'] = 'type';
+  $handler->display->display_options['fields']['type']['table'] = 'membership_entity';
+  $handler->display->display_options['fields']['type']['field'] = 'type';
+  $handler->display->display_options['fields']['type']['relationship'] = 'membership_entity';
+  $handler->display->display_options['fields']['type']['label'] = 'Membership-type';
+  $handler->display->display_options['path'] = 'members-export';
   $export['member_lists'] = $view;
 
   $view = new view();
