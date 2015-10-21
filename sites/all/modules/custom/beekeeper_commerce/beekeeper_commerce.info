@@ -67,6 +67,7 @@ features[field_instance][] = commerce_product-product-commerce_price
 features[field_instance][] = node-product_display-body
 features[field_instance][] = node-product_display-field_product
 features[node][] = product_display
+features[rules_config][] = beekeeper_commerce_advise_when_payment_complete
 features[rules_config][] = beekeeper_commerce_bank_transfer
 features[user_permission][] = access checkout
 features[user_permission][] = administer commerce_customer_profile entities
