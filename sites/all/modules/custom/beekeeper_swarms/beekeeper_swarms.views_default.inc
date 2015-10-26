@@ -139,23 +139,6 @@ function beekeeper_swarms_views_default_views() {
     9 => 0,
   );
 
-  /* Display: Page: View swarm collectors */
-  $handler = $view->new_display('page', 'Page: View swarm collectors', 'page');
-  $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Swarm collectors';
-  $handler->display->display_options['defaults']['access'] = FALSE;
-  $handler->display->display_options['access']['type'] = 'role';
-  $handler->display->display_options['access']['role'] = array(
-    1 => '1',
-    2 => '2',
-  );
-  $handler->display->display_options['path'] = 'swarms/view-collectors';
-  $handler->display->display_options['menu']['type'] = 'normal';
-  $handler->display->display_options['menu']['title'] = 'Swarm collectors';
-  $handler->display->display_options['menu']['weight'] = '0';
-  $handler->display->display_options['menu']['context'] = 0;
-  $handler->display->display_options['menu']['context_only_inline'] = 0;
-
   /* Display: Page: List swarm collectors */
   $handler = $view->new_display('page', 'Page: List swarm collectors', 'page_2');
   $handler->display->display_options['defaults']['access'] = FALSE;
@@ -307,6 +290,60 @@ function beekeeper_swarms_views_default_views() {
   $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
+
+  /* Display: Page: View swarm collectors */
+  $handler = $view->new_display('page', 'Page: View swarm collectors', 'page');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Swarm collectors';
+  $handler->display->display_options['defaults']['access'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'role';
+  $handler->display->display_options['access']['role'] = array(
+    1 => '1',
+    2 => '2',
+  );
+  $handler->display->display_options['path'] = 'swarms/view-collectors';
+  $handler->display->display_options['menu']['type'] = 'normal';
+  $handler->display->display_options['menu']['title'] = 'Swarm collectors';
+  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['context'] = 0;
+  $handler->display->display_options['menu']['context_only_inline'] = 0;
+
+  /* Display: Pane: Swarm collectors */
+  $handler = $view->new_display('panel_pane', 'Pane: Swarm collectors', 'panel_pane_1');
+  $handler->display->display_options['defaults']['access'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'role';
+  $handler->display->display_options['access']['role'] = array(
+    1 => '1',
+    2 => '2',
+  );
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'google_map';
+  $handler->display->display_options['style_options']['map_height'] = '600px';
+  $handler->display->display_options['style_options']['map_center'] = '-41.2784228,174.776692';
+  $handler->display->display_options['style_options']['map_zoom'] = '10';
+  $handler->display->display_options['style_options']['map_min_zoom'] = '1';
+  $handler->display->display_options['style_options']['map_max_zoom'] = '19';
+  $handler->display->display_options['style_options']['marker_title_field'] = 'realname';
+  $handler->display->display_options['style_options']['use_marker_clusterer'] = 0;
+  $handler->display->display_options['style_options']['marker_clusterer'] = array(
+    'grid_size' => '',
+    'max_zoom' => '',
+    'icon_url' => '',
+    'icon_size' => '',
+  );
+  $handler->display->display_options['style_options']['map_auto_center_and_zoom'] = 1;
+  $handler->display->display_options['style_options']['map_disable_scroll_wheel'] = 0;
+  $handler->display->display_options['style_options']['map_disable_double_click_zoom'] = 0;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['inline'] = array(
+    'realname' => 'realname',
+    'field_phone_number' => 'field_phone_number',
+  );
+  $handler->display->display_options['row_options']['separator'] = ', ';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['inherit_panels_path'] = '1';
   $export['swarm_collection'] = $view;
 
   return $export;

@@ -61,34 +61,18 @@ function beekeeper_swarms_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = 'Report a swarm';
+  $display->title = 'Find someone to collect a swarm';
   $display->uuid = 'ea7c7f7e-af1b-43cf-a7a5-d150b763fa71';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-69ef973e-8562-4f8d-b136-7b04c9485c1a';
+    $pane->pid = 'new-1273403f-7ee8-4418-8732-a31deff5a11e';
     $pane->panel = 'two_66_33_first';
-    $pane->type = 'views';
-    $pane->subtype = 'swarm_collection';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'swarm_collection-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array(
-      'override_pager_settings' => 0,
-      'use_pager' => 1,
-      'nodes_per_page' => '50',
-      'pager_id' => '0',
-      'offset' => '0',
-      'more_link' => 0,
-      'feed_icons' => 0,
-      'panel_args' => 0,
-      'link_to_view' => 0,
-      'args' => '',
-      'url' => '',
-      'display' => 'page',
-      'override_title' => 0,
-      'override_title_text' => '',
-      'override_title_heading' => 'h2',
-    );
+    $pane->configuration = array();
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
@@ -97,9 +81,9 @@ function beekeeper_swarms_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = '69ef973e-8562-4f8d-b136-7b04c9485c1a';
-    $display->content['new-69ef973e-8562-4f8d-b136-7b04c9485c1a'] = $pane;
-    $display->panels['two_66_33_first'][0] = 'new-69ef973e-8562-4f8d-b136-7b04c9485c1a';
+    $pane->uuid = '1273403f-7ee8-4418-8732-a31deff5a11e';
+    $display->content['new-1273403f-7ee8-4418-8732-a31deff5a11e'] = $pane;
+    $display->panels['two_66_33_first'][0] = 'new-1273403f-7ee8-4418-8732-a31deff5a11e';
     $pane = new stdClass();
     $pane->pid = 'new-73c1abf2-3626-4f07-b729-34ca6e71f7fb';
     $pane->panel = 'two_66_33_second';
@@ -115,7 +99,7 @@ function beekeeper_swarms_default_page_manager_pages() {
 <li>Click "Apply" to then filter the display to show the locations of members who live up to 15 kms away, and are willing to collect swarms.</li>
 <li>Clicking on each marker will display the name, contact phone number and brief details of availability for each such member.</li>
 <li>If you are unable to find someone to collect your swarm, then you can try increasing the search distance from 15kms to say 25kms to see if there is someone else available.</li>
-<li>If no-one is available to collect your swarm, then please complete the details on the this form and someone from the club will get in touch with you</li>
+<li>If no-one is available to collect your swarm, then please complete the details on <a href="/swarms/report-form">this form</a> and someone from the club will get in touch with you</li>
 </ul>',
       'format' => 'filtered_html',
       'substitute' => TRUE,
