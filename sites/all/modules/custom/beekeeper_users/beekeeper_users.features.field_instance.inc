@@ -42,7 +42,7 @@ function beekeeper_users_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => -19,
+      'weight' => 1,
     ),
   );
 
@@ -78,7 +78,7 @@ function beekeeper_users_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => -18,
+      'weight' => 2,
     ),
   );
 
@@ -117,7 +117,7 @@ function beekeeper_users_field_default_field_instances() {
         'display_label' => 0,
       ),
       'type' => 'options_onoff',
-      'weight' => -14,
+      'weight' => 6,
     ),
   );
 
@@ -152,7 +152,7 @@ function beekeeper_users_field_default_field_instances() {
         'placeholder' => '',
       ),
       'type' => 'telephone_default',
-      'weight' => -17,
+      'weight' => 3,
     ),
   );
 
@@ -205,7 +205,7 @@ function beekeeper_users_field_default_field_instances() {
         ),
       ),
       'type' => 'addressfield_standard',
-      'weight' => -16,
+      'weight' => 4,
     ),
   );
 
@@ -258,7 +258,7 @@ function beekeeper_users_field_default_field_instances() {
         'scrollwheel' => 0,
       ),
       'type' => 'geolocation_googlemap',
-      'weight' => -15,
+      'weight' => 5,
     ),
   );
 

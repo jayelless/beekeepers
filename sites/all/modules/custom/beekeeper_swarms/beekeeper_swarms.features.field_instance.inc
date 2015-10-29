@@ -18,7 +18,7 @@ function beekeeper_swarms_field_default_field_instances() {
     'description' => 'Enter details such as the times you are available to collect and the areas you will collect from.  People needing a swarm collected will see you name and phone number(s) along with this information.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -42,7 +42,7 @@ function beekeeper_swarms_field_default_field_instances() {
         'rows' => 3,
       ),
       'type' => 'text_textarea',
-      'weight' => -11,
+      'weight' => 8,
     ),
   );
 
@@ -55,7 +55,7 @@ function beekeeper_swarms_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => 'Tick the box if you are willing to collect swarms.  Please also fill in the details of your availability in the swarm collection details field.  Please note, that you should also set your location details so that you will be listed for swarms in your vicinty.',
+    'description' => 'Tick the box if you are willing to collect swarms.  Please also fill in the details of your availability in the swarm collection details field.  Please note, that you should also set your location details so that you will be listed for swarms in your vicinity.',
     'display' => array(
       'default' => array(
         'label' => 'inline',
@@ -81,7 +81,82 @@ function beekeeper_swarms_field_default_field_instances() {
         'display_label' => 0,
       ),
       'type' => 'options_onoff',
-      'weight' => -12,
+      'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance: 'user-user-field_swarm_receipt_details'.
+  $field_instances['user-user-field_swarm_receipt_details'] = array(
+    'bundle' => 'user',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 9,
+      ),
+    ),
+    'entity_type' => 'user',
+    'field_name' => 'field_swarm_receipt_details',
+    'label' => 'Swarm receipt details',
+    'required' => 0,
+    'settings' => array(
+      'membership_entity_join_form' => FALSE,
+      'membership_entity_term_renew_form' => FALSE,
+      'text_processing' => 1,
+      'user_register_form' => 0,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 3,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 10,
+    ),
+  );
+
+  // Exported field_instance: 'user-user-field_swarm_recipient'.
+  $field_instances['user-user-field_swarm_recipient'] = array(
+    'bundle' => 'user',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Tick this box if you would like to receive surplus swarms. Please also fill in the details of your availability in the swarm receipt details field. Please note, that you should also set your location details so that you will be listed for swarms in your vicinity.',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 8,
+      ),
+    ),
+    'entity_type' => 'user',
+    'field_name' => 'field_swarm_recipient',
+    'label' => 'Swarm recipient',
+    'required' => 0,
+    'settings' => array(
+      'membership_entity_join_form' => FALSE,
+      'membership_entity_term_renew_form' => FALSE,
+      'user_register_form' => 0,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 0,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 9,
     ),
   );
 
@@ -90,7 +165,10 @@ function beekeeper_swarms_field_default_field_instances() {
   t('Enter details such as the times you are available to collect and the areas you will collect from.  People needing a swarm collected will see you name and phone number(s) along with this information.');
   t('Swarm collect details');
   t('Swarm collector');
-  t('Tick the box if you are willing to collect swarms.  Please also fill in the details of your availability in the swarm collection details field.  Please note, that you should also set your location details so that you will be listed for swarms in your vicinty.');
+  t('Swarm receipt details');
+  t('Swarm recipient');
+  t('Tick the box if you are willing to collect swarms.  Please also fill in the details of your availability in the swarm collection details field.  Please note, that you should also set your location details so that you will be listed for swarms in your vicinity.');
+  t('Tick this box if you would like to receive surplus swarms. Please also fill in the details of your availability in the swarm receipt details field. Please note, that you should also set your location details so that you will be listed for swarms in your vicinity.');
 
   return $field_instances;
 }
