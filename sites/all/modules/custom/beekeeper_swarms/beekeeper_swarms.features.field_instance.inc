@@ -10,7 +10,7 @@
 function beekeeper_swarms_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'user-user-field_swarm_collect_details'
+  // Exported field_instance: 'user-user-field_swarm_collect_details'.
   $field_instances['user-user-field_swarm_collect_details'] = array(
     'bundle' => 'user',
     'default_value' => NULL,
@@ -46,7 +46,7 @@ function beekeeper_swarms_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'user-user-field_swarm_collector'
+  // Exported field_instance: 'user-user-field_swarm_collector'.
   $field_instances['user-user-field_swarm_collector'] = array(
     'bundle' => 'user',
     'default_value' => array(

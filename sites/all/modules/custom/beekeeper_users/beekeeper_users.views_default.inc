@@ -33,11 +33,13 @@ function beekeeper_users_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '50';
   $handler->display->display_options['style_plugin'] = 'google_map';
+  $handler->display->display_options['style_options']['map_height'] = '640px';
+  $handler->display->display_options['style_options']['map_center'] = '-41.278423,174.776692';
   $handler->display->display_options['style_options']['map_zoom'] = '10';
-  $handler->display->display_options['style_options']['map_min_zoom'] = '1';
-  $handler->display->display_options['style_options']['map_max_zoom'] = '19';
+  $handler->display->display_options['style_options']['map_min_zoom'] = '6';
+  $handler->display->display_options['style_options']['map_max_zoom'] = '14';
   $handler->display->display_options['style_options']['marker_title_field'] = 'realname';
-  $handler->display->display_options['style_options']['use_marker_clusterer'] = 0;
+  $handler->display->display_options['style_options']['use_marker_clusterer'] = 1;
   $handler->display->display_options['style_options']['marker_clusterer'] = array(
     'grid_size' => '',
     'max_zoom' => '',
@@ -58,6 +60,14 @@ function beekeeper_users_views_default_views() {
     'life_membership' => 'life_membership',
     'standard_membership' => 'standard_membership',
   );
+  /* Field: User: My Location */
+  $handler->display->display_options['fields']['field_user_location']['id'] = 'field_user_location';
+  $handler->display->display_options['fields']['field_user_location']['table'] = 'field_data_field_user_location';
+  $handler->display->display_options['fields']['field_user_location']['field'] = 'field_user_location';
+  $handler->display->display_options['fields']['field_user_location']['label'] = '';
+  $handler->display->display_options['fields']['field_user_location']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_user_location']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_user_location']['click_sort_column'] = 'lat';
   /* Field: User: Name */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'users';
@@ -84,6 +94,34 @@ function beekeeper_users_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Geolocation: Distance */
+  $handler->display->display_options['filters']['field_user_location_distance']['id'] = 'field_user_location_distance';
+  $handler->display->display_options['filters']['field_user_location_distance']['table'] = 'field_data_field_user_location';
+  $handler->display->display_options['filters']['field_user_location_distance']['field'] = 'field_user_location_distance';
+  $handler->display->display_options['filters']['field_user_location_distance']['value'] = array(
+    'latitude' => '',
+    'longitude' => '',
+    'search_distance' => '15',
+    'search_units' => 'kilometers',
+    'type' => 'googlemap',
+  );
+  $handler->display->display_options['filters']['field_user_location_distance']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_user_location_distance']['expose']['operator_id'] = '';
+  $handler->display->display_options['filters']['field_user_location_distance']['expose']['label'] = 'Distance';
+  $handler->display->display_options['filters']['field_user_location_distance']['expose']['operator'] = 'field_user_location_distance_op';
+  $handler->display->display_options['filters']['field_user_location_distance']['expose']['identifier'] = 'field_user_location_distance';
+  $handler->display->display_options['filters']['field_user_location_distance']['expose']['remember'] = TRUE;
+  $handler->display->display_options['filters']['field_user_location_distance']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    5 => 0,
+    6 => 0,
+    7 => 0,
+    8 => 0,
+    9 => 0,
+  );
 
   /* Display: Members view all */
   $handler = $view->new_display('page', 'Members view all', 'page');
@@ -94,6 +132,7 @@ function beekeeper_users_views_default_views() {
   $handler->display->display_options['access']['type'] = 'role';
   $handler->display->display_options['access']['role'] = array(
     3 => '3',
+    9 => '9',
     8 => '8',
   );
   $handler->display->display_options['path'] = 'members-view-all';
@@ -124,6 +163,14 @@ function beekeeper_users_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: User: Location Privacy (field_location_privacy) */
+  $handler->display->display_options['filters']['field_location_privacy_value']['id'] = 'field_location_privacy_value';
+  $handler->display->display_options['filters']['field_location_privacy_value']['table'] = 'field_data_field_location_privacy';
+  $handler->display->display_options['filters']['field_location_privacy_value']['field'] = 'field_location_privacy_value';
+  $handler->display->display_options['filters']['field_location_privacy_value']['value'] = array(
+    1 => '1',
+  );
+  $handler->display->display_options['filters']['field_location_privacy_value']['group'] = 1;
   /* Filter criterion: Geolocation: Distance */
   $handler->display->display_options['filters']['field_user_location_distance']['id'] = 'field_user_location_distance';
   $handler->display->display_options['filters']['field_user_location_distance']['table'] = 'field_data_field_user_location';
@@ -151,14 +198,6 @@ function beekeeper_users_views_default_views() {
     7 => 0,
     8 => 0,
   );
-  /* Filter criterion: User: Location Privacy (field_location_privacy) */
-  $handler->display->display_options['filters']['field_location_privacy_value']['id'] = 'field_location_privacy_value';
-  $handler->display->display_options['filters']['field_location_privacy_value']['table'] = 'field_data_field_location_privacy';
-  $handler->display->display_options['filters']['field_location_privacy_value']['field'] = 'field_location_privacy_value';
-  $handler->display->display_options['filters']['field_location_privacy_value']['value'] = array(
-    1 => '1',
-  );
-  $handler->display->display_options['filters']['field_location_privacy_value']['group'] = 1;
   $handler->display->display_options['path'] = 'members-view';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'View members';
@@ -484,8 +523,9 @@ function beekeeper_users_views_default_views() {
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
 
-  /* Display: Data export */
-  $handler = $view->new_display('views_data_export', 'Data export', 'views_data_export_1');
+  /* Display: Members export */
+  $handler = $view->new_display('views_data_export', 'Members export', 'views_data_export_1');
+  $handler->display->display_options['display_description'] = 'Export all member details as CSV file';
   $handler->display->display_options['defaults']['access'] = FALSE;
   $handler->display->display_options['access']['type'] = 'role';
   $handler->display->display_options['access']['role'] = array(
@@ -555,6 +595,15 @@ function beekeeper_users_views_default_views() {
   $handler->display->display_options['fields']['type']['field'] = 'type';
   $handler->display->display_options['fields']['type']['relationship'] = 'membership_entity';
   $handler->display->display_options['fields']['type']['label'] = 'Membership-type';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: User: Active */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'users';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
   $handler->display->display_options['path'] = 'members-export';
   $export['member_lists'] = $view;
 
@@ -577,14 +626,17 @@ function beekeeper_users_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['reset_button'] = TRUE;
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '50';
   $handler->display->display_options['style_plugin'] = 'google_map';
+  $handler->display->display_options['style_options']['map_height'] = '640px';
+  $handler->display->display_options['style_options']['map_center'] = '-41.278423,174.776692';
   $handler->display->display_options['style_options']['map_zoom'] = '10';
-  $handler->display->display_options['style_options']['map_min_zoom'] = '1';
-  $handler->display->display_options['style_options']['map_max_zoom'] = '19';
+  $handler->display->display_options['style_options']['map_min_zoom'] = '6';
+  $handler->display->display_options['style_options']['map_max_zoom'] = '14';
   $handler->display->display_options['style_options']['marker_title_field'] = 'realname';
-  $handler->display->display_options['style_options']['use_marker_clusterer'] = 0;
+  $handler->display->display_options['style_options']['use_marker_clusterer'] = 1;
   $handler->display->display_options['style_options']['marker_clusterer'] = array(
     'grid_size' => '',
     'max_zoom' => '',
@@ -638,32 +690,6 @@ function beekeeper_users_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Geolocation: Distance */
-  $handler->display->display_options['filters']['field_user_location_distance']['id'] = 'field_user_location_distance';
-  $handler->display->display_options['filters']['field_user_location_distance']['table'] = 'field_data_field_user_location';
-  $handler->display->display_options['filters']['field_user_location_distance']['field'] = 'field_user_location_distance';
-  $handler->display->display_options['filters']['field_user_location_distance']['value'] = array(
-    'latitude' => '',
-    'longitude' => '',
-    'search_distance' => '100',
-    'search_units' => 'kilometers',
-    'type' => 'googlemap',
-  );
-  $handler->display->display_options['filters']['field_user_location_distance']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_user_location_distance']['expose']['operator_id'] = '';
-  $handler->display->display_options['filters']['field_user_location_distance']['expose']['label'] = 'Distance';
-  $handler->display->display_options['filters']['field_user_location_distance']['expose']['operator'] = 'field_user_location_distance_op';
-  $handler->display->display_options['filters']['field_user_location_distance']['expose']['identifier'] = 'field_user_location_distance';
-  $handler->display->display_options['filters']['field_user_location_distance']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    3 => 0,
-    4 => 0,
-    5 => 0,
-    6 => 0,
-    7 => 0,
-    8 => 0,
-  );
 
   /* Display: Page: View */
   $handler = $view->new_display('page', 'Page: View', 'page_1');
@@ -717,7 +743,7 @@ function beekeeper_users_views_default_views() {
     1 => '1',
   );
   $handler->display->display_options['filters']['field_location_privacy_value']['group'] = 1;
-  $handler->display->display_options['path'] = 'users-view';
+  $handler->display->display_options['path'] = 'users/view';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'View users';
   $handler->display->display_options['menu']['weight'] = '0';
@@ -733,7 +759,27 @@ function beekeeper_users_views_default_views() {
   $handler->display->display_options['access']['role'] = array(
     3 => '3',
   );
-  $handler->display->display_options['path'] = 'users-view-all';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: User: Active */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'users';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Geolocation: Distance */
+  $handler->display->display_options['filters']['field_user_location_distance']['id'] = 'field_user_location_distance';
+  $handler->display->display_options['filters']['field_user_location_distance']['table'] = 'field_data_field_user_location';
+  $handler->display->display_options['filters']['field_user_location_distance']['field'] = 'field_user_location_distance';
+  $handler->display->display_options['filters']['field_user_location_distance']['value'] = array(
+    'latitude' => '',
+    'longitude' => '',
+    'search_distance' => '15',
+    'search_units' => 'kilometers',
+    'type' => 'direct_input',
+  );
+  $handler->display->display_options['path'] = 'users/view-all';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'View all users';
   $handler->display->display_options['menu']['weight'] = '0';
@@ -834,18 +880,107 @@ function beekeeper_users_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Membership: Membership status */
-  $handler->display->display_options['filters']['status_1']['id'] = 'status_1';
-  $handler->display->display_options['filters']['status_1']['table'] = 'membership_entity';
-  $handler->display->display_options['filters']['status_1']['field'] = 'status';
-  $handler->display->display_options['filters']['status_1']['relationship'] = 'membership_entity';
-  $handler->display->display_options['filters']['status_1']['value'] = array(
-    0 => '0',
+  /* Filter criterion: User: Location Privacy (field_location_privacy) */
+  $handler->display->display_options['filters']['field_location_privacy_value']['id'] = 'field_location_privacy_value';
+  $handler->display->display_options['filters']['field_location_privacy_value']['table'] = 'field_data_field_location_privacy';
+  $handler->display->display_options['filters']['field_location_privacy_value']['field'] = 'field_location_privacy_value';
+  $handler->display->display_options['filters']['field_location_privacy_value']['value'] = array(
     1 => '1',
-    2 => '2',
-    3 => '3',
   );
-  $handler->display->display_options['path'] = 'users-list';
+  $handler->display->display_options['filters']['field_location_privacy_value']['group'] = 1;
+  /* Filter criterion: Realname: Real name */
+  $handler->display->display_options['filters']['realname']['id'] = 'realname';
+  $handler->display->display_options['filters']['realname']['table'] = 'realname';
+  $handler->display->display_options['filters']['realname']['field'] = 'realname';
+  $handler->display->display_options['filters']['realname']['operator'] = 'contains';
+  $handler->display->display_options['filters']['realname']['group'] = 1;
+  $handler->display->display_options['filters']['realname']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['realname']['expose']['operator_id'] = 'realname_op';
+  $handler->display->display_options['filters']['realname']['expose']['label'] = 'Name';
+  $handler->display->display_options['filters']['realname']['expose']['operator'] = 'realname_op';
+  $handler->display->display_options['filters']['realname']['expose']['identifier'] = 'realname';
+  $handler->display->display_options['filters']['realname']['expose']['remember'] = TRUE;
+  $handler->display->display_options['filters']['realname']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    5 => 0,
+    6 => 0,
+    7 => 0,
+    8 => 0,
+    9 => 0,
+  );
+  /* Filter criterion: User: Name (raw) */
+  $handler->display->display_options['filters']['name']['id'] = 'name';
+  $handler->display->display_options['filters']['name']['table'] = 'users';
+  $handler->display->display_options['filters']['name']['field'] = 'name';
+  $handler->display->display_options['filters']['name']['operator'] = 'contains';
+  $handler->display->display_options['filters']['name']['group'] = 1;
+  $handler->display->display_options['filters']['name']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['name']['expose']['operator_id'] = 'name_op';
+  $handler->display->display_options['filters']['name']['expose']['label'] = 'Login';
+  $handler->display->display_options['filters']['name']['expose']['operator'] = 'name_op';
+  $handler->display->display_options['filters']['name']['expose']['identifier'] = 'name';
+  $handler->display->display_options['filters']['name']['expose']['remember'] = TRUE;
+  $handler->display->display_options['filters']['name']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    5 => 0,
+    6 => 0,
+    7 => 0,
+    8 => 0,
+    9 => 0,
+  );
+  /* Filter criterion: User: E-mail */
+  $handler->display->display_options['filters']['mail']['id'] = 'mail';
+  $handler->display->display_options['filters']['mail']['table'] = 'users';
+  $handler->display->display_options['filters']['mail']['field'] = 'mail';
+  $handler->display->display_options['filters']['mail']['operator'] = 'contains';
+  $handler->display->display_options['filters']['mail']['group'] = 1;
+  $handler->display->display_options['filters']['mail']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['mail']['expose']['operator_id'] = 'mail_op';
+  $handler->display->display_options['filters']['mail']['expose']['label'] = 'E-mail';
+  $handler->display->display_options['filters']['mail']['expose']['operator'] = 'mail_op';
+  $handler->display->display_options['filters']['mail']['expose']['identifier'] = 'mail';
+  $handler->display->display_options['filters']['mail']['expose']['remember'] = TRUE;
+  $handler->display->display_options['filters']['mail']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    5 => 0,
+    6 => 0,
+    7 => 0,
+    8 => 0,
+    9 => 0,
+  );
+  /* Filter criterion: User: Postal address (field_postal_address:data) */
+  $handler->display->display_options['filters']['field_postal_address_data']['id'] = 'field_postal_address_data';
+  $handler->display->display_options['filters']['field_postal_address_data']['table'] = 'field_data_field_postal_address';
+  $handler->display->display_options['filters']['field_postal_address_data']['field'] = 'field_postal_address_data';
+  $handler->display->display_options['filters']['field_postal_address_data']['operator'] = 'contains';
+  $handler->display->display_options['filters']['field_postal_address_data']['group'] = 1;
+  $handler->display->display_options['filters']['field_postal_address_data']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_postal_address_data']['expose']['operator_id'] = 'field_postal_address_data_op';
+  $handler->display->display_options['filters']['field_postal_address_data']['expose']['label'] = 'Address';
+  $handler->display->display_options['filters']['field_postal_address_data']['expose']['operator'] = 'field_postal_address_data_op';
+  $handler->display->display_options['filters']['field_postal_address_data']['expose']['identifier'] = 'field_postal_address_data';
+  $handler->display->display_options['filters']['field_postal_address_data']['expose']['remember'] = TRUE;
+  $handler->display->display_options['filters']['field_postal_address_data']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    5 => 0,
+    6 => 0,
+    7 => 0,
+    8 => 0,
+    9 => 0,
+  );
+  $handler->display->display_options['path'] = 'users/list';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'List users';
   $handler->display->display_options['menu']['weight'] = '0';
@@ -947,13 +1082,141 @@ function beekeeper_users_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  $handler->display->display_options['path'] = 'users-list-all';
+  /* Filter criterion: Realname: Real name */
+  $handler->display->display_options['filters']['realname']['id'] = 'realname';
+  $handler->display->display_options['filters']['realname']['table'] = 'realname';
+  $handler->display->display_options['filters']['realname']['field'] = 'realname';
+  $handler->display->display_options['filters']['realname']['operator'] = 'contains';
+  $handler->display->display_options['filters']['realname']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['realname']['expose']['operator_id'] = 'realname_op';
+  $handler->display->display_options['filters']['realname']['expose']['label'] = 'Name';
+  $handler->display->display_options['filters']['realname']['expose']['operator'] = 'realname_op';
+  $handler->display->display_options['filters']['realname']['expose']['identifier'] = 'realname';
+  $handler->display->display_options['filters']['realname']['expose']['remember'] = TRUE;
+  $handler->display->display_options['filters']['realname']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    5 => 0,
+    6 => 0,
+    7 => 0,
+    8 => 0,
+    9 => 0,
+  );
+  /* Filter criterion: User: Name (raw) */
+  $handler->display->display_options['filters']['name']['id'] = 'name';
+  $handler->display->display_options['filters']['name']['table'] = 'users';
+  $handler->display->display_options['filters']['name']['field'] = 'name';
+  $handler->display->display_options['filters']['name']['operator'] = 'contains';
+  $handler->display->display_options['filters']['name']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['name']['expose']['operator_id'] = 'name_op';
+  $handler->display->display_options['filters']['name']['expose']['label'] = 'Login';
+  $handler->display->display_options['filters']['name']['expose']['operator'] = 'name_op';
+  $handler->display->display_options['filters']['name']['expose']['identifier'] = 'name';
+  $handler->display->display_options['filters']['name']['expose']['remember'] = TRUE;
+  $handler->display->display_options['filters']['name']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    5 => 0,
+    6 => 0,
+    7 => 0,
+    8 => 0,
+    9 => 0,
+  );
+  /* Filter criterion: User: E-mail */
+  $handler->display->display_options['filters']['mail']['id'] = 'mail';
+  $handler->display->display_options['filters']['mail']['table'] = 'users';
+  $handler->display->display_options['filters']['mail']['field'] = 'mail';
+  $handler->display->display_options['filters']['mail']['operator'] = 'contains';
+  $handler->display->display_options['filters']['mail']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['mail']['expose']['operator_id'] = 'mail_op';
+  $handler->display->display_options['filters']['mail']['expose']['label'] = 'E-mail';
+  $handler->display->display_options['filters']['mail']['expose']['operator'] = 'mail_op';
+  $handler->display->display_options['filters']['mail']['expose']['identifier'] = 'mail';
+  $handler->display->display_options['filters']['mail']['expose']['remember'] = TRUE;
+  $handler->display->display_options['filters']['mail']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    5 => 0,
+    6 => 0,
+    7 => 0,
+    8 => 0,
+    9 => 0,
+  );
+  /* Filter criterion: User: Postal address (field_postal_address:data) */
+  $handler->display->display_options['filters']['field_postal_address_data']['id'] = 'field_postal_address_data';
+  $handler->display->display_options['filters']['field_postal_address_data']['table'] = 'field_data_field_postal_address';
+  $handler->display->display_options['filters']['field_postal_address_data']['field'] = 'field_postal_address_data';
+  $handler->display->display_options['filters']['field_postal_address_data']['operator'] = 'contains';
+  $handler->display->display_options['filters']['field_postal_address_data']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_postal_address_data']['expose']['operator_id'] = 'field_postal_address_data_op';
+  $handler->display->display_options['filters']['field_postal_address_data']['expose']['label'] = 'Address';
+  $handler->display->display_options['filters']['field_postal_address_data']['expose']['operator'] = 'field_postal_address_data_op';
+  $handler->display->display_options['filters']['field_postal_address_data']['expose']['identifier'] = 'field_postal_address_data';
+  $handler->display->display_options['filters']['field_postal_address_data']['expose']['remember'] = TRUE;
+  $handler->display->display_options['filters']['field_postal_address_data']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    5 => 0,
+    6 => 0,
+    7 => 0,
+    8 => 0,
+    9 => 0,
+  );
+  $handler->display->display_options['path'] = 'users/list-all';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'List all users';
   $handler->display->display_options['menu']['description'] = 'List all users fro administrators';
   $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
+
+  /* Display: User export */
+  $handler = $view->new_display('views_data_export', 'User export', 'views_data_export_1');
+  $handler->display->display_options['display_description'] = 'Export all user details as a CSV file';
+  $handler->display->display_options['defaults']['access'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'role';
+  $handler->display->display_options['access']['role'] = array(
+    3 => '3',
+    8 => '8',
+  );
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['style_plugin'] = 'views_data_export_csv';
+  $handler->display->display_options['style_options']['provide_file'] = 0;
+  $handler->display->display_options['style_options']['parent_sort'] = 0;
+  $handler->display->display_options['style_options']['quote'] = 1;
+  $handler->display->display_options['style_options']['trim'] = 0;
+  $handler->display->display_options['style_options']['replace_newlines'] = 1;
+  $handler->display->display_options['style_options']['header'] = 1;
+  $handler->display->display_options['style_options']['keep_html'] = 0;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Realname: Real name */
+  $handler->display->display_options['fields']['realname']['id'] = 'realname';
+  $handler->display->display_options['fields']['realname']['table'] = 'realname';
+  $handler->display->display_options['fields']['realname']['field'] = 'realname';
+  $handler->display->display_options['fields']['realname']['label'] = 'Name';
+  /* Field: User: Username */
+  $handler->display->display_options['fields']['username']['id'] = 'username';
+  $handler->display->display_options['fields']['username']['table'] = 'users';
+  $handler->display->display_options['fields']['username']['field'] = 'username';
+  $handler->display->display_options['fields']['username']['link_to_user'] = FALSE;
+  /* Field: User: E-mail */
+  $handler->display->display_options['fields']['mail']['id'] = 'mail';
+  $handler->display->display_options['fields']['mail']['table'] = 'users';
+  $handler->display->display_options['fields']['mail']['field'] = 'mail';
+  $handler->display->display_options['fields']['mail']['link_to_user'] = '0';
+  /* Field: User: Postal address (field_postal_address:data) */
+  $handler->display->display_options['fields']['field_postal_address_data']['id'] = 'field_postal_address_data';
+  $handler->display->display_options['fields']['field_postal_address_data']['table'] = 'field_data_field_postal_address';
+  $handler->display->display_options['fields']['field_postal_address_data']['field'] = 'field_postal_address_data';
+  $handler->display->display_options['path'] = 'users/export';
   $export['user_admin'] = $view;
 
   return $export;

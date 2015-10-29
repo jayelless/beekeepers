@@ -10,7 +10,7 @@
 function beekeeper_apiaries_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_apiary_location'
+  // Exported field_base: 'field_apiary_location'.
   $field_bases['field_apiary_location'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -32,7 +32,7 @@ function beekeeper_apiaries_field_default_field_bases() {
     'type' => 'geolocation_latlng',
   );
 
-  // Exported field_base: 'field_apiary_notes'
+  // Exported field_base: 'field_apiary_notes'.
   $field_bases['field_apiary_notes'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -51,7 +51,7 @@ function beekeeper_apiaries_field_default_field_bases() {
     'type' => 'text_with_summary',
   );
 
-  // Exported field_base: 'field_apiary_photos'
+  // Exported field_base: 'field_apiary_photos'.
   $field_bases['field_apiary_photos'] = array(
     'active' => 1,
     'cardinality' => -1,

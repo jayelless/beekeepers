@@ -10,10 +10,19 @@
 function beekeeper_apiaries_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-apiary-field_apiary_location'
+  // Exported field_instance: 'node-apiary-field_apiary_location'.
   $field_instances['node-apiary-field_apiary_location'] = array(
     'bundle' => 'apiary',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'address' => array(
+          'field' => 'the beehive, wellington',
+        ),
+        'lat' => '-41.27842280000001',
+        'lng' => '174.77669200000003',
+        'field_type' => 'geolocation_latlng',
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -62,14 +71,14 @@ function beekeeper_apiaries_field_default_field_instances() {
       'module' => 'geolocation_googlemaps',
       'settings' => array(
         'marker_draggable' => 1,
-        'scrollwheel' => 0,
+        'scrollwheel' => 1,
       ),
       'type' => 'geolocation_googlemap',
       'weight' => 1,
     ),
   );
 
-  // Exported field_instance: 'node-apiary-field_apiary_notes'
+  // Exported field_instance: 'node-apiary-field_apiary_notes'.
   $field_instances['node-apiary-field_apiary_notes'] = array(
     'bundle' => 'apiary',
     'default_value' => NULL,
@@ -113,7 +122,7 @@ function beekeeper_apiaries_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-apiary-field_apiary_photos'
+  // Exported field_instance: 'node-apiary-field_apiary_photos'.
   $field_instances['node-apiary-field_apiary_photos'] = array(
     'bundle' => 'apiary',
     'deleted' => 0,

@@ -10,7 +10,7 @@
 function beekeeper_swarms_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_swarm_collect_details'
+  // Exported field_base: 'field_swarm_collect_details'.
   $field_bases['field_swarm_collect_details'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -29,7 +29,7 @@ function beekeeper_swarms_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_swarm_collector'
+  // Exported field_base: 'field_swarm_collector'.
   $field_bases['field_swarm_collector'] = array(
     'active' => 1,
     'cardinality' => 1,

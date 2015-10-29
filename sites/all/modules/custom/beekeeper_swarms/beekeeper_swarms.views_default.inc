@@ -32,10 +32,11 @@ function beekeeper_swarms_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '50';
   $handler->display->display_options['style_plugin'] = 'google_map';
-  $handler->display->display_options['style_options']['map_height'] = '600px';
+  $handler->display->display_options['style_options']['map_height'] = '640px';
+  $handler->display->display_options['style_options']['map_center'] = '-41.278423,174.776692';
   $handler->display->display_options['style_options']['map_zoom'] = '10';
-  $handler->display->display_options['style_options']['map_min_zoom'] = '1';
-  $handler->display->display_options['style_options']['map_max_zoom'] = '19';
+  $handler->display->display_options['style_options']['map_min_zoom'] = '6';
+  $handler->display->display_options['style_options']['map_max_zoom'] = '12';
   $handler->display->display_options['style_options']['marker_title_field'] = 'realname';
   $handler->display->display_options['style_options']['use_marker_clusterer'] = 0;
   $handler->display->display_options['style_options']['marker_clusterer'] = array(
@@ -318,11 +319,11 @@ function beekeeper_swarms_views_default_views() {
   );
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'google_map';
-  $handler->display->display_options['style_options']['map_height'] = '600px';
+  $handler->display->display_options['style_options']['map_height'] = '640px';
   $handler->display->display_options['style_options']['map_center'] = '-41.2784228,174.776692';
   $handler->display->display_options['style_options']['map_zoom'] = '10';
-  $handler->display->display_options['style_options']['map_min_zoom'] = '1';
-  $handler->display->display_options['style_options']['map_max_zoom'] = '19';
+  $handler->display->display_options['style_options']['map_min_zoom'] = '6';
+  $handler->display->display_options['style_options']['map_max_zoom'] = '12';
   $handler->display->display_options['style_options']['marker_title_field'] = 'realname';
   $handler->display->display_options['style_options']['use_marker_clusterer'] = 0;
   $handler->display->display_options['style_options']['marker_clusterer'] = array(

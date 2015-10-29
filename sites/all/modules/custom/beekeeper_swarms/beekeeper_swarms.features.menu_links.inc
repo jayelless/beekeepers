@@ -10,7 +10,7 @@
 function beekeeper_swarms_menu_default_menu_links() {
   $menu_links = array();
 
-  // Exported menu link: main-menu_swarms:node/19
+  // Exported menu link: main-menu_swarms:node/19.
   $menu_links['main-menu_swarms:node/19'] = array(
     'menu_name' => 'main-menu',
     'link_path' => 'node/19',

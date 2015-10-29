@@ -10,7 +10,7 @@
 function beekeeper_users_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_first_name'
+  // Exported field_base: 'field_first_name'.
   $field_bases['field_first_name'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -31,7 +31,7 @@ function beekeeper_users_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_last_name'
+  // Exported field_base: 'field_last_name'.
   $field_bases['field_last_name'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -52,7 +52,7 @@ function beekeeper_users_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_location_privacy'
+  // Exported field_base: 'field_location_privacy'.
   $field_bases['field_location_privacy'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -77,7 +77,7 @@ function beekeeper_users_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_phone_number'
+  // Exported field_base: 'field_phone_number'.
   $field_bases['field_phone_number'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -94,7 +94,7 @@ function beekeeper_users_field_default_field_bases() {
     'type' => 'telephone',
   );
 
-  // Exported field_base: 'field_postal_address'
+  // Exported field_base: 'field_postal_address'.
   $field_bases['field_postal_address'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -111,7 +111,7 @@ function beekeeper_users_field_default_field_bases() {
     'type' => 'addressfield',
   );
 
-  // Exported field_base: 'field_user_location'
+  // Exported field_base: 'field_user_location'.
   $field_bases['field_user_location'] = array(
     'active' => 1,
     'cardinality' => 1,

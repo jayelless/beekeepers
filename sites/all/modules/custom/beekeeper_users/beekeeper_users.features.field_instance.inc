@@ -10,7 +10,7 @@
 function beekeeper_users_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'user-user-field_first_name'
+  // Exported field_instance: 'user-user-field_first_name'.
   $field_instances['user-user-field_first_name'] = array(
     'bundle' => 'user',
     'default_value' => NULL,
@@ -46,7 +46,7 @@ function beekeeper_users_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'user-user-field_last_name'
+  // Exported field_instance: 'user-user-field_last_name'.
   $field_instances['user-user-field_last_name'] = array(
     'bundle' => 'user',
     'default_value' => NULL,
@@ -82,7 +82,7 @@ function beekeeper_users_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'user-user-field_location_privacy'
+  // Exported field_instance: 'user-user-field_location_privacy'.
   $field_instances['user-user-field_location_privacy'] = array(
     'bundle' => 'user',
     'default_value' => array(
@@ -121,7 +121,7 @@ function beekeeper_users_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'user-user-field_phone_number'
+  // Exported field_instance: 'user-user-field_phone_number'.
   $field_instances['user-user-field_phone_number'] = array(
     'bundle' => 'user',
     'default_value' => NULL,
@@ -156,7 +156,7 @@ function beekeeper_users_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'user-user-field_postal_address'
+  // Exported field_instance: 'user-user-field_postal_address'.
   $field_instances['user-user-field_postal_address'] = array(
     'bundle' => 'user',
     'default_value' => NULL,
@@ -209,7 +209,7 @@ function beekeeper_users_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'user-user-field_user_location'
+  // Exported field_instance: 'user-user-field_user_location'.
   $field_instances['user-user-field_user_location'] = array(
     'bundle' => 'user',
     'default_value' => array(
