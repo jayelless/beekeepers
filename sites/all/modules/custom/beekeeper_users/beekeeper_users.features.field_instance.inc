@@ -91,7 +91,7 @@ function beekeeper_users_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => 'Checking this box will mean that your address details are kept private and not made available to other members, and conversely, you will also not be able to see other members details.',
+    'description' => 'Checking this box will mean that your address details are made available to other members, and additionally, you will be able to see other members details.',
     'display' => array(
       'default' => array(
         'label' => 'inline',
@@ -117,7 +117,7 @@ function beekeeper_users_field_default_field_instances() {
         'display_label' => 0,
       ),
       'type' => 'options_onoff',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 
@@ -264,7 +264,7 @@ function beekeeper_users_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Checking this box will mean that your address details are kept private and not made available to other members, and conversely, you will also not be able to see other members details.');
+  t('Checking this box will mean that your address details are made available to other members, and additionally, you will be able to see other members details.');
   t('Enter one or more contact phone numbers.  Use the "Add another item" button for second and subsequent numbers.  It is recommended that each number is prefixed with a brief description like "Home: "');
   t('Enter your home or postal address here.  The first address field should be used for the street name and number unless you need to specify a flat or apartment. Please also specify your suburb if possible.');
   t('First Name');

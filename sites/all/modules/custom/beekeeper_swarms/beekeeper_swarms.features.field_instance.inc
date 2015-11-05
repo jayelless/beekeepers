@@ -15,7 +15,7 @@ function beekeeper_swarms_field_default_field_instances() {
     'bundle' => 'user',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Enter details such as the times you are available to collect and the areas you will collect from.  People needing a swarm collected will see you name and phone number(s) along with this information.',
+    'description' => 'Enter details such as the times you are available to collect, and the areas you will collect from.  People needing a swarm collected will see your name and phone number(s) along with this information. Only plain text will be displayed, although line breaks will be shown.',
     'display' => array(
       'default' => array(
         'label' => 'inline',
@@ -30,9 +30,35 @@ function beekeeper_swarms_field_default_field_instances() {
     'label' => 'Swarm collect details',
     'required' => 0,
     'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'advanced_html' => 'advanced_html',
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'advanced_html' => array(
+              'weight' => 0,
+            ),
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
       'membership_entity_join_form' => FALSE,
       'membership_entity_term_renew_form' => FALSE,
-      'text_processing' => 1,
+      'text_processing' => 0,
       'user_register_form' => 0,
     ),
     'widget' => array(
@@ -42,7 +68,7 @@ function beekeeper_swarms_field_default_field_instances() {
         'rows' => 3,
       ),
       'type' => 'text_textarea',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
@@ -81,7 +107,7 @@ function beekeeper_swarms_field_default_field_instances() {
         'display_label' => 0,
       ),
       'type' => 'options_onoff',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -90,7 +116,7 @@ function beekeeper_swarms_field_default_field_instances() {
     'bundle' => 'user',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Enter details of your availability to receive swarms.  Only plain text will be displayed, although line breaks will be shown.',
     'display' => array(
       'default' => array(
         'label' => 'inline',
@@ -105,9 +131,35 @@ function beekeeper_swarms_field_default_field_instances() {
     'label' => 'Swarm receipt details',
     'required' => 0,
     'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'advanced_html' => 0,
+          'filtered_html' => 'filtered_html',
+          'full_html' => 0,
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'advanced_html' => array(
+              'weight' => 0,
+            ),
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
       'membership_entity_join_form' => FALSE,
       'membership_entity_term_renew_form' => FALSE,
-      'text_processing' => 1,
+      'text_processing' => 0,
       'user_register_form' => 0,
     ),
     'widget' => array(
@@ -117,7 +169,7 @@ function beekeeper_swarms_field_default_field_instances() {
         'rows' => 3,
       ),
       'type' => 'text_textarea',
-      'weight' => 10,
+      'weight' => 11,
     ),
   );
 
@@ -156,13 +208,14 @@ function beekeeper_swarms_field_default_field_instances() {
         'display_label' => 0,
       ),
       'type' => 'options_onoff',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Enter details such as the times you are available to collect and the areas you will collect from.  People needing a swarm collected will see you name and phone number(s) along with this information.');
+  t('Enter details of your availability to receive swarms.  Only plain text will be displayed, although line breaks will be shown.');
+  t('Enter details such as the times you are available to collect, and the areas you will collect from.  People needing a swarm collected will see your name and phone number(s) along with this information. Only plain text will be displayed, although line breaks will be shown.');
   t('Swarm collect details');
   t('Swarm collector');
   t('Swarm receipt details');

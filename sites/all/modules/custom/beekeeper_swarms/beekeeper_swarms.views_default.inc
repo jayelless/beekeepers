@@ -339,7 +339,9 @@ function beekeeper_swarms_views_default_views() {
   $handler->display->display_options['fields']['field_swarm_collect_details']['id'] = 'field_swarm_collect_details';
   $handler->display->display_options['fields']['field_swarm_collect_details']['table'] = 'field_data_field_swarm_collect_details';
   $handler->display->display_options['fields']['field_swarm_collect_details']['field'] = 'field_swarm_collect_details';
-  $handler->display->display_options['fields']['field_swarm_collect_details']['label'] = 'Details';
+  $handler->display->display_options['fields']['field_swarm_collect_details']['label'] = '';
+  $handler->display->display_options['fields']['field_swarm_collect_details']['alter']['nl2br'] = TRUE;
+  $handler->display->display_options['fields']['field_swarm_collect_details']['element_label_colon'] = FALSE;
   $handler->display->display_options['path'] = 'swarms/view-collectors';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'Swarm collectors';
@@ -582,7 +584,9 @@ function beekeeper_swarms_views_default_views() {
   $handler->display->display_options['fields']['field_swarm_receipt_details']['id'] = 'field_swarm_receipt_details';
   $handler->display->display_options['fields']['field_swarm_receipt_details']['table'] = 'field_data_field_swarm_receipt_details';
   $handler->display->display_options['fields']['field_swarm_receipt_details']['field'] = 'field_swarm_receipt_details';
-  $handler->display->display_options['fields']['field_swarm_receipt_details']['label'] = 'Details';
+  $handler->display->display_options['fields']['field_swarm_receipt_details']['label'] = '';
+  $handler->display->display_options['fields']['field_swarm_receipt_details']['alter']['nl2br'] = TRUE;
+  $handler->display->display_options['fields']['field_swarm_receipt_details']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: User: Active */
