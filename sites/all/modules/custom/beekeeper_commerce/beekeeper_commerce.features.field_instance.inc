@@ -11,7 +11,7 @@ function beekeeper_commerce_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance:
-  // 'commerce_customer_profile-billing-commerce_customer_address'
+  // 'commerce_customer_profile-billing-commerce_customer_address'.
   $field_instances['commerce_customer_profile-billing-commerce_customer_address'] = array(
     'bundle' => 'billing',
     'default_value' => NULL,
@@ -89,7 +89,7 @@ function beekeeper_commerce_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'commerce_line_item-membership_entity_line_item-commerce_display_path'
+  // 'commerce_line_item-membership_entity_line_item-commerce_display_path'.
   $field_instances['commerce_line_item-membership_entity_line_item-commerce_display_path'] = array(
     'bundle' => 'membership_entity_line_item',
     'default_value' => NULL,
@@ -132,7 +132,7 @@ function beekeeper_commerce_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'commerce_line_item-membership_entity_line_item-commerce_product'
+  // 'commerce_line_item-membership_entity_line_item-commerce_product'.
   $field_instances['commerce_line_item-membership_entity_line_item-commerce_product'] = array(
     'bundle' => 'membership_entity_line_item',
     'default_value' => NULL,
@@ -180,7 +180,7 @@ function beekeeper_commerce_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'commerce_line_item-membership_entity_line_item-commerce_total'
+  // 'commerce_line_item-membership_entity_line_item-commerce_total'.
   $field_instances['commerce_line_item-membership_entity_line_item-commerce_total'] = array(
     'bundle' => 'membership_entity_line_item',
     'default_value' => NULL,
@@ -235,7 +235,7 @@ function beekeeper_commerce_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'commerce_line_item-membership_entity_line_item-commerce_unit_price'
+  // 'commerce_line_item-membership_entity_line_item-commerce_unit_price'.
   $field_instances['commerce_line_item-membership_entity_line_item-commerce_unit_price'] = array(
     'bundle' => 'membership_entity_line_item',
     'default_value' => NULL,
@@ -290,7 +290,7 @@ function beekeeper_commerce_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'commerce_line_item-membership_entity_line_item-membership_entity_term_ref'
+  // 'commerce_line_item-membership_entity_line_item-membership_entity_term_ref'.
   $field_instances['commerce_line_item-membership_entity_line_item-membership_entity_term_ref'] = array(
     'bundle' => 'membership_entity_line_item',
     'default_value' => NULL,
@@ -337,7 +337,8 @@ function beekeeper_commerce_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'commerce_line_item-product-commerce_display_path'
+  // Exported field_instance:
+  // 'commerce_line_item-product-commerce_display_path'.
   $field_instances['commerce_line_item-product-commerce_display_path'] = array(
     'bundle' => 'product',
     'default_value' => NULL,
@@ -379,7 +380,7 @@ function beekeeper_commerce_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'commerce_line_item-product-commerce_product'
+  // Exported field_instance: 'commerce_line_item-product-commerce_product'.
   $field_instances['commerce_line_item-product-commerce_product'] = array(
     'bundle' => 'product',
     'default_value' => NULL,
@@ -424,7 +425,7 @@ function beekeeper_commerce_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'commerce_line_item-product-commerce_total'
+  // Exported field_instance: 'commerce_line_item-product-commerce_total'.
   $field_instances['commerce_line_item-product-commerce_total'] = array(
     'bundle' => 'product',
     'default_value' => NULL,
@@ -478,7 +479,7 @@ function beekeeper_commerce_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'commerce_line_item-product-commerce_unit_price'
+  // Exported field_instance: 'commerce_line_item-product-commerce_unit_price'.
   $field_instances['commerce_line_item-product-commerce_unit_price'] = array(
     'bundle' => 'product',
     'default_value' => NULL,
@@ -533,7 +534,7 @@ function beekeeper_commerce_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'commerce_order-commerce_order-commerce_customer_billing'
+  // 'commerce_order-commerce_order-commerce_customer_billing'.
   $field_instances['commerce_order-commerce_order-commerce_customer_billing'] = array(
     'bundle' => 'commerce_order',
     'deleted' => 0,
@@ -586,7 +587,7 @@ function beekeeper_commerce_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'commerce_order-commerce_order-commerce_line_items'
+  // 'commerce_order-commerce_order-commerce_line_items'.
   $field_instances['commerce_order-commerce_order-commerce_line_items'] = array(
     'bundle' => 'commerce_order',
     'deleted' => 0,
@@ -647,7 +648,7 @@ function beekeeper_commerce_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'commerce_order-commerce_order-commerce_order_total'
+  // 'commerce_order-commerce_order-commerce_order_total'.
   $field_instances['commerce_order-commerce_order-commerce_order_total'] = array(
     'bundle' => 'commerce_order',
     'default_value' => NULL,
@@ -720,7 +721,7 @@ function beekeeper_commerce_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'commerce_product-membership_entity_product-commerce_price'
+  // 'commerce_product-membership_entity_product-commerce_price'.
   $field_instances['commerce_product-membership_entity_product-commerce_price'] = array(
     'bundle' => 'membership_entity_product',
     'default_value' => NULL,
@@ -801,7 +802,7 @@ function beekeeper_commerce_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'commerce_product-nucleus_colony-commerce_price'
+  // Exported field_instance: 'commerce_product-nucleus_colony-commerce_price'.
   $field_instances['commerce_product-nucleus_colony-commerce_price'] = array(
     'bundle' => 'nucleus_colony',
     'default_value' => NULL,
@@ -900,7 +901,7 @@ function beekeeper_commerce_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'commerce_product-product-commerce_price'
+  // Exported field_instance: 'commerce_product-product-commerce_price'.
   $field_instances['commerce_product-product-commerce_price'] = array(
     'bundle' => 'product',
     'default_value' => NULL,
@@ -981,7 +982,7 @@ function beekeeper_commerce_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-product_display-body'
+  // Exported field_instance: 'node-product_display-body'.
   $field_instances['node-product_display-body'] = array(
     'bundle' => 'product_display',
     'default_value' => NULL,
@@ -1027,7 +1028,7 @@ function beekeeper_commerce_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-product_display-field_product'
+  // Exported field_instance: 'node-product_display-field_product'.
   $field_instances['node-product_display-field_product'] = array(
     'bundle' => 'product_display',
     'default_value' => NULL,
