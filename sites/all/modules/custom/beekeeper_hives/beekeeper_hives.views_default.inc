@@ -120,6 +120,13 @@ function beekeeper_hives_views_default_views() {
 
   /* Display: Page: View Hive Inspectors */
   $handler = $view->new_display('page', 'Page: View Hive Inspectors', 'page_1');
+  $handler->display->display_options['defaults']['access'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'role';
+  $handler->display->display_options['access']['role'] = array(
+    5 => '5',
+    7 => '7',
+    4 => '4',
+  );
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';

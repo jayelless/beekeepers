@@ -10,7 +10,7 @@
 function beekeeper_forums_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'comment-comment_node_forum-comment_body'
+  // Exported field_instance: 'comment-comment_node_forum-comment_body'.
   $field_instances['comment-comment_node_forum-comment_body'] = array(
     'bundle' => 'comment_node_forum',
     'default_value' => NULL,
@@ -45,7 +45,7 @@ function beekeeper_forums_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-forum-body'
+  // Exported field_instance: 'node-forum-body'.
   $field_instances['node-forum-body'] = array(
     'bundle' => 'forum',
     'default_value' => NULL,
@@ -91,7 +91,7 @@ function beekeeper_forums_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-forum-taxonomy_forums'
+  // Exported field_instance: 'node-forum-taxonomy_forums'.
   $field_instances['node-forum-taxonomy_forums'] = array(
     'bundle' => 'forum',
     'default_value' => NULL,
