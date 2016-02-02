@@ -81,6 +81,7 @@ function beekeeper_content_user_default_permissions() {
   $permissions['create newsletter content'] = array(
     'name' => 'create newsletter content',
     'roles' => array(
+      'Committee member' => 'Committee member',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -164,6 +165,7 @@ function beekeeper_content_user_default_permissions() {
   $permissions['delete own article content'] = array(
     'name' => 'delete own article content',
     'roles' => array(
+      'Committee member' => 'Committee member',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -173,6 +175,7 @@ function beekeeper_content_user_default_permissions() {
   $permissions['delete own newsletter content'] = array(
     'name' => 'delete own newsletter content',
     'roles' => array(
+      'Committee member' => 'Committee member',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -182,6 +185,7 @@ function beekeeper_content_user_default_permissions() {
   $permissions['delete own page content'] = array(
     'name' => 'delete own page content',
     'roles' => array(
+      'Committee member' => 'Committee member',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -229,6 +233,7 @@ function beekeeper_content_user_default_permissions() {
   $permissions['edit any newsletter content'] = array(
     'name' => 'edit any newsletter content',
     'roles' => array(
+      'Committee member' => 'Committee member',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -267,6 +272,7 @@ function beekeeper_content_user_default_permissions() {
   $permissions['edit own newsletter content'] = array(
     'name' => 'edit own newsletter content',
     'roles' => array(
+      'Committee member' => 'Committee member',
       'administrator' => 'administrator',
     ),
     'module' => 'node',

@@ -18,7 +18,7 @@ function beekeeper_hives_field_default_field_instances() {
     'description' => 'Enter details of your availability to inspect hives.  Members looking for someone to inspect their hives will see you name and phone number along with these details. Only plain text will be displayed, although line breaks will be shown.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -84,7 +84,7 @@ function beekeeper_hives_field_default_field_instances() {
     'description' => 'Indicate whether you are willing to inspect other members\' hives for diseases, including for their annual disease return.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
