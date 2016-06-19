@@ -22,7 +22,7 @@ function beekeeper_hives_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 11,
+        'weight' => 12,
       ),
     ),
     'entity_type' => 'user',
@@ -68,7 +68,7 @@ function beekeeper_hives_field_default_field_instances() {
         'rows' => 3,
       ),
       'type' => 'text_textarea',
-      'weight' => 13,
+      'weight' => 14,
     ),
   );
 
@@ -88,7 +88,7 @@ function beekeeper_hives_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 10,
+        'weight' => 11,
       ),
     ),
     'entity_type' => 'user',
@@ -107,7 +107,7 @@ function beekeeper_hives_field_default_field_instances() {
         'display_label' => 0,
       ),
       'type' => 'options_onoff',
-      'weight' => 12,
+      'weight' => 13,
     ),
   );
 

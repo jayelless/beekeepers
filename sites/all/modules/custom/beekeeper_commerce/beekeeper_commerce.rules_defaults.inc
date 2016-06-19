@@ -24,7 +24,13 @@ function beekeeper_commerce_default_rules_configuration() {
       "IF" : [
         { "commerce_order_contains_product_type" : {
             "commerce_order" : [ "commerce_order" ],
-            "product_type" : { "value" : { "nucleus_colony" : "nucleus_colony" } },
+            "product_type" : { "value" : {
+                "beekeeper_magazine_subscription" : "beekeeper_magazine_subscription",
+                "nucleus_colony" : "nucleus_colony",
+                "product" : "product",
+                "membership_entity_product" : "membership_entity_product"
+              }
+            },
             "operator" : "\\u003E=",
             "value" : "1"
           }
@@ -60,6 +66,23 @@ function beekeeper_commerce_default_rules_configuration() {
                 }
               }
             }
+          }
+        }
+      ]
+    }
+  }');
+  $items['commerce_payment_bank_transfer'] = entity_import('rules_config', '{ "commerce_payment_bank_transfer" : {
+      "LABEL" : "Bank Transfer",
+      "PLUGIN" : "reaction rule",
+      "ACTIVE" : false,
+      "OWNER" : "rules",
+      "TAGS" : [ "Commerce Payment" ],
+      "REQUIRES" : [ "commerce_payment" ],
+      "ON" : { "commerce_payment_methods" : [] },
+      "DO" : [
+        { "commerce_payment_enable_bank_transfer" : {
+            "commerce_order" : [ "commerce-order" ],
+            "payment_method" : "bank_transfer"
           }
         }
       ]

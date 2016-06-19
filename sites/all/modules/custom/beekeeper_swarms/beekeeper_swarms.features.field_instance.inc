@@ -22,7 +22,7 @@ function beekeeper_swarms_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 7,
+        'weight' => 8,
       ),
     ),
     'entity_type' => 'user',
@@ -68,7 +68,7 @@ function beekeeper_swarms_field_default_field_instances() {
         'rows' => 3,
       ),
       'type' => 'text_textarea',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
@@ -88,7 +88,7 @@ function beekeeper_swarms_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 6,
+        'weight' => 7,
       ),
     ),
     'entity_type' => 'user',
@@ -107,7 +107,7 @@ function beekeeper_swarms_field_default_field_instances() {
         'display_label' => 0,
       ),
       'type' => 'options_onoff',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
@@ -123,7 +123,7 @@ function beekeeper_swarms_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 9,
+        'weight' => 10,
       ),
     ),
     'entity_type' => 'user',
@@ -169,7 +169,7 @@ function beekeeper_swarms_field_default_field_instances() {
         'rows' => 3,
       ),
       'type' => 'text_textarea',
-      'weight' => 11,
+      'weight' => 12,
     ),
   );
 
@@ -189,7 +189,7 @@ function beekeeper_swarms_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 8,
+        'weight' => 9,
       ),
     ),
     'entity_type' => 'user',
@@ -208,7 +208,7 @@ function beekeeper_swarms_field_default_field_instances() {
         'display_label' => 0,
       ),
       'type' => 'options_onoff',
-      'weight' => 10,
+      'weight' => 11,
     ),
   );
 

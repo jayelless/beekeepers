@@ -10,6 +10,41 @@
 function beekeeper_apiaries_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'comment-comment_node_apiary-comment_body'.
+  $field_instances['comment-comment_node_apiary-comment_body'] = array(
+    'bundle' => 'comment_node_apiary',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'comment',
+    'field_name' => 'comment_body',
+    'label' => 'Comment',
+    'required' => TRUE,
+    'settings' => array(
+      'membership_entity_join_form' => FALSE,
+      'membership_entity_term_renew_form' => FALSE,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 0,
+    ),
+  );
+
   // Exported field_instance: 'node-apiary-field_apiary_location'.
   $field_instances['node-apiary-field_apiary_location'] = array(
     'bundle' => 'apiary',
@@ -183,6 +218,7 @@ function beekeeper_apiaries_field_default_field_instances() {
   t('Apiary location');
   t('Apiary notes');
   t('Apiary photos');
+  t('Comment');
 
   return $field_instances;
 }
