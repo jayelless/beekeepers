@@ -135,7 +135,7 @@ function beekeeper_users_views_default_views() {
     9 => '9',
     8 => '8',
   );
-  $handler->display->display_options['path'] = 'members-view-all';
+  $handler->display->display_options['path'] = 'members/view-all';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'View all members';
   $handler->display->display_options['menu']['description'] = 'Location of all members (for administrators)';
@@ -198,7 +198,7 @@ function beekeeper_users_views_default_views() {
     7 => 0,
     8 => 0,
   );
-  $handler->display->display_options['path'] = 'members-view';
+  $handler->display->display_options['path'] = 'members/view';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'View members';
   $handler->display->display_options['menu']['description'] = 'Location of members who have agreed to share their details';
@@ -515,7 +515,7 @@ function beekeeper_users_views_default_views() {
     9 => 0,
   );
   $handler->display->display_options['filters']['type']['expose']['reduce'] = TRUE;
-  $handler->display->display_options['path'] = 'members-list';
+  $handler->display->display_options['path'] = 'members/list';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'List members';
   $handler->display->display_options['menu']['description'] = 'List of all members for administrators';
@@ -622,7 +622,7 @@ function beekeeper_users_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  $handler->display->display_options['path'] = 'members-export';
+  $handler->display->display_options['path'] = 'members/export';
 
   /* Display: Members newsletter */
   $handler = $view->new_display('page', 'Members newsletter', 'page_3');
@@ -902,10 +902,10 @@ function beekeeper_users_views_default_views() {
     9 => 0,
   );
   $handler->display->display_options['filters']['type']['expose']['reduce'] = TRUE;
-  $handler->display->display_options['path'] = 'members-newsletter';
+  $handler->display->display_options['path'] = 'members/newsletter';
   $handler->display->display_options['menu']['type'] = 'normal';
-  $handler->display->display_options['menu']['title'] = 'List members';
-  $handler->display->display_options['menu']['description'] = 'List of all members for administrators';
+  $handler->display->display_options['menu']['title'] = 'Newsletter members';
+  $handler->display->display_options['menu']['description'] = 'List of members subscribing to printed newsletter for administrators';
   $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
