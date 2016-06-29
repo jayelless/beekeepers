@@ -85,18 +85,6 @@ function beekeeper_content_ckeditor_profile_defaults() {
             ),
             'default' => 't',
           ),
-          'imce' => array(
-            'name' => 'imce',
-            'desc' => 'Plugin for inserting files from IMCE without image dialog',
-            'path' => '%plugin_dir%imce/',
-            'buttons' => array(
-              'IMCE' => array(
-                'label' => 'IMCE',
-                'icon' => 'images/icon.png',
-              ),
-            ),
-            'default' => 'f',
-          ),
           'mediaembed' => array(
             'name' => 'mediaembed',
             'desc' => 'Plugin for inserting Drupal embeded media',
@@ -186,18 +174,6 @@ function beekeeper_content_ckeditor_profile_defaults() {
               ),
             ),
             'default' => 't',
-          ),
-          'imce' => array(
-            'name' => 'imce',
-            'desc' => 'Plugin for inserting files from IMCE without image dialog',
-            'path' => '%plugin_dir%imce/',
-            'buttons' => array(
-              'IMCE' => array(
-                'label' => 'IMCE',
-                'icon' => 'images/icon.png',
-              ),
-            ),
-            'default' => 'f',
           ),
           'tableresize' => array(
             'name' => 'tableresize',
@@ -306,18 +282,6 @@ function beekeeper_content_ckeditor_profile_defaults() {
               ),
             ),
             'default' => 't',
-          ),
-          'imce' => array(
-            'name' => 'imce',
-            'desc' => 'Plugin for inserting files from IMCE without image dialog',
-            'path' => '%plugin_dir%imce/',
-            'buttons' => array(
-              'IMCE' => array(
-                'label' => 'IMCE',
-                'icon' => 'images/icon.png',
-              ),
-            ),
-            'default' => 'f',
           ),
           'mediaembed' => array(
             'name' => 'mediaembed',

@@ -118,6 +118,7 @@ features[variable][] = comment_preview_webform
 features[variable][] = comment_subject_field_newsletter
 features[variable][] = comment_subject_field_webform
 features[variable][] = comment_webform
+features[variable][] = field_bundle_settings_node__article
 features[variable][] = field_bundle_settings_node__newsletter
 features[variable][] = menu_options_newsletter
 features[variable][] = menu_options_webform

@@ -10,7 +10,7 @@
 function beekeeper_memberships_menu_default_menu_links() {
   $menu_links = array();
 
-  // Exported menu link: user-menu_join---dummy-membership:user/join/membership
+  // Exported menu link: user-menu_join---dummy-membership:user/join/membership.
   $menu_links['user-menu_join---dummy-membership:user/join/membership'] = array(
     'menu_name' => 'user-menu',
     'link_path' => 'user/join/membership',
@@ -31,7 +31,7 @@ function beekeeper_memberships_menu_default_menu_links() {
     'customized' => 1,
     'parent_identifier' => 'user-menu_join:user/join',
   );
-  // Exported menu link: user-menu_join---honorary-membership:user/join/honorary-membership
+  // Exported menu link: user-menu_join---honorary-membership:user/join/honorary-membership.
   $menu_links['user-menu_join---honorary-membership:user/join/honorary-membership'] = array(
     'menu_name' => 'user-menu',
     'link_path' => 'user/join/honorary-membership',
@@ -52,7 +52,7 @@ function beekeeper_memberships_menu_default_menu_links() {
     'customized' => 1,
     'parent_identifier' => 'user-menu_join:user/join',
   );
-  // Exported menu link: user-menu_join---life-membership:user/join/life-membership
+  // Exported menu link: user-menu_join---life-membership:user/join/life-membership.
   $menu_links['user-menu_join---life-membership:user/join/life-membership'] = array(
     'menu_name' => 'user-menu',
     'link_path' => 'user/join/life-membership',
@@ -73,7 +73,7 @@ function beekeeper_memberships_menu_default_menu_links() {
     'customized' => 1,
     'parent_identifier' => 'user-menu_join:user/join',
   );
-  // Exported menu link: user-menu_join:user/join
+  // Exported menu link: user-menu_join:user/join.
   $menu_links['user-menu_join:user/join'] = array(
     'menu_name' => 'user-menu',
     'link_path' => 'user/join',
@@ -90,7 +90,7 @@ function beekeeper_memberships_menu_default_menu_links() {
     'weight' => -50,
     'customized' => 1,
   );
-  // Exported menu link: user-menu_renew---dummy-membership:user/renew/membership
+  // Exported menu link: user-menu_renew---dummy-membership:user/renew/membership.
   $menu_links['user-menu_renew---dummy-membership:user/renew/membership'] = array(
     'menu_name' => 'user-menu',
     'link_path' => 'user/renew/membership',
@@ -111,7 +111,7 @@ function beekeeper_memberships_menu_default_menu_links() {
     'customized' => 1,
     'parent_identifier' => 'user-menu_renew:user/renew',
   );
-  // Exported menu link: user-menu_renew---honorary-membership:user/renew/honorary-membership
+  // Exported menu link: user-menu_renew---honorary-membership:user/renew/honorary-membership.
   $menu_links['user-menu_renew---honorary-membership:user/renew/honorary-membership'] = array(
     'menu_name' => 'user-menu',
     'link_path' => 'user/renew/honorary-membership',
@@ -132,7 +132,7 @@ function beekeeper_memberships_menu_default_menu_links() {
     'customized' => 1,
     'parent_identifier' => 'user-menu_renew:user/renew',
   );
-  // Exported menu link: user-menu_renew---life-membership:user/renew/life-membership
+  // Exported menu link: user-menu_renew---life-membership:user/renew/life-membership.
   $menu_links['user-menu_renew---life-membership:user/renew/life-membership'] = array(
     'menu_name' => 'user-menu',
     'link_path' => 'user/renew/life-membership',
@@ -153,7 +153,7 @@ function beekeeper_memberships_menu_default_menu_links() {
     'customized' => 1,
     'parent_identifier' => 'user-menu_renew:user/renew',
   );
-  // Exported menu link: user-menu_renew:user/renew
+  // Exported menu link: user-menu_renew:user/renew.
   $menu_links['user-menu_renew:user/renew'] = array(
     'menu_name' => 'user-menu',
     'link_path' => 'user/renew',
@@ -167,7 +167,7 @@ function beekeeper_memberships_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 1,
     'expanded' => 0,
-    'weight' => -50,
+    'weight' => -49,
     'customized' => 1,
   );
 

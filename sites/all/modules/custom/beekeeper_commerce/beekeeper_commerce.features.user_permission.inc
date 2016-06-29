@@ -230,6 +230,13 @@ function beekeeper_commerce_user_default_permissions() {
     'module' => 'commerce_product',
   );
 
+  // Exported permission: 'create commerce_product entities of bundle merchandise_tshirt'.
+  $permissions['create commerce_product entities of bundle merchandise_tshirt'] = array(
+    'name' => 'create commerce_product entities of bundle merchandise_tshirt',
+    'roles' => array(),
+    'module' => 'commerce_product',
+  );
+
   // Exported permission: 'create commerce_product entities of bundle nucleus_colony'.
   $permissions['create commerce_product entities of bundle nucleus_colony'] = array(
     'name' => 'create commerce_product entities of bundle nucleus_colony',
@@ -443,6 +450,13 @@ function beekeeper_commerce_user_default_permissions() {
     'module' => 'commerce_product',
   );
 
+  // Exported permission: 'edit any commerce_product entity of bundle merchandise_tshirt'.
+  $permissions['edit any commerce_product entity of bundle merchandise_tshirt'] = array(
+    'name' => 'edit any commerce_product entity of bundle merchandise_tshirt',
+    'roles' => array(),
+    'module' => 'commerce_product',
+  );
+
   // Exported permission: 'edit any commerce_product entity of bundle nucleus_colony'.
   $permissions['edit any commerce_product entity of bundle nucleus_colony'] = array(
     'name' => 'edit any commerce_product entity of bundle nucleus_colony',
@@ -561,6 +575,13 @@ function beekeeper_commerce_user_default_permissions() {
   // Exported permission: 'edit own commerce_product entities of bundle merchandise_transfer'.
   $permissions['edit own commerce_product entities of bundle merchandise_transfer'] = array(
     'name' => 'edit own commerce_product entities of bundle merchandise_transfer',
+    'roles' => array(),
+    'module' => 'commerce_product',
+  );
+
+  // Exported permission: 'edit own commerce_product entities of bundle merchandise_tshirt'.
+  $permissions['edit own commerce_product entities of bundle merchandise_tshirt'] = array(
+    'name' => 'edit own commerce_product entities of bundle merchandise_tshirt',
     'roles' => array(),
     'module' => 'commerce_product',
   );
@@ -735,6 +756,13 @@ function beekeeper_commerce_user_default_permissions() {
     'module' => 'commerce_product',
   );
 
+  // Exported permission: 'view any commerce_product entity of bundle merchandise_tshirt'.
+  $permissions['view any commerce_product entity of bundle merchandise_tshirt'] = array(
+    'name' => 'view any commerce_product entity of bundle merchandise_tshirt',
+    'roles' => array(),
+    'module' => 'commerce_product',
+  );
+
   // Exported permission: 'view any commerce_product entity of bundle nucleus_colony'.
   $permissions['view any commerce_product entity of bundle nucleus_colony'] = array(
     'name' => 'view any commerce_product entity of bundle nucleus_colony',
@@ -838,6 +866,13 @@ function beekeeper_commerce_user_default_permissions() {
   // Exported permission: 'view own commerce_product entities of bundle merchandise_transfer'.
   $permissions['view own commerce_product entities of bundle merchandise_transfer'] = array(
     'name' => 'view own commerce_product entities of bundle merchandise_transfer',
+    'roles' => array(),
+    'module' => 'commerce_product',
+  );
+
+  // Exported permission: 'view own commerce_product entities of bundle merchandise_tshirt'.
+  $permissions['view own commerce_product entities of bundle merchandise_tshirt'] = array(
+    'name' => 'view own commerce_product entities of bundle merchandise_tshirt',
     'roles' => array(),
     'module' => 'commerce_product',
   );

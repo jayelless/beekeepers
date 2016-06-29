@@ -10,7 +10,7 @@
 function beekeeper_messaging_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'body'
+  // Exported field_base: 'body'.
   $field_bases['body'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -31,7 +31,7 @@ function beekeeper_messaging_field_default_field_bases() {
     'type' => 'text_with_summary',
   );
 
-  // Exported field_base: 'field_mass_contact_attachments'
+  // Exported field_base: 'field_mass_contact_attachments'.
   $field_bases['field_mass_contact_attachments'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -54,7 +54,7 @@ function beekeeper_messaging_field_default_field_bases() {
     'type' => 'file',
   );
 
-  // Exported field_base: 'field_mass_contact_bcc'
+  // Exported field_base: 'field_mass_contact_bcc'.
   $field_bases['field_mass_contact_bcc'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -75,7 +75,7 @@ function beekeeper_messaging_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_mass_contact_category'
+  // Exported field_base: 'field_mass_contact_category'.
   $field_bases['field_mass_contact_category'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -96,7 +96,7 @@ function beekeeper_messaging_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_mass_contact_from'
+  // Exported field_base: 'field_mass_contact_from'.
   $field_bases['field_mass_contact_from'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -117,7 +117,7 @@ function beekeeper_messaging_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_mass_contact_headers'
+  // Exported field_base: 'field_mass_contact_headers'.
   $field_bases['field_mass_contact_headers'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -136,7 +136,7 @@ function beekeeper_messaging_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_mass_contact_result'
+  // Exported field_base: 'field_mass_contact_result'.
   $field_bases['field_mass_contact_result'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -155,7 +155,7 @@ function beekeeper_messaging_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_mass_contact_to'
+  // Exported field_base: 'field_mass_contact_to'.
   $field_bases['field_mass_contact_to'] = array(
     'active' => 1,
     'cardinality' => -1,

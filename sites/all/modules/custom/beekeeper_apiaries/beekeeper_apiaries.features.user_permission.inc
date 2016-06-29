@@ -72,5 +72,31 @@ function beekeeper_apiaries_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'view any apiary content'.
+  $permissions['view any apiary content'] = array(
+    'name' => 'view any apiary content',
+    'roles' => array(
+      'Honorary member' => 'Honorary member',
+      'Junior member' => 'Junior member',
+      'Lifetime member' => 'Lifetime member',
+      'Standard member' => 'Standard member',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node_view_permissions',
+  );
+
+  // Exported permission: 'view own apiary content'.
+  $permissions['view own apiary content'] = array(
+    'name' => 'view own apiary content',
+    'roles' => array(
+      'Honorary member' => 'Honorary member',
+      'Junior member' => 'Junior member',
+      'Lifetime member' => 'Lifetime member',
+      'Standard member' => 'Standard member',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node_view_permissions',
+  );
+
   return $permissions;
 }

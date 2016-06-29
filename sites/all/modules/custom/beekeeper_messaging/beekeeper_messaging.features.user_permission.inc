@@ -153,5 +153,27 @@ function beekeeper_messaging_user_default_permissions() {
     'module' => 'mass_contact',
   );
 
+  // Exported permission: 'view any mass_contact content'.
+  $permissions['view any mass_contact content'] = array(
+    'name' => 'view any mass_contact content',
+    'roles' => array(
+      'Committee member' => 'Committee member',
+      'Membership admin' => 'Membership admin',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node_view_permissions',
+  );
+
+  // Exported permission: 'view own mass_contact content'.
+  $permissions['view own mass_contact content'] = array(
+    'name' => 'view own mass_contact content',
+    'roles' => array(
+      'Committee member' => 'Committee member',
+      'Membership admin' => 'Membership admin',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node_view_permissions',
+  );
+
   return $permissions;
 }

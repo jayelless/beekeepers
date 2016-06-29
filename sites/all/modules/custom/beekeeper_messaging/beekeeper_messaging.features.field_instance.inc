@@ -10,7 +10,7 @@
 function beekeeper_messaging_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-mass_contact-body'
+  // Exported field_instance: 'node-mass_contact-body'.
   $field_instances['node-mass_contact-body'] = array(
     'bundle' => 'mass_contact',
     'default_value' => NULL,
@@ -56,7 +56,8 @@ function beekeeper_messaging_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-mass_contact-field_mass_contact_attachments'
+  // Exported field_instance:
+  // 'node-mass_contact-field_mass_contact_attachments'.
   $field_instances['node-mass_contact-field_mass_contact_attachments'] = array(
     'bundle' => 'mass_contact',
     'default_value' => NULL,
@@ -110,7 +111,7 @@ function beekeeper_messaging_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-mass_contact-field_mass_contact_bcc'
+  // Exported field_instance: 'node-mass_contact-field_mass_contact_bcc'.
   $field_instances['node-mass_contact-field_mass_contact_bcc'] = array(
     'bundle' => 'mass_contact',
     'default_value' => NULL,
@@ -151,7 +152,7 @@ function beekeeper_messaging_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-mass_contact-field_mass_contact_category'
+  // Exported field_instance: 'node-mass_contact-field_mass_contact_category'.
   $field_instances['node-mass_contact-field_mass_contact_category'] = array(
     'bundle' => 'mass_contact',
     'default_value' => NULL,
@@ -192,7 +193,7 @@ function beekeeper_messaging_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-mass_contact-field_mass_contact_from'
+  // Exported field_instance: 'node-mass_contact-field_mass_contact_from'.
   $field_instances['node-mass_contact-field_mass_contact_from'] = array(
     'bundle' => 'mass_contact',
     'default_value' => NULL,
@@ -233,7 +234,7 @@ function beekeeper_messaging_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-mass_contact-field_mass_contact_headers'
+  // Exported field_instance: 'node-mass_contact-field_mass_contact_headers'.
   $field_instances['node-mass_contact-field_mass_contact_headers'] = array(
     'bundle' => 'mass_contact',
     'default_value' => NULL,
@@ -274,7 +275,7 @@ function beekeeper_messaging_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-mass_contact-field_mass_contact_result'
+  // Exported field_instance: 'node-mass_contact-field_mass_contact_result'.
   $field_instances['node-mass_contact-field_mass_contact_result'] = array(
     'bundle' => 'mass_contact',
     'default_value' => NULL,
@@ -315,7 +316,7 @@ function beekeeper_messaging_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-mass_contact-field_mass_contact_to'
+  // Exported field_instance: 'node-mass_contact-field_mass_contact_to'.
   $field_instances['node-mass_contact-field_mass_contact_to'] = array(
     'bundle' => 'mass_contact',
     'default_value' => NULL,
