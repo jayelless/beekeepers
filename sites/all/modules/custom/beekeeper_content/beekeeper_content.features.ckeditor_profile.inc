@@ -70,7 +70,7 @@ function beekeeper_content_ckeditor_profile_defaults() {
           'ckeditor_link' => array(
             'name' => 'drupal_path',
             'desc' => 'CKEditor Link - A plugin to easily create links to Drupal internal paths',
-            'path' => '%base_path%sites/all/modules/ckeditor_link/plugins/link/',
+            'path' => '%base_path%sites/all/modules/contrib/ckeditor_link/plugins/link/',
             'buttons' => FALSE,
           ),
           'drupalbreaks' => array(
@@ -160,7 +160,7 @@ function beekeeper_content_ckeditor_profile_defaults() {
           'ckeditor_link' => array(
             'name' => 'drupal_path',
             'desc' => 'CKEditor Link - A plugin to easily create links to Drupal internal paths',
-            'path' => '%base_path%sites/all/modules/ckeditor_link/plugins/link/',
+            'path' => '%base_path%sites/all/modules/contrib/ckeditor_link/plugins/link/',
             'buttons' => FALSE,
           ),
           'drupalbreaks' => array(
@@ -268,7 +268,7 @@ function beekeeper_content_ckeditor_profile_defaults() {
           'ckeditor_link' => array(
             'name' => 'drupal_path',
             'desc' => 'CKEditor Link - A plugin to easily create links to Drupal internal paths',
-            'path' => '%base_path%sites/all/modules/ckeditor_link/plugins/link/',
+            'path' => '%base_path%sites/all/modules/contrib/ckeditor_link/plugins/link/',
             'buttons' => FALSE,
           ),
           'drupalbreaks' => array(
