@@ -54,68 +54,6 @@ function beekeeper_custom_entity_presave($entity, $type) {
 
 
 /**
- * Implementation of hook_rules_condition_info().
- */
-function beekeeper_custom_rules_condition_info() {
-    return array(
-        'beekeeper_custom_rules_condition_send_renewal_notifications' => array(
-            'label' => t('Send renewal notification emails?'),
-            'group' => 'Beekeeper Custom',
-        ),
-        'beekeeper_custom_rules_condition_send_lapse_notifications' => array(
-            'label' => t('Send lapse notification emails?'),
-            'group' => 'Beekeeper Custom',
-        ),
-    );
-}
-
-/**
- * Condition to make sure membership renewal notifications are sent out on the 1st of June,
- * and uses a "renewal_notifications_sent" variable to make sure the notifications are only sent out
- * once no matter how many times cron is run that day.
- */
-function beekeeper_custom_rules_condition_send_renewal_notifications() {
-    $today = date('z');
-    $renewal_date = date('z', strtotime("1 June this year"));
-    if($today==$renewal_date){
-      if(strcmp(variable_get('renewal_notifications_sent'), 'true')!=0){
-        variable_set('renewal_notifications_sent', 'true');
-        return true;
-      }else{
-        return false;
-      }
-
-    }else{
-      variable_set('renewal_notifications_sent', 'false');
-      return false;
-    }
-
-}
-
-/**
- * Condition to make sure membership lapsed notifications are sent out on the 1st of August,
- * and uses a "lapse_notifications_sent" variable to make sure the notifications are only sent out
- * once no matter how many times cron is run that day.
- */
-function beekeeper_custom_rules_condition_send_lapse_notifications() {
-    $today = date('z');
-    $renewal_date = date('z', strtotime("1 August this year"));
-    if($today==$renewal_date){
-      if(strcmp(variable_get('lapse_notification_sent'), 'true')!=0){
-        variable_set('lapse_notifications_sent', 'true');
-        return true;
-      }else{
-        return false;
-      }
-
-    }else{
-      variable_set('lapse_notifications_sent', 'false');
-      return false;
-    }
-
-}
-
-/**
  * Function to massage imported data to ensure that the address elements are correct
  *
  * Implements hook_feeds_presave
@@ -253,4 +191,11 @@ function beekeeper_custom_mail_alter(&$message) {
     // leave a message for the user
     drupal_set_message(t('Mail message NOT sent to @to', array('@to'=>$message['to'])));
   }
+}
+
+/**
+ * Function to return a keyed list of membership types
+ */
+function beekeeper_custom_membership_type_list() {
+  return db_query('SELECT id, type FROM {membership_entity_type} ORDER BY id')->fetchAllKeyed();
 }
