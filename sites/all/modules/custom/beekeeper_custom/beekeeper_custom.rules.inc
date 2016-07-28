@@ -54,7 +54,7 @@ function beekeeper_custom_rules_condition_send_lapse_notifications() {
   $today = date('z');
   $renewal_date = date('z', strtotime("1 August this year"));
   if($today==$renewal_date){
-    if(strcmp(variable_get('lapse_notification_sent'), 'true')!=0){
+    if(strcmp(variable_get('lapse_notifications_sent'), 'true')!=0){
       variable_set('lapse_notifications_sent', 'true');
       return true;
     }else{
