@@ -61,28 +61,55 @@ function beekeeper_custom_rules_condition_info() {
         'beekeeper_custom_rules_condition_send_renewal_notifications' => array(
             'label' => t('Send renewal notification emails?'),
             'group' => 'Beekeeper Custom',
-        )
+        ),
+        'beekeeper_custom_rules_condition_send_lapse_notifications' => array(
+            'label' => t('Send lapse notification emails?'),
+            'group' => 'Beekeeper Custom',
+        ),
     );
 }
 
 /**
- * Condition to make sure membership renewal notifications are sent out on the 31st of May,
- * and uses a "notifications_sent" variable to make sure the notifications are only sent out
+ * Condition to make sure membership renewal notifications are sent out on the 1st of June,
+ * and uses a "renewal_notifications_sent" variable to make sure the notifications are only sent out
  * once no matter how many times cron is run that day.
  */
 function beekeeper_custom_rules_condition_send_renewal_notifications() {
     $today = date('z');
-    $renewal_date = date('z', strtotime("31 May this year"));
+    $renewal_date = date('z', strtotime("1 June this year"));
     if($today==$renewal_date){
-      if(strcmp(variable_get('notifications_sent'), 'true')!=0){
-        variable_set('notifications_sent', 'true');
+      if(strcmp(variable_get('renewal_notifications_sent'), 'true')!=0){
+        variable_set('renewal_notifications_sent', 'true');
         return true;
       }else{
         return false;
       }
 
     }else{
-      variable_set('notifications_sent', 'false');
+      variable_set('renewal_notifications_sent', 'false');
+      return false;
+    }
+
+}
+
+/**
+ * Condition to make sure membership lapsed notifications are sent out on the 1st of August,
+ * and uses a "lapse_notifications_sent" variable to make sure the notifications are only sent out
+ * once no matter how many times cron is run that day.
+ */
+function beekeeper_custom_rules_condition_send_lapse_notifications() {
+    $today = date('z');
+    $renewal_date = date('z', strtotime("1 August this year"));
+    if($today==$renewal_date){
+      if(strcmp(variable_get('lapse_notification_sent'), 'true')!=0){
+        variable_set('lapse_notifications_sent', 'true');
+        return true;
+      }else{
+        return false;
+      }
+
+    }else{
+      variable_set('lapse_notifications_sent', 'false');
       return false;
     }
 
