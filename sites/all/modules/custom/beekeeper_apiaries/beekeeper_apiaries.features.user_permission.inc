@@ -72,23 +72,5 @@ function beekeeper_apiaries_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: 'view any apiary content'.
-  $permissions['view any apiary content'] = array(
-    'name' => 'view any apiary content',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'node_view_permissions',
-  );
-
-  // Exported permission: 'view own apiary content'.
-  $permissions['view own apiary content'] = array(
-    'name' => 'view own apiary content',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'node_view_permissions',
-  );
-
   return $permissions;
 }

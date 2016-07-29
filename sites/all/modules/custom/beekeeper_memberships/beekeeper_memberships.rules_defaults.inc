@@ -98,5 +98,33 @@ function beekeeper_memberships_default_rules_configuration() {
       ]
     }
   }');
+  $items['rules_beekeepers_email_membership_lapse_notification_on_1st_augu'] = entity_import('rules_config', '{ "rules_beekeepers_email_membership_lapse_notification_on_1st_augu" : {
+      "LABEL" : "Beekeepers: email membership lapse notification on 1st August",
+      "PLUGIN" : "reaction rule",
+      "OWNER" : "rules",
+      "TAGS" : [ "Memberships" ],
+      "REQUIRES" : [ "beekeeper_custom", "rules" ],
+      "ON" : { "cron" : [] },
+      "IF" : [ { "beekeeper_custom_rules_condition_send_lapse_notifications" : [] } ],
+      "DO" : [
+        { "beekeeper_custon_rules_action_send_mail_to_members" : {
+            "types" : { "value" : { "3" : "3", "5" : "5" } },
+            "status" : { "value" : [ "0" ] },
+            "roles" : { "value" : { "4" : "4", "5" : "5" } },
+            "subject" : "[site:name] Membership has now lapsed",
+            "message" : "Hello Beekeepers!\\\\r\\\\n\\\\r\\\\nYour membership to [site:name] expired on the 31st May and has not been renewed during the two month grace period. If you did not want this to happen, and would now like to renew your membership, please login here [site:login-url] and follow the renewal process.\\\\r\\\\n\\\\r\\\\nThank you.\\\\r\\\\n\\\\r\\\\nThe [site:name] Team."
+          }
+        },
+        { "beekeeper_custon_rules_action_update_role_of_members" : {
+            "types" : { "value" : { "3" : "3", "5" : "5" } },
+            "status" : { "value" : [ "0" ] },
+            "roles" : { "value" : { "4" : "4", "5" : "5" } },
+            "assign" : { "value" : [] },
+            "remove" : { "value" : { "4" : "4", "5" : "5" } }
+          }
+        }
+      ]
+    }
+  }');
   return $items;
 }

@@ -74,7 +74,7 @@ function beekeeper_custom_rules_condition_send_lapse_notifications() {
  */
 function beekeeper_custom_rules_action_info() {
   return array(
-    'beekeeper_custon_rules_action_mail_to_members' => array(
+    'beekeeper_custon_rules_action_send_mail_to_members' => array(
       'label' => t('Send mail to all members with specifed status'),
       'group' => t('Beekeeper custom'),
       'parameter' => array(
@@ -116,15 +116,57 @@ function beekeeper_custom_rules_action_info() {
       //'base' => 'rules_action_mail_to_users_of_role',
       //'access callback' => 'rules_system_integration_access',
     ),
+    'beekeeper_custon_rules_action_update_role_of_members' => array(
+      'label' => t('Update user roles for members with specified status'),
+      'group' => t('Beekeeper custom'),
+      'parameter' => array(
+        'types' => array(
+          'type' => 'list<integer>',
+          'label' => t('Types'),
+          'options list' => 'beekeeper_custom_membership_type_list',
+          'description' => t('Select the membership types of users to receive the mail.'),
+        ),
+        'status' => array(
+          'type' => 'list<integer>',
+          'label' => t('Status'),
+          'options list' => 'membership_entity_get_status_list',
+          'description' => t('Select the membership status of users to receive the mail.'),
+        ),
+        'roles' => array(
+          'type' => 'list<integer>',
+          'label' => t('Roles'),
+          'options list' => 'entity_metadata_user_roles',
+          'description' => t('Select the roles of users to receive the mail.'),
+        ),
+        'assign' => array(
+          'type' => 'list<integer>',
+          'label' => t('Assign'),
+          'optional' => TRUE,
+          'options list' => 'entity_metadata_user_roles',
+          'description' => t('Select the roles to be assigned to members accounts.'),
+        ),
+        'remove' => array(
+          'type' => 'list<integer>',
+          'label' => t('Remove'),
+          'optional' => TRUE,
+          'options list' => 'entity_metadata_user_roles',
+          'description' => t('Select the roles to be removed from members accounts.'),
+        ),
+      ),
+    ),
   );
 }
 
 /**
- * Function to send email to users with an expired membership who still have a valid membership role
+ * Function to send email to users with specified roles and memberships of specified type and status vsalues
  */
-function beekeeper_custon_rules_action_mail_to_members($types, $status, $roles, $subject, $message, $from = NULL, $settings, RulesState $state, RulesPlugin $element) {
+function beekeeper_custon_rules_action_send_mail_to_members($types, $status, $roles, $subject, $message, $from = NULL, $settings, RulesState $state, RulesPlugin $element) {
   // Check the from value
   $from = !empty($from) ? str_replace(array("\r", "\n"), '', $from) : NULL;
+
+  watchdog('beekeeper', 'Send email to members from %from with subject %subject.',
+    array('%from' => $from, '%subject' => $subject));
+
 
   // Convert arrays of type, status and role values to lists
   $tids = implode(',', $types);
@@ -151,6 +193,7 @@ function beekeeper_custon_rules_action_mail_to_members($types, $status, $roles, 
   $name = isset($element->root()->name) ? $element->root()->name : 'unnamed';
   $key = 'rules_action_mail_to_users_of_role_' . $name . '_' . $element->elementId();  $languages = language_list();
 
+  $count = 0;
   $message = array('result' => TRUE);
   foreach ($result as $row) {
     $message = drupal_mail('rules', $key, $row->mail, language_default(), $params, $from);
@@ -163,12 +206,88 @@ function beekeeper_custon_rules_action_mail_to_members($types, $status, $roles, 
     if ($message['result'] === FALSE) {
       break;
     }
+    $count++;
   }
   if ($message['result'] !== FALSE) {
     $type_names = array_intersect_key(beekeeper_custom_membership_type_list(), array_flip($types));
     $status_names = array_intersect_key(membership_entity_get_status_list(), array_flip($status));
     $role_names = array_intersect_key(user_roles(TRUE), array_flip($roles));
-    watchdog('beekeeper', 'Successfully sent email to members having role(s) %roles, with membership type(s) %type in status(es) %status.',
-      array('%roles' => implode(', ', $role_names), '%type' => implode(', ', $type_names), '%status' => implode(', ', $status_names)));
+    watchdog('beekeeper', 'Successfully sent email to %count members having role(s) %roles, with membership type(s) %type in status(es) %status.',
+      array('%count' => $count, '%roles' => implode(', ', $role_names), '%type' => implode(', ', $type_names), '%status' => implode(', ', $status_names)));
+  }
+}
+
+/**
+ * Function to change user role of members with specified membership type and status values
+ */
+function beekeeper_custon_rules_action_update_role_of_members($types, $status, $roles, $assign, $remove, $settings, RulesState $state, RulesPlugin $element) {
+
+  if (count($assign) > 0) {
+    $assign_names = array_intersect_key(user_roles(TRUE), array_flip($assign));
+  }
+  else {
+    $assign_names = array('<none>');
+  }
+  if (count($remove) > 0) {
+    $remove_names = array_intersect_key(user_roles(TRUE), array_flip($remove));
+  }
+  else {
+    $remove_names = array('<none>');
+  }
+  watchdog('beekeeper', 'Update member accounts to assign roles %assign and remove roles %remove.',
+    array('%assign' => implode(', ', $assign_names), '%remove' => implode(', ', $remove_names)));
+
+  // Convert arrays of type, status and role values to lists
+  $tids = implode(',', $types);
+  $sids = implode(',', $status);
+  $rids = implode(',', $roles);
+
+  // Build an SQL statement to select the required users
+  $sql = 'SELECT DISTINCT u.uid FROM {users} u ';
+  $sql .= 'LEFT JOIN {users_roles} r ON r.uid = u.uid ';
+  $sql .= 'LEFT JOIN {membership_entity} me ON me.uid = u.uid ';
+  $sql .= 'LEFT JOIN {membership_entity_type} mt ON mt.type = me.type ';
+  $sql .= 'WHERE r.rid IN (' . $rids . ') ';
+  $sql .= 'AND me.status IN (' . $sids . ') ';
+  $sql .= 'AND mt.id IN (' . $tids . ')';
+
+  $result = db_query($sql);
+
+  $roles = user_roles(TRUE); // array of $rid => $role_name
+
+  $count = 0;
+  foreach ($result as $row) {
+    $account = user_load($row->uid);
+    $save = FALSE;
+
+    // Assign any required roles to the user if not already present
+    foreach ($assign as $rid) {
+      if (!array_key_exists($rid, $account->roles)) {
+        $account->roles[$rid] = $roles[$rid];
+        $save = TRUE;
+      }
+    }
+
+    // Remove any specified role if the user already has it.
+    foreach ($remove as $rid) {
+      if (array_key_exists($rid, $account->roles)) {
+        unset($account->roles[$rid]);
+        $save = TRUE;
+      }
+    }
+
+    if ($save) {
+      user_save($account, array('roles' => $account->roles));
+      $count++;
+    }
+
+  }
+
+  if ($count > 0) {
+    $type_names = array_intersect_key(beekeeper_custom_membership_type_list(), array_flip($types));
+    $status_names = array_intersect_key(membership_entity_get_status_list(), array_flip($status));
+    $role_names = array_intersect_key(user_roles(TRUE), array_flip($roles));
+    watchdog('beekeeper', 'Successfully updated roles for %count members having role(s) %roles, with membership type(s) %type in status(es) %status.',
+      array('%count' => $count, '%roles' => implode(', ', $role_names), '%type' => implode(', ', $type_names), '%status' => implode(', ', $status_names)));
   }
 }
