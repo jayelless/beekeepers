@@ -63,6 +63,7 @@ features[user_role][] = Honorary member
 features[user_role][] = Junior member
 features[user_role][] = Lifetime member
 features[user_role][] = Membership admin
+features[user_role][] = Site editor
 features[user_role][] = Standard member
 features[user_role][] = administrator
 features[variable][] = realname_pattern

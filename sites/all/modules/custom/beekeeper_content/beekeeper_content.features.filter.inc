@@ -18,15 +18,6 @@ function beekeeper_content_filter_default_formats() {
     'status' => 1,
     'weight' => 0,
     'filters' => array(
-      'filter_html' => array(
-        'weight' => -50,
-        'status' => 1,
-        'settings' => array(
-          'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <p> <br> <div> <span> <table> <tr> <th> <td>',
-          'filter_html_help' => 1,
-          'filter_html_nofollow' => 0,
-        ),
-      ),
       'filter_url' => array(
         'weight' => -47,
         'status' => 1,
@@ -42,6 +33,7 @@ function beekeeper_content_filter_default_formats() {
 div[align<center?justify?left?right],
 p[align<center?justify?left?right],
 table[border],tr,th,td,
+img[!src|alt|title],
 br,span,em,strong,cite,code,blockquote,ul,ol,li,dl,dt,dd',
           'allow_comments' => 0,
           'nofollow_policy' => 'whitelist',
@@ -460,6 +452,7 @@ test.beehive.org.nz',
 div[align<center?justify?left?right],
 p[align<center?justify?left?right],
 table[border],tr,th,td,
+img[!src|alt|title],
 br,span,em,strong,cite,code,blockquote,ul,ol,li,dl,dt,dd,
 h1,h2,h3,h4,h5,h6',
           'allow_comments' => 0,

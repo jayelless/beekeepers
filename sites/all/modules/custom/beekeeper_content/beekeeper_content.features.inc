@@ -14,6 +14,47 @@ function beekeeper_content_ctools_plugin_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_image_default_styles().
+ */
+function beekeeper_content_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: extra_large.
+  $styles['extra_large'] = array(
+    'label' => 'Extra large (1280x1280)',
+    'effects' => array(
+      3 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 1280,
+          'height' => 1280,
+          'upscale' => 1,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: larger.
+  $styles['larger'] = array(
+    'label' => 'Larger (1024x1024)',
+    'effects' => array(
+      4 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 1024,
+          'height' => 1024,
+          'upscale' => 1,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  return $styles;
+}
+
+/**
  * Implements hook_node_info().
  */
 function beekeeper_content_node_info() {

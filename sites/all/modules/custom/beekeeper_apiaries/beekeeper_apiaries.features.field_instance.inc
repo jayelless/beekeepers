@@ -76,6 +76,12 @@ function beekeeper_apiaries_field_default_field_instances() {
         'type' => 'geolocation_googlemaps_dynamic',
         'weight' => 0,
       ),
+      'notifications' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'above',
         'module' => 'geolocation_googlemaps',
@@ -127,6 +133,12 @@ function beekeeper_apiaries_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 2,
       ),
+      'notifications' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -173,6 +185,12 @@ function beekeeper_apiaries_field_default_field_instances() {
         'type' => 'image',
         'weight' => 1,
       ),
+      'notifications' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'above',
         'module' => 'image',
@@ -205,6 +223,16 @@ function beekeeper_apiaries_field_default_field_instances() {
       'active' => 1,
       'module' => 'image',
       'settings' => array(
+        'insert' => 0,
+        'insert_absolute' => FALSE,
+        'insert_class' => '',
+        'insert_default' => array(
+          0 => 'auto',
+        ),
+        'insert_styles' => array(
+          0 => 'auto',
+        ),
+        'insert_width' => '',
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),

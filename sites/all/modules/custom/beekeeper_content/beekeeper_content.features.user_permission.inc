@@ -24,6 +24,7 @@ function beekeeper_content_user_default_permissions() {
     'name' => 'access ckeditor link',
     'roles' => array(
       'Committee member' => 'Committee member',
+      'Site editor' => 'Site editor',
       'administrator' => 'administrator',
     ),
     'module' => 'ckeditor_link',
@@ -72,6 +73,7 @@ function beekeeper_content_user_default_permissions() {
     'name' => 'create article content',
     'roles' => array(
       'Committee member' => 'Committee member',
+      'Site editor' => 'Site editor',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -82,6 +84,7 @@ function beekeeper_content_user_default_permissions() {
     'name' => 'create newsletter content',
     'roles' => array(
       'Committee member' => 'Committee member',
+      'Site editor' => 'Site editor',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -92,6 +95,7 @@ function beekeeper_content_user_default_permissions() {
     'name' => 'create page content',
     'roles' => array(
       'Committee member' => 'Committee member',
+      'Site editor' => 'Site editor',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -129,6 +133,7 @@ function beekeeper_content_user_default_permissions() {
   $permissions['delete any article content'] = array(
     'name' => 'delete any article content',
     'roles' => array(
+      'Site editor' => 'Site editor',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -147,6 +152,7 @@ function beekeeper_content_user_default_permissions() {
   $permissions['delete any page content'] = array(
     'name' => 'delete any page content',
     'roles' => array(
+      'Site editor' => 'Site editor',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -166,6 +172,7 @@ function beekeeper_content_user_default_permissions() {
     'name' => 'delete own article content',
     'roles' => array(
       'Committee member' => 'Committee member',
+      'Site editor' => 'Site editor',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -176,6 +183,7 @@ function beekeeper_content_user_default_permissions() {
     'name' => 'delete own newsletter content',
     'roles' => array(
       'Committee member' => 'Committee member',
+      'Site editor' => 'Site editor',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -186,6 +194,7 @@ function beekeeper_content_user_default_permissions() {
     'name' => 'delete own page content',
     'roles' => array(
       'Committee member' => 'Committee member',
+      'Site editor' => 'Site editor',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -224,6 +233,7 @@ function beekeeper_content_user_default_permissions() {
     'name' => 'edit any article content',
     'roles' => array(
       'Committee member' => 'Committee member',
+      'Site editor' => 'Site editor',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -234,6 +244,7 @@ function beekeeper_content_user_default_permissions() {
     'name' => 'edit any newsletter content',
     'roles' => array(
       'Committee member' => 'Committee member',
+      'Site editor' => 'Site editor',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -244,6 +255,7 @@ function beekeeper_content_user_default_permissions() {
     'name' => 'edit any page content',
     'roles' => array(
       'Committee member' => 'Committee member',
+      'Site editor' => 'Site editor',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -263,6 +275,7 @@ function beekeeper_content_user_default_permissions() {
     'name' => 'edit own article content',
     'roles' => array(
       'Committee member' => 'Committee member',
+      'Site editor' => 'Site editor',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -273,6 +286,7 @@ function beekeeper_content_user_default_permissions() {
     'name' => 'edit own newsletter content',
     'roles' => array(
       'Committee member' => 'Committee member',
+      'Site editor' => 'Site editor',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -283,6 +297,7 @@ function beekeeper_content_user_default_permissions() {
     'name' => 'edit own page content',
     'roles' => array(
       'Committee member' => 'Committee member',
+      'Site editor' => 'Site editor',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -448,6 +463,7 @@ function beekeeper_content_user_default_permissions() {
     'name' => 'use text format advanced_html',
     'roles' => array(
       'Committee member' => 'Committee member',
+      'Site editor' => 'Site editor',
     ),
     'module' => 'filter',
   );
@@ -465,6 +481,7 @@ function beekeeper_content_user_default_permissions() {
   $permissions['use text format full_html'] = array(
     'name' => 'use text format full_html',
     'roles' => array(
+      'Site editor' => 'Site editor',
       'administrator' => 'administrator',
     ),
     'module' => 'filter',

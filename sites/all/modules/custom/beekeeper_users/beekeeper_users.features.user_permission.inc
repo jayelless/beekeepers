@@ -16,6 +16,7 @@ function beekeeper_users_user_default_permissions() {
     'roles' => array(
       'Committee member' => 'Committee member',
       'Membership admin' => 'Membership admin',
+      'Site editor' => 'Site editor',
       'administrator' => 'administrator',
     ),
     'module' => 'admin_menu',
@@ -27,6 +28,7 @@ function beekeeper_users_user_default_permissions() {
     'roles' => array(
       'Committee member' => 'Committee member',
       'Membership admin' => 'Membership admin',
+      'Site editor' => 'Site editor',
       'administrator' => 'administrator',
     ),
     'module' => 'system',

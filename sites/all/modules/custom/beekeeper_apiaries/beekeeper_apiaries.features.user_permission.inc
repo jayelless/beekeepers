@@ -76,10 +76,6 @@ function beekeeper_apiaries_user_default_permissions() {
   $permissions['view any apiary content'] = array(
     'name' => 'view any apiary content',
     'roles' => array(
-      'Honorary member' => 'Honorary member',
-      'Junior member' => 'Junior member',
-      'Lifetime member' => 'Lifetime member',
-      'Standard member' => 'Standard member',
       'administrator' => 'administrator',
     ),
     'module' => 'node_view_permissions',
@@ -89,10 +85,6 @@ function beekeeper_apiaries_user_default_permissions() {
   $permissions['view own apiary content'] = array(
     'name' => 'view own apiary content',
     'roles' => array(
-      'Honorary member' => 'Honorary member',
-      'Junior member' => 'Junior member',
-      'Lifetime member' => 'Lifetime member',
-      'Standard member' => 'Standard member',
       'administrator' => 'administrator',
     ),
     'module' => 'node_view_permissions',

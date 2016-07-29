@@ -24,6 +24,12 @@ function beekeeper_messaging_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 0,
       ),
+      'notifications' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -70,6 +76,12 @@ function beekeeper_messaging_field_default_field_instances() {
         'settings' => array(),
         'type' => 'file_default',
         'weight' => 10,
+      ),
+      'notifications' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -125,6 +137,12 @@ function beekeeper_messaging_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => -7,
       ),
+      'notifications' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'settings' => array(),
@@ -165,6 +183,12 @@ function beekeeper_messaging_field_default_field_instances() {
         'settings' => array(),
         'type' => 'text_default',
         'weight' => -9,
+      ),
+      'notifications' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -207,6 +231,12 @@ function beekeeper_messaging_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => -10,
       ),
+      'notifications' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'settings' => array(),
@@ -247,6 +277,12 @@ function beekeeper_messaging_field_default_field_instances() {
         'settings' => array(),
         'type' => 'text_default',
         'weight' => -6,
+      ),
+      'notifications' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -289,6 +325,12 @@ function beekeeper_messaging_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 5,
       ),
+      'notifications' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'settings' => array(),
@@ -329,6 +371,12 @@ function beekeeper_messaging_field_default_field_instances() {
         'settings' => array(),
         'type' => 'text_default',
         'weight' => -8,
+      ),
+      'notifications' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'hidden',

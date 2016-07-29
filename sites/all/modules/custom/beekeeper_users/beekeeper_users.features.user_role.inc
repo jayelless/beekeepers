@@ -40,6 +40,12 @@ function beekeeper_users_user_default_roles() {
     'weight' => 7,
   );
 
+  // Exported role: Site editor.
+  $roles['Site editor'] = array(
+    'name' => 'Site editor',
+    'weight' => 9,
+  );
+
   // Exported role: Standard member.
   $roles['Standard member'] = array(
     'name' => 'Standard member',

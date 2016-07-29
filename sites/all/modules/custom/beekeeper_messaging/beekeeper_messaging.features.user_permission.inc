@@ -149,6 +149,7 @@ function beekeeper_messaging_user_default_permissions() {
     'roles' => array(
       'Committee member' => 'Committee member',
       'Membership admin' => 'Membership admin',
+      'administrator' => 'administrator',
     ),
     'module' => 'mass_contact',
   );

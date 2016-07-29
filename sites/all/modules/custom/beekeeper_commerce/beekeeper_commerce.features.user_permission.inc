@@ -196,7 +196,9 @@ function beekeeper_commerce_user_default_permissions() {
   // Exported permission: 'create commerce_product entities of bundle beekeeper_magazine_subscription'.
   $permissions['create commerce_product entities of bundle beekeeper_magazine_subscription'] = array(
     'name' => 'create commerce_product entities of bundle beekeeper_magazine_subscription',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'commerce_product',
   );
 
@@ -212,28 +214,27 @@ function beekeeper_commerce_user_default_permissions() {
   // Exported permission: 'create commerce_product entities of bundle merchandise_baseball_cap'.
   $permissions['create commerce_product entities of bundle merchandise_baseball_cap'] = array(
     'name' => 'create commerce_product entities of bundle merchandise_baseball_cap',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'commerce_product',
   );
 
   // Exported permission: 'create commerce_product entities of bundle merchandise_t_shirt'.
   $permissions['create commerce_product entities of bundle merchandise_t_shirt'] = array(
     'name' => 'create commerce_product entities of bundle merchandise_t_shirt',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'commerce_product',
   );
 
   // Exported permission: 'create commerce_product entities of bundle merchandise_transfer'.
   $permissions['create commerce_product entities of bundle merchandise_transfer'] = array(
     'name' => 'create commerce_product entities of bundle merchandise_transfer',
-    'roles' => array(),
-    'module' => 'commerce_product',
-  );
-
-  // Exported permission: 'create commerce_product entities of bundle merchandise_tshirt'.
-  $permissions['create commerce_product entities of bundle merchandise_tshirt'] = array(
-    'name' => 'create commerce_product entities of bundle merchandise_tshirt',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'commerce_product',
   );
 
@@ -258,7 +259,9 @@ function beekeeper_commerce_user_default_permissions() {
   // Exported permission: 'create merchandise_display content'.
   $permissions['create merchandise_display content'] = array(
     'name' => 'create merchandise_display content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -285,7 +288,9 @@ function beekeeper_commerce_user_default_permissions() {
   // Exported permission: 'delete any merchandise_display content'.
   $permissions['delete any merchandise_display content'] = array(
     'name' => 'delete any merchandise_display content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -301,7 +306,9 @@ function beekeeper_commerce_user_default_permissions() {
   // Exported permission: 'delete own merchandise_display content'.
   $permissions['delete own merchandise_display content'] = array(
     'name' => 'delete own merchandise_display content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -328,35 +335,45 @@ function beekeeper_commerce_user_default_permissions() {
   // Exported permission: 'delete terms in merchandise_baseball_cap_colour'.
   $permissions['delete terms in merchandise_baseball_cap_colour'] = array(
     'name' => 'delete terms in merchandise_baseball_cap_colour',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'taxonomy',
   );
 
   // Exported permission: 'delete terms in merchandise_catalogue'.
   $permissions['delete terms in merchandise_catalogue'] = array(
     'name' => 'delete terms in merchandise_catalogue',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'taxonomy',
   );
 
   // Exported permission: 'delete terms in merchandise_t_shiirt_colours'.
   $permissions['delete terms in merchandise_t_shiirt_colours'] = array(
     'name' => 'delete terms in merchandise_t_shiirt_colours',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'taxonomy',
   );
 
   // Exported permission: 'delete terms in merchandise_t_shirt_sizes'.
   $permissions['delete terms in merchandise_t_shirt_sizes'] = array(
     'name' => 'delete terms in merchandise_t_shirt_sizes',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'taxonomy',
   );
 
   // Exported permission: 'delete terms in merchandise_transfer_design'.
   $permissions['delete terms in merchandise_transfer_design'] = array(
     'name' => 'delete terms in merchandise_transfer_design',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'taxonomy',
   );
 
@@ -416,7 +433,9 @@ function beekeeper_commerce_user_default_permissions() {
   // Exported permission: 'edit any commerce_product entity of bundle beekeeper_magazine_subscription'.
   $permissions['edit any commerce_product entity of bundle beekeeper_magazine_subscription'] = array(
     'name' => 'edit any commerce_product entity of bundle beekeeper_magazine_subscription',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'commerce_product',
   );
 
@@ -432,28 +451,27 @@ function beekeeper_commerce_user_default_permissions() {
   // Exported permission: 'edit any commerce_product entity of bundle merchandise_baseball_cap'.
   $permissions['edit any commerce_product entity of bundle merchandise_baseball_cap'] = array(
     'name' => 'edit any commerce_product entity of bundle merchandise_baseball_cap',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'commerce_product',
   );
 
   // Exported permission: 'edit any commerce_product entity of bundle merchandise_t_shirt'.
   $permissions['edit any commerce_product entity of bundle merchandise_t_shirt'] = array(
     'name' => 'edit any commerce_product entity of bundle merchandise_t_shirt',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'commerce_product',
   );
 
   // Exported permission: 'edit any commerce_product entity of bundle merchandise_transfer'.
   $permissions['edit any commerce_product entity of bundle merchandise_transfer'] = array(
     'name' => 'edit any commerce_product entity of bundle merchandise_transfer',
-    'roles' => array(),
-    'module' => 'commerce_product',
-  );
-
-  // Exported permission: 'edit any commerce_product entity of bundle merchandise_tshirt'.
-  $permissions['edit any commerce_product entity of bundle merchandise_tshirt'] = array(
-    'name' => 'edit any commerce_product entity of bundle merchandise_tshirt',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'commerce_product',
   );
 
@@ -478,7 +496,9 @@ function beekeeper_commerce_user_default_permissions() {
   // Exported permission: 'edit any merchandise_display content'.
   $permissions['edit any merchandise_display content'] = array(
     'name' => 'edit any merchandise_display content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -545,7 +565,9 @@ function beekeeper_commerce_user_default_permissions() {
   // Exported permission: 'edit own commerce_product entities of bundle beekeeper_magazine_subscription'.
   $permissions['edit own commerce_product entities of bundle beekeeper_magazine_subscription'] = array(
     'name' => 'edit own commerce_product entities of bundle beekeeper_magazine_subscription',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'commerce_product',
   );
 
@@ -561,28 +583,27 @@ function beekeeper_commerce_user_default_permissions() {
   // Exported permission: 'edit own commerce_product entities of bundle merchandise_baseball_cap'.
   $permissions['edit own commerce_product entities of bundle merchandise_baseball_cap'] = array(
     'name' => 'edit own commerce_product entities of bundle merchandise_baseball_cap',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'commerce_product',
   );
 
   // Exported permission: 'edit own commerce_product entities of bundle merchandise_t_shirt'.
   $permissions['edit own commerce_product entities of bundle merchandise_t_shirt'] = array(
     'name' => 'edit own commerce_product entities of bundle merchandise_t_shirt',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'commerce_product',
   );
 
   // Exported permission: 'edit own commerce_product entities of bundle merchandise_transfer'.
   $permissions['edit own commerce_product entities of bundle merchandise_transfer'] = array(
     'name' => 'edit own commerce_product entities of bundle merchandise_transfer',
-    'roles' => array(),
-    'module' => 'commerce_product',
-  );
-
-  // Exported permission: 'edit own commerce_product entities of bundle merchandise_tshirt'.
-  $permissions['edit own commerce_product entities of bundle merchandise_tshirt'] = array(
-    'name' => 'edit own commerce_product entities of bundle merchandise_tshirt',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'commerce_product',
   );
 
@@ -607,7 +628,9 @@ function beekeeper_commerce_user_default_permissions() {
   // Exported permission: 'edit own merchandise_display content'.
   $permissions['edit own merchandise_display content'] = array(
     'name' => 'edit own merchandise_display content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -623,35 +646,45 @@ function beekeeper_commerce_user_default_permissions() {
   // Exported permission: 'edit terms in merchandise_baseball_cap_colour'.
   $permissions['edit terms in merchandise_baseball_cap_colour'] = array(
     'name' => 'edit terms in merchandise_baseball_cap_colour',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'taxonomy',
   );
 
   // Exported permission: 'edit terms in merchandise_catalogue'.
   $permissions['edit terms in merchandise_catalogue'] = array(
     'name' => 'edit terms in merchandise_catalogue',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'taxonomy',
   );
 
   // Exported permission: 'edit terms in merchandise_t_shiirt_colours'.
   $permissions['edit terms in merchandise_t_shiirt_colours'] = array(
     'name' => 'edit terms in merchandise_t_shiirt_colours',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'taxonomy',
   );
 
   // Exported permission: 'edit terms in merchandise_t_shirt_sizes'.
   $permissions['edit terms in merchandise_t_shirt_sizes'] = array(
     'name' => 'edit terms in merchandise_t_shirt_sizes',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'taxonomy',
   );
 
   // Exported permission: 'edit terms in merchandise_transfer_design'.
   $permissions['edit terms in merchandise_transfer_design'] = array(
     'name' => 'edit terms in merchandise_transfer_design',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'taxonomy',
   );
 
@@ -722,7 +755,9 @@ function beekeeper_commerce_user_default_permissions() {
   // Exported permission: 'view any commerce_product entity of bundle beekeeper_magazine_subscription'.
   $permissions['view any commerce_product entity of bundle beekeeper_magazine_subscription'] = array(
     'name' => 'view any commerce_product entity of bundle beekeeper_magazine_subscription',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'commerce_product',
   );
 
@@ -738,28 +773,27 @@ function beekeeper_commerce_user_default_permissions() {
   // Exported permission: 'view any commerce_product entity of bundle merchandise_baseball_cap'.
   $permissions['view any commerce_product entity of bundle merchandise_baseball_cap'] = array(
     'name' => 'view any commerce_product entity of bundle merchandise_baseball_cap',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'commerce_product',
   );
 
   // Exported permission: 'view any commerce_product entity of bundle merchandise_t_shirt'.
   $permissions['view any commerce_product entity of bundle merchandise_t_shirt'] = array(
     'name' => 'view any commerce_product entity of bundle merchandise_t_shirt',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'commerce_product',
   );
 
   // Exported permission: 'view any commerce_product entity of bundle merchandise_transfer'.
   $permissions['view any commerce_product entity of bundle merchandise_transfer'] = array(
     'name' => 'view any commerce_product entity of bundle merchandise_transfer',
-    'roles' => array(),
-    'module' => 'commerce_product',
-  );
-
-  // Exported permission: 'view any commerce_product entity of bundle merchandise_tshirt'.
-  $permissions['view any commerce_product entity of bundle merchandise_tshirt'] = array(
-    'name' => 'view any commerce_product entity of bundle merchandise_tshirt',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'commerce_product',
   );
 
@@ -836,7 +870,9 @@ function beekeeper_commerce_user_default_permissions() {
   // Exported permission: 'view own commerce_product entities of bundle beekeeper_magazine_subscription'.
   $permissions['view own commerce_product entities of bundle beekeeper_magazine_subscription'] = array(
     'name' => 'view own commerce_product entities of bundle beekeeper_magazine_subscription',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'commerce_product',
   );
 
@@ -852,28 +888,27 @@ function beekeeper_commerce_user_default_permissions() {
   // Exported permission: 'view own commerce_product entities of bundle merchandise_baseball_cap'.
   $permissions['view own commerce_product entities of bundle merchandise_baseball_cap'] = array(
     'name' => 'view own commerce_product entities of bundle merchandise_baseball_cap',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'commerce_product',
   );
 
   // Exported permission: 'view own commerce_product entities of bundle merchandise_t_shirt'.
   $permissions['view own commerce_product entities of bundle merchandise_t_shirt'] = array(
     'name' => 'view own commerce_product entities of bundle merchandise_t_shirt',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'commerce_product',
   );
 
   // Exported permission: 'view own commerce_product entities of bundle merchandise_transfer'.
   $permissions['view own commerce_product entities of bundle merchandise_transfer'] = array(
     'name' => 'view own commerce_product entities of bundle merchandise_transfer',
-    'roles' => array(),
-    'module' => 'commerce_product',
-  );
-
-  // Exported permission: 'view own commerce_product entities of bundle merchandise_tshirt'.
-  $permissions['view own commerce_product entities of bundle merchandise_tshirt'] = array(
-    'name' => 'view own commerce_product entities of bundle merchandise_tshirt',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'commerce_product',
   );
 
